@@ -1,0 +1,50 @@
+<div class="login-screen screen">
+
+  <!-- Logo -->
+  <app-logo size="80"></app-logo>
+
+  <!-- Input Form -->
+  <form class="login-form">
+
+    <!-- Fields -->
+    <div class="login-form__fields">
+
+      <mat-form-field class="login-form__field">
+        <input matInput placeholder="Name">
+      </mat-form-field>
+
+      <mat-form-field class="login-form__field">
+        <textarea matInput placeholder="Password"></textarea>
+      </mat-form-field>
+
+    </div>
+
+    <!-- Actions -->
+    <div class="login-actions flex column">
+
+      <a
+        class="login-actions__action login-actions__action--secondary"
+        routerLink="/forgot-password"
+        >
+        Forgot Password?
+      </a>
+
+      <button
+        class="login-actions__action login-actions__action--primary"
+        mat-raised-button
+        (click)="attemptLogin(null)"
+        >
+        Log In
+      </button>
+
+      <a
+        class="login-actions__action login-actions__action--secondary"
+        >
+        Create Account
+      </a>
+
+    </div>
+
+  </form>
+
+</div>

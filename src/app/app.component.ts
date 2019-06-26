@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
   title = 'wmhw-spark-care';
+
+  getState(outlet) {
+    let state = outlet.activatedRouteData.state;
+    return outlet.activatedRouteData.state;
+  }
+  
 }

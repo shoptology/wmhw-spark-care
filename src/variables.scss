@@ -1,0 +1,23 @@
+// @import "mixins.scss";
+
+// shades of grey
+$color-white: #FFFFFF;
+$color-grey-1: darken($color-white,15%);
+$color-grey-2: darken($color-white,30%);
+$color-grey-3: darken($color-white,45%);
+$color-grey-4: darken($color-white,60%);
+$color-grey-5: darken($color-white,75%);
+$color-grey-6: darken($color-white,90%);
+
+// color assignments
+$color-primary: $color-grey-6;
+$color-primary-grey: $color-grey-2;
+
+// Screen Break Points
+$screen-sm-min: 480px;
+$screen-md-min: 720px;
+$screen-lg-min: 960px;
+$screen-xl-min: 1200px;
+
+// Size Variables
+$gutter-sm-screen: 2em;
