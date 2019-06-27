@@ -1,1 +1,177 @@
-<p>dashboard works!</p>
+<div class="dashboard">
+
+  <div class="dashboard__headline headline_wrapper headline_wrapper--center">
+    <p>Dashboard</p>
+  </div>
+
+  <!-- Statistics -->
+  <div class="dashboard__statistics">
+
+    <div class="statistics__block">
+      <button mat-raised-button class="statistics__data">
+
+        <div>
+          <mat-icon>favorite</mat-icon>
+          <span>12</span>
+        </div>
+
+        <div>
+          <p>Safety</p>
+        </div>
+
+      </button>
+    </div>
+
+    <div class="statistics__block">
+      <button mat-raised-button class="statistics__data">
+
+        <div>
+          <mat-icon>favorite</mat-icon>
+          <span>12</span>
+        </div>
+
+        <div>
+          <p>Kindness</p>
+        </div>
+
+      </button>
+    </div>
+
+    <div class="statistics__block">
+      <button mat-raised-button class="statistics__data">
+
+        <div>
+          <mat-icon>favorite</mat-icon>
+          <span>12</span>
+        </div>
+
+        <div>
+          <p>Connection</p>
+        </div>
+
+      </button>
+    </div>
+
+    <div class="statistics__block">
+      <button mat-raised-button class="statistics__data">
+
+        <div>
+          <mat-icon>favorite</mat-icon>
+          <span>12</span>
+        </div>
+
+        <div>
+          <p>Simplicity</p>
+        </div>
+
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Notifications -->
+  <div class="dashboard__notifications">
+
+    <mat-card class="notifications__card">
+
+      <mat-card-header class="notifications__header" matBadge="2" matBadgeOverlap="true">
+        <div>My Notifications</div>
+      </mat-card-header>
+
+      <mat-divider></mat-divider>
+
+      <mat-accordion class="notifications__accordion">
+
+        <mat-expansion-panel class="notification">
+
+          <mat-expansion-panel-header
+            class="notification__header"
+            [class.notification__header--active]="true"
+            >
+            <mat-panel-description>1/23/45</mat-panel-description>
+            <mat-panel-title>Stacy sent you a Kindness Spark!</mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <div class="notification__content">
+            <p class="content-item">
+              <span class="content-item__title">From: </span>
+              <span class="content-item__body">Stacy</span>
+            </p>
+            <p class="content-item">
+              <span class="content-item__title">Type of Care: </span>
+              <span class="content-item__body">Kindness</span>
+            </p>
+            <p class="content-item">
+              <span class="content-item__title">Details: </span>
+              <span class="content-item__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+            </p>
+          </div>
+
+          <div class="notification__actions">
+            <button mat-raised-button type="button" name="button">Say Thanks</button>
+          </div>
+
+        </mat-expansion-panel>
+
+        <mat-expansion-panel class="notification">
+
+          <mat-expansion-panel-header
+            class="notification__header"
+            [class.notification__header--active]="true"
+            >
+            <mat-panel-description>1/23/45</mat-panel-description>
+            <mat-panel-title>Stacy sent you a Kindness Spark!</mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <div class="notification__content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+
+          <button mat-raised-button type="button" name="button">Send Thank You</button>
+
+        </mat-expansion-panel>
+
+        <mat-expansion-panel class="notification">
+
+          <mat-expansion-panel-header
+            class="notification__header"
+            [class.notification__header--active]="false"
+            >
+            <mat-panel-description>1/23/45</mat-panel-description>
+            <mat-panel-title>Stacy sent you a Kindness Spark!</mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <div class="notification__content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+
+          <button mat-raised-button type="button" name="button">Send Thank You</button>
+
+        </mat-expansion-panel>
+
+        <mat-expansion-panel class="notification">
+
+          <mat-expansion-panel-header
+            class="notification__header"
+            [class.notification__header--active]="false"
+            >
+            <mat-panel-description>1/23/45</mat-panel-description>
+            <mat-panel-title>Stacy sent you a Kindness Spark!</mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <div class="notification__content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+
+          <button mat-raised-button type="button" name="button">Send Thank You</button>
+
+        </mat-expansion-panel>
+
+
+
+      </mat-accordion>
+
+    </mat-card>
+  </div>
+
+</div>

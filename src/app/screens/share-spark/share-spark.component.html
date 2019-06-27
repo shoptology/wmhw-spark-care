@@ -1,1 +1,46 @@
 <p>share-spark works!</p>
+
+<div class="share-spark">
+
+  <div class="share-spark__headline headline-wrapper">
+    <h1>Share a Spark!</h1>
+  </div>
+
+  <div class="share-spark__form">
+
+    <!-- Spark form -->
+    <form class="form" (ngSubmit)="onSubmit()">
+
+      <!-- Associate selector -->
+      <mat-form-field class="form__field">
+        <input matInput placeholder="Associate" aria-label="Associate" [matAutocomplete]="auto" [formControl]="associateCtrl">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let associate of filteredAssociates | async" [value]="associate.name">
+            <img class="example-option-img" aria-hidden [src]="associate.avatar" height="25">
+            <span>{{associate.name}}</span> |
+            <small>Population: {{associate.win}}</small>
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+
+      <!-- Spark type selector -->
+      <mat-radio-group class="form__field" aria-label="Select an option">
+        <mat-radio-button value="safety">Safety</mat-radio-button>
+        <mat-radio-button value="kindness">Kindness</mat-radio-button>
+        <mat-radio-button value="connection">Connection</mat-radio-button>
+        <mat-radio-button value="simplicity">Simplicity</mat-radio-button>
+      </mat-radio-group>
+
+      <!-- Spark message -->
+      <mat-form-field class="form__field">
+        <textarea rows="4" cols="50" matInput placeholder="Tell us about your moment of care"></textarea>
+      </mat-form-field>
+
+      <!-- Submit -->
+      <button mat-raised-button type="submit" name="submit">Submit</button>
+
+    </form>
+
+  </div>
+
+</div>
