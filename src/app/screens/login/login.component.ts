@@ -17,14 +17,11 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  public attemptLogin(userData): void {
+  public attemptLogin(): void {
 
-    this.router.navigate(["/home"]);
+    // this.router.navigate(['/home', { id: 123456, foo: 'foo' }]);
+    this.router.navigate(['/home']);
 
   }
-
-  // public goBack(): void {
-  //   this.location.back();
-  // }
 
 }

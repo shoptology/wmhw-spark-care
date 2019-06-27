@@ -3,7 +3,6 @@
 
 /* You can add global styles to this file, and also import other style files */
 
-
 /*
   Global Element Styles
   - simple and global styles that will cascade to all elements
@@ -11,9 +10,6 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 img { max-width: 100%; max-height: 100%; height: auto;}
-
-
-
 
 .headline {
   &_wrapper {

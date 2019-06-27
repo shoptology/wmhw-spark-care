@@ -16,7 +16,13 @@ export class SparkConfirmationComponent implements OnInit {
   }
 
   public acknowledgeSpark(): void {
+
+    // TODO: has spark already been acknowledged in DB?
+    // TODO: anything else before navigate next?
+
+    // go to next screen
     this.navNext();
+
   }
 
   public navNext(): void {
