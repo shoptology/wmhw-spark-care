@@ -16,9 +16,8 @@
         <input matInput placeholder="Associate" aria-label="Associate" [matAutocomplete]="auto" [formControl]="associateCtrl">
         <mat-autocomplete #auto="matAutocomplete">
           <mat-option *ngFor="let associate of filteredAssociates | async" [value]="associate.name">
-            <img class="example-option-img" aria-hidden [src]="associate.avatar" height="25">
             <span>{{associate.name}}</span> |
-            <small>Population: {{associate.win}}</small>
+            <small>{{associate.win}}</small>
           </mat-option>
         </mat-autocomplete>
       </mat-form-field>
