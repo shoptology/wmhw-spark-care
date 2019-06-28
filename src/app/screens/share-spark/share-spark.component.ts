@@ -3,6 +3,8 @@ import {FormControl} from '@angular/forms';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 import { Router } from '@angular/router';
+import { Associate } from '../../associate';
+import { WmhwApiService } from '../../wmhw-api.service';
 
 export interface Associate {
   avatar: string;
@@ -19,34 +21,16 @@ export class ShareSparkComponent implements OnInit {
 
   associateCtrl = new FormControl();
   filteredAssociates: Observable<Associate[]>;
-
-  associates: Associate[] = [
-    {
-      avatar: null,
-      name: 'Mark Roy',
-      win: 345123,
-    },
-    {
-      avatar: null,
-      name: 'Aleena Stubbs',
-      win: 345246,
-    },
-    {
-      avatar: null,
-      name: 'Toby Martinez',
-      win: 345369,
-    },
-    {
-      avatar: null,
-      name: 'Sumayya Crosby',
-      win: 345492,
-    }
-  ];
-
+  associates: Associate[];
 
   constructor(
     private router: Router,
+    public associateService: WmhwApiService,
+
   ) {
+
+    this.associates = this.associateService.getAssociates();
+
     this.filteredAssociates = this.associateCtrl.valueChanges
       .pipe(
         startWith(''),
