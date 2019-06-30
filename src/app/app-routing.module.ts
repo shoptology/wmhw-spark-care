@@ -5,6 +5,10 @@ import { HomeComponent } from './screens/home/home.component';
 import { DashboardComponent } from './screens/dashboard/dashboard.component';
 import { HelpComponent } from './screens/help/help.component';
 import { SettingsComponent } from './screens/settings/settings.component';
+
+import { CreateAccountComponent } from './screens/create-account/create-account.component';
+import { ForgotPasswordComponent } from './screens/forgot-password/forgot-password.component';
+
 import { ShareSparkComponent } from './screens/share-spark/share-spark.component';
 import { SparkConfirmationComponent } from './screens/spark-confirmation/spark-confirmation.component';
 
@@ -23,6 +27,9 @@ const routes: Routes = [
   // Utility Screens
   { path: 'help', component: HelpComponent, data: { state: 'help' } },
   { path: 'settings', component: SettingsComponent, data: { state: 'settings' } },
+
+  { path: 'create-account', component: SettingsComponent, data: { state: 'create-account' } },
+  { path: 'forgot-password', component: SettingsComponent, data: { state: 'forgot-password' } },
 
 ];
 
