@@ -32,21 +32,6 @@
 
 <mat-menu #hamburgerMenu="matMenu">
 
-  <button mat-menu-item>John Doe</button>
-
-  <mat-divider style="margin-left: -2em; margin-right: -2em;"></mat-divider>
-
-  <button mat-menu-item routerLink="/help"><mat-icon>help</mat-icon>Help</button>
-  <button mat-menu-item routerLink="/settings"><mat-icon>settings</mat-icon>Setting</button>
-
-  <br>
-
-  <button
-    mat-raised-button
-    class="button button--primary"
-    (click)="signOut()"
-    >
-    Sign Out
-  </button>
+  <app-main-menu></app-main-menu>
 
 </mat-menu>

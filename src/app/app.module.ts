@@ -32,7 +32,7 @@ import { SparkConfirmationComponent } from './screens/spark-confirmation/spark-c
 import { IconComponent } from './components/icon/icon.component';
 import { CreateAccountComponent } from './screens/create-account/create-account.component';
 import { ForgotPasswordComponent } from './screens/forgot-password/forgot-password.component';
-
+import { MainMenuComponent } from './components/main-menu/main-menu.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +49,7 @@ import { ForgotPasswordComponent } from './screens/forgot-password/forgot-passwo
     IconComponent,
     CreateAccountComponent,
     ForgotPasswordComponent,
-
+    MainMenuComponent,
   ],
   imports: [
     AppRoutingModule,

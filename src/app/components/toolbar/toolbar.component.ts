@@ -6,9 +6,9 @@ import { Location } from '@angular/common';
   selector: 'app-toolbar',
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.scss'],
-  encapsulation: ViewEncapsulation.None
-
+  encapsulation: ViewEncapsulation.None,
 })
+
 export class ToolbarComponent implements OnInit {
 
   constructor(
@@ -16,16 +16,7 @@ export class ToolbarComponent implements OnInit {
     private router: Router,
   ) { }
 
-  ngOnInit() {
-  }
-
-  public signOut(): void {
-
-    // TODO: create log in/out service and do log out here
-
-    this.router.navigate(["/login"]);
-
-  }
+  ngOnInit() {}
 
   public goBack(): void {
     this.location.back();
