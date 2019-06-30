@@ -30,6 +30,9 @@ import { SettingsComponent } from './screens/settings/settings.component';
 import { ShareSparkComponent } from './screens/share-spark/share-spark.component';
 import { SparkConfirmationComponent } from './screens/spark-confirmation/spark-confirmation.component';
 import { IconComponent } from './components/icon/icon.component';
+import { CreateAccountComponent } from './screens/create-account/create-account.component';
+import { ForgotPasswordComponent } from './screens/forgot-password/forgot-password.component';
+
 
 @NgModule({
   declarations: [
@@ -44,6 +47,9 @@ import { IconComponent } from './components/icon/icon.component';
     ShareSparkComponent,
     SparkConfirmationComponent,
     IconComponent,
+    CreateAccountComponent,
+    ForgotPasswordComponent,
+
   ],
   imports: [
     AppRoutingModule,
@@ -61,7 +67,7 @@ import { IconComponent } from './components/icon/icon.component';
     MatInputModule,
     MatMenuModule,
     MatRadioModule,
-    MatRippleModule,  
+    MatRippleModule,
     MatSelectModule,
     MatToolbarModule,
     ReactiveFormsModule,
