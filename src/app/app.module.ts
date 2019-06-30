@@ -17,6 +17,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatRippleModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { LoginComponent } from './screens/login/login.component';
@@ -60,6 +61,7 @@ import { IconComponent } from './components/icon/icon.component';
     MatInputModule,
     MatMenuModule,
     MatRadioModule,
+    MatRippleModule,  
     MatSelectModule,
     MatToolbarModule,
     ReactiveFormsModule,
