@@ -1,5 +1,11 @@
 // @import "mixins.scss";
 
+// color template
+$color-safety-blue: #1276ca;
+$color-connection-yellow: #fcba30;
+$color-kindness-orange: #fa6400;
+$color-simplicity-purple: #663399;
+
 // shades of grey
 $color-white: #FFFFFF;
 $color-grey-1: darken($color-white,15%);
@@ -9,15 +15,18 @@ $color-grey-4: darken($color-white,60%);
 $color-grey-5: darken($color-white,75%);
 $color-grey-6: darken($color-white,90%);
 
-// color assignments
-$color-primary: $color-grey-6;
-$color-primary-grey: $color-grey-2;
+// color assignment variables
+$color-primary: $color-grey-6; // TODO: make this Walmart Blue ?
+$color-secondary: $color-grey-6; // TODO: make this Walmart Yellow ?
+$color-primary-grey: $color-grey-4;
+
+$color-safety: $color-safety-blue;
+$color-connection: $color-connection-yellow;
+$color-kindness: $color-kindness-orange;
+$color-simplicity: $color-simplicity-purple;
 
 // Screen Break Points
 $screen-sm-min: 480px;
 $screen-md-min: 720px;
 $screen-lg-min: 960px;
 $screen-xl-min: 1200px;
-
-// Size Variables
-$gutter-sm-screen: 2em;

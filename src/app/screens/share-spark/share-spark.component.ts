@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
@@ -15,7 +15,9 @@ export interface Associate {
 @Component({
   selector: 'app-share-spark',
   templateUrl: './share-spark.component.html',
-  styleUrls: ['./share-spark.component.scss']
+  styleUrls: ['./share-spark.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+
 })
 export class ShareSparkComponent implements OnInit {
 
@@ -47,7 +49,17 @@ export class ShareSparkComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit() {
+  public onSubmit():void {
+    // TODO: process spark data here, >then navigate next
+    this.submitSpark();
+    this.navNext();
+  }
+
+  private submitSpark():void {
+    // TODO: access/submit to spark service
+  }
+
+  private navNext():void {
     this.router.navigate(["/spark-confirmation"]);
   }
 

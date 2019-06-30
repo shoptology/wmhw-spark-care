@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -27,6 +28,7 @@ import { HelpComponent } from './screens/help/help.component';
 import { SettingsComponent } from './screens/settings/settings.component';
 import { ShareSparkComponent } from './screens/share-spark/share-spark.component';
 import { SparkConfirmationComponent } from './screens/spark-confirmation/spark-confirmation.component';
+import { IconComponent } from './components/icon/icon.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,7 @@ import { SparkConfirmationComponent } from './screens/spark-confirmation/spark-c
     SettingsComponent,
     ShareSparkComponent,
     SparkConfirmationComponent,
+    IconComponent,
   ],
   imports: [
     AppRoutingModule,

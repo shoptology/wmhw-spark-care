@@ -1,8 +1,6 @@
-<p>share-spark works!</p>
-
 <div class="share-spark">
 
-  <div class="share-spark__headline headline-wrapper">
+  <div class="share-spark__headline headline__wrapper">
     <h1>Share a Spark!</h1>
   </div>
 
@@ -23,20 +21,80 @@
       </mat-form-field>
 
       <!-- Spark type selector -->
-      <mat-radio-group class="form__field" aria-label="Select an option">
-        <mat-radio-button value="safety">Safety</mat-radio-button>
-        <mat-radio-button value="kindness">Kindness</mat-radio-button>
-        <mat-radio-button value="connection">Connection</mat-radio-button>
-        <mat-radio-button value="simplicity">Simplicity</mat-radio-button>
+      <p class="form__label">Select Type</p>
+      <mat-radio-group class="form__field spark-type__selector" aria-label="Select an option">
+
+        <mat-radio-button
+          class="spark-type__option spark-type__option--safety"
+          value="safety"
+          >
+          <app-icon
+            class="option__icon"
+            width=""
+            height=""
+            type="safety"
+            title="Safety Spark"
+          >
+          </app-icon>
+          <p class="option__label option__label--safety">Safety</p>
+        </mat-radio-button>
+
+        <mat-radio-button
+          class="spark-type__option spark-type__option--kindness"
+          value="kindness"
+          >
+          <app-icon
+            class="option__icon"
+            width=""
+            height=""
+            type="kindness"
+            title="Kindness Spark"
+          >
+          </app-icon>
+          <p class="option__label option__label--kindness">Kindness</p>
+        </mat-radio-button>
+
+        <mat-radio-button
+          class="spark-type__option spark-type__option--connection"
+          value="connection"
+          >
+          <app-icon
+            class="option__icon"
+            width=""
+            height=""
+            type="connection"
+            title="Connection Spark"
+          >
+          </app-icon>
+          <p class="option__label option__label--connection">Connection</p>
+        </mat-radio-button>
+
+        <mat-radio-button
+          class="spark-type__option spark-type__option--simplicity"
+          value="simplicity"
+          >
+          <app-icon
+            class="option__icon"
+            width=""
+            height=""
+            type="simplicity"
+            title="Simplicity Spark"
+          >
+          </app-icon>
+          <p class="option__label option__label--simplicity">Simplicity</p>
+        </mat-radio-button>
+
       </mat-radio-group>
 
       <!-- Spark message -->
       <mat-form-field class="form__field">
-        <textarea rows="4" cols="50" matInput placeholder="Tell us about your moment of care"></textarea>
+        <textarea rows="4" cols="150" matInput placeholder="Tell us about your moment of care"></textarea>
       </mat-form-field>
 
       <!-- Submit -->
-      <button mat-raised-button type="submit" name="submit">Submit</button>
+      <div class="form__actions">
+        <button mat-raised-button type="submit" name="submit">Submit</button>
+      </div>
 
     </form>
 
