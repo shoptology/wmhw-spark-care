@@ -28,8 +28,8 @@ const routes: Routes = [
   { path: 'help', component: HelpComponent, data: { state: 'help' } },
   { path: 'settings', component: SettingsComponent, data: { state: 'settings' } },
 
-  { path: 'create-account', component: SettingsComponent, data: { state: 'create-account' } },
-  { path: 'forgot-password', component: SettingsComponent, data: { state: 'forgot-password' } },
+  { path: 'create-account', component: CreateAccountComponent, data: { state: 'create-account' } },
+  { path: 'forgot-password', component: ForgotPasswordComponent, data: { state: 'forgot-password' } },
 
 ];
 

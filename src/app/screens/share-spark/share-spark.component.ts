@@ -5,12 +5,8 @@ import {map, startWith} from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { Associate } from '../../associate';
 import { WmhwApiService } from '../../wmhw-api.service';
-
-export interface Associate {
-  avatar: string;
-  name: string;
-  win: number;
-}
+import { SPARKTYPES } from '../../spark-types';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-share-spark',
@@ -21,18 +17,20 @@ export interface Associate {
 })
 export class ShareSparkComponent implements OnInit {
 
-  associateCtrl = new FormControl();
-  filteredAssociates: Observable<Associate[]>;
-  associates: Associate[];
+  public associateCtrl = new FormControl();
+  public filteredAssociates: Observable<Associate[]>;
+  public associates: Associate[];
+  public sparkTypes = SPARKTYPES;
 
   constructor(
     private router: Router,
     public associateService: WmhwApiService,
-
   ) {
 
+    // fetch the associates list
     this.associates = this.associateService.getAssociates();
 
+    // filter associates object for autocomplete
     this.filteredAssociates = this.associateCtrl.valueChanges
       .pipe(
         startWith(''),
@@ -46,21 +44,40 @@ export class ShareSparkComponent implements OnInit {
     return this.associates.filter(associate => associate.name.toLowerCase().indexOf(filterValue) === 0);
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  public onSubmit():void {
+  public onSubmit(sparkForm: NgForm):void {
+
     // TODO: process spark data here, >then navigate next
-    this.submitSpark();
-    this.navNext();
+    // this.submitSpark();
+
+    this.navNext(sparkForm);
   }
 
-  private submitSpark():void {
+  private submitSpark(sparkForm):void {
     // TODO: access/submit to spark service
+    // this.spark.service.submit(spark to DB)
+    // {
+    //   dateCode: 1234567890 
+    //   fromAssociate:
+    //   toAssociate: this.associateCtrl.value,
+    //   type: sparkForm.value.type,
+    //   message: sparkForm.value.message,
+    // }
+
   }
 
-  private navNext():void {
-    this.router.navigate(["/spark-confirmation"]);
+  private navNext(sparkForm):void {
+    this.router.navigate([
+      '/spark-confirmation',
+      {
+        toAssociate: this.associateCtrl.value,
+        fromAssociate: 'loggedin.user',
+        type: sparkForm.value.type,
+        message: sparkForm.value.message,
+      }
+    ]);
+
   }
 
 }

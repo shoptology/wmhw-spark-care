@@ -1,17 +1,39 @@
 <div class="share-spark">
 
   <div class="share-spark__headline headline__wrapper">
-    <h1>Share a Spark!</h1>
+    <h1>Share a Spark</h1>
   </div>
 
   <div class="share-spark__form">
 
-    <!-- Spark form -->
-    <form class="form" (ngSubmit)="onSubmit()">
+    <mat-card>
+
+      <form class="form" #sparkForm="ngForm" (ngSubmit)="onSubmit(sparkForm)">
+
+      <mat-card-title>
+        From: 'Your name here'
+      </mat-card-title>
+      <mat-card-subtitle>
+        <span *ngIf="associateCtrl.value">To: {{associateCtrl.value}}</span>
+
+        <span *ngIf="type.value"> for <span style="text-transform: capitalize;">{{type.value}}</span></span>
+      </mat-card-subtitle>
+
+      <mat-divider></mat-divider>
+
+
 
       <!-- Associate selector -->
       <mat-form-field class="form__field">
-        <input matInput placeholder="Associate" aria-label="Associate" [matAutocomplete]="auto" [formControl]="associateCtrl">
+        <input
+          [formControl]="associateCtrl"
+          name="associate"
+          required
+          matInput
+          placeholder="Associate"
+          aria-label="Associate"
+          [matAutocomplete]="auto"
+        >
         <mat-autocomplete #auto="matAutocomplete">
           <mat-option *ngFor="let associate of filteredAssociates | async" [value]="associate.name">
             <span>{{associate.name}}</span> |
@@ -21,10 +43,20 @@
       </mat-form-field>
 
       <!-- Spark type selector -->
-      <p class="form__label">Select Type</p>
-      <mat-radio-group class="form__field spark-type__selector" aria-label="Select an option">
+      <p class="form__label">Select Type *</p>
 
+      <mat-radio-group
+        name="type"
+        #type="ngModel"
+        ngModel
+        required
+        class="form__field spark-type__selector"
+        aria-label="Select an option"
+        >
+
+        <!-- TODO: ngFor breaks the button ripple -->
         <mat-radio-button
+          type="radio"
           matRipple
           matRippleColor="rgba(0,0,0,0.1)"
           class="spark-type__option spark-type__option--safety"
@@ -42,6 +74,7 @@
         </mat-radio-button>
 
         <mat-radio-button
+          type="radio"
           matRipple
           matRippleColor="rgba(0,0,0,0.1)"
           class="spark-type__option spark-type__option--kindness"
@@ -59,6 +92,7 @@
         </mat-radio-button>
 
         <mat-radio-button
+          type="radio"
           matRipple
           matRippleColor="rgba(0,0,0,0.1)"
           class="spark-type__option spark-type__option--connection"
@@ -76,6 +110,7 @@
         </mat-radio-button>
 
         <mat-radio-button
+          type="radio"
           matRipple
           matRippleColor="rgba(0,0,0,0.1)"
           class="spark-type__option spark-type__option--simplicity"
@@ -96,15 +131,29 @@
 
       <!-- Spark message -->
       <mat-form-field class="form__field">
-        <textarea rows="4" cols="150" matInput placeholder="Tell us about your moment of care"></textarea>
+        <textarea
+          rows="4"
+          cols="150"
+          name="message"
+          ngModel
+          required
+          #message="ngModel"
+          matInput
+          placeholder="Tell us about your moment of care"
+        >
+        </textarea>
       </mat-form-field>
+
+      <mat-divider></mat-divider>
 
       <!-- Submit -->
       <div class="form__actions">
-        <button mat-raised-button type="submit" name="submit">Submit</button>
+        <button mat-button type="submit" name="submit">Submit</button>
       </div>
 
-    </form>
+      </form>
+
+    </mat-card>
 
   </div>
 

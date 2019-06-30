@@ -1,0 +1,40 @@
+@import "../../../variables.scss";
+
+
+.spark-confirmation {
+  &__card {
+    .card {
+      &__content {
+        padding: 2em 0;
+
+        .label {
+          font-style: italic;
+          color: $color-primary-grey;
+        }
+        .value {
+          font-weight: bold;
+          text-transform: capitalize;
+          &--message {
+            font-weight: normal;
+            text-transform: none;
+          }
+        }
+      }
+    }
+  }
+  &__type {
+    text-transform: capitalize;
+  }
+  &__label {
+    font-size: 0.8rem;
+    font-weight: normal;
+  }
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+      width: 100%;
+    }
+  }
+}
