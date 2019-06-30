@@ -10,27 +10,51 @@ import { Associate } from './associate';
 
 export const ASSOCIATES: Associate[] = [
   {
+    win: 220385722,
+    storeId: 123456,
+    name: 'Matt Parry',
+    email: 'Matt.Parry@walmart.com',
+    isManager: true,
+    managersId: 123456,
+  },
+  {
+    win: 213659722,
+    storeId: 123456,
+    name: 'Nicole Daigle',
+    email: 'Nicole.Daigle@walmart.com',
+    isManager: false,
+    managersId: 123456,
+  },
+  {
     win: 345123,
     storeId: 123456,
     name: 'Mark Roy',
-    managerId: 123456,
+    email: 'Mark.Roy@walmart.com',
+    isManager: false,
+    managersId: 123456,
   },
   {
     win: 345246,
     storeId: 123456,
     name: 'Aleena Stubbs',
-    managerId: 123456,
+    email: 'Aleena.Stubbs@walmart.com',
+    isManager: false,
+    managersId: 123456,
   },
   {
     win: 345369,
     storeId: 123456,
     name: 'Toby Martinez',
-    managerId: 123456,
+    email: 'Toby.Martinez@walmart.com',
+    isManager: false,
+    managersId: 123456,
   },
   {
     win: 345492,
     storeId: 123456,
     name: 'Sumayya Crosby',
-    managerId: 123456,
+    email: 'Sumayya.Crosby@walmart.com',
+    isManager: false,
+    managersId: 123456,
   }
 ];
