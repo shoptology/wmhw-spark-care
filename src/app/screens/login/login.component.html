@@ -27,9 +27,14 @@
 
       <mat-form-field class="login-form__field">
         <input
+          #password="ngModel"
+          ngModel
+          required
           matInput
-          type="password"
           placeholder="Password"
+          type="password"
+          name="password"
+          aria-label="Password"
         />
 
       </mat-form-field>

@@ -31,5 +31,8 @@ h1 {
     font-size: 1.2em;
     margin-bottom: 1em;
     border-bottom: 1px solid $color-grey-1;
+    &--center {
+      text-align: center;
+    }
   }
 }

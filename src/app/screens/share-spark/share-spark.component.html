@@ -1,6 +1,6 @@
 <div class="share-spark">
 
-  <div class="share-spark__headline headline__wrapper">
+  <div class="share-spark__headline headline__wrapper headline__wrapper--center">
     <h1>Share a Spark</h1>
   </div>
 
@@ -11,7 +11,7 @@
       <form class="form" #sparkForm="ngForm" (ngSubmit)="onSubmit(sparkForm)">
 
       <mat-card-title>
-        From: 'Your name here'
+        From: user.name
       </mat-card-title>
       <mat-card-subtitle>
         <span *ngIf="associateCtrl.value">To: {{associateCtrl.value}}</span>
