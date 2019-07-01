@@ -1,0 +1,41 @@
+// @import "mixins.scss";
+
+// color template
+$color-safety-blue: #1276ca;
+$color-connection-yellow: #fcba30;
+$color-kindness-orange: #fa6400;
+$color-simplicity-purple: #6bcae8;
+
+$color-wm-dark-blue: #004c91; // RGB: 0, 76, 145
+$color-wm-medium-blue: #007dc6; // RGB: 0, 125, 198
+$color-wm-light-blue: #78b9e7; // RGB: 120, 185, 231
+$color-wm-orange: #f47321; // RGB: 244, 115, 33
+$color-wm-yellow: #ffc220; // RGB: 255, 194, 32
+$color-wm-dark-green: #367c2b; // Walmart Fresh Product Dark Green // RGB: 54, 124, 43
+$color-wm-light-green: #76c043; // Walmart Fresh Product Light Green // RGB: 118, 192, 67
+
+// shades of grey
+$color-white: #FFFFFF;
+$color-grey-1: darken($color-white,15%);
+$color-grey-2: darken($color-white,30%);
+$color-grey-3: darken($color-white,45%);
+$color-grey-4: darken($color-white,60%);
+$color-grey-5: darken($color-white,75%);
+$color-grey-6: darken($color-white,90%);
+
+// color assignment variables
+$color-primary: $color-grey-6; // TODO: make this Walmart Blue ?
+$color-secondary: $color-grey-6; // TODO: make this Walmart Yellow ?
+$color-primary-grey: $color-grey-4;
+
+$color-safety: $color-safety-blue;
+$color-connection: $color-connection-yellow;
+$color-kindness: $color-kindness-orange;
+$color-simplicity: $color-simplicity-purple;
+
+// Screen Break Points
+$screen-xs-min: 480px;
+$screen-sm-min: 600px;
+$screen-md-min: 720px;
+$screen-lg-min: 960px;
+$screen-xl-min: 1200px;

@@ -1,0 +1,41 @@
+<mat-toolbar color="primary">
+
+  <mat-toolbar-row>
+
+    <div *ngIf="true"><!-- TODO: if back navigation exists -->
+
+      <button
+        mat-icon-button
+        aria-label="Previous Screen Navigation"
+        (click)="goBack()"
+        >
+        <mat-icon>keyboard_backspace</mat-icon>
+      </button>
+
+    </div>
+
+
+    <span  routerLink="/dashboard">
+      <span style="display: flex; justify-content: center; align-items: center;">
+        <app-logo size="32" isInline="true"></app-logo>&nbsp;Spark Care
+      </span>
+    </span>
+
+    <button
+      mat-icon-button
+      aria-hidden="false"
+      aria-label="Spark Care App Menu"
+      [matMenuTriggerFor]="hamburgerMenu"
+      >
+      <mat-icon>menu</mat-icon>
+    </button>
+
+  </mat-toolbar-row>
+
+</mat-toolbar>
+
+<mat-menu #hamburgerMenu="matMenu">
+
+  <app-main-menu></app-main-menu>
+
+</mat-menu>
