@@ -1,19 +1,13 @@
 <div class="dashboard">
 
-  <button
-    class="dashboard__fab fab"
-    mat-fab
-    aria-label="Example icon-button with a heart icon"
-    routerLink="/share-spark"
-    >
-    <mat-icon>add</mat-icon>
-  </button>
-
   <br>
 
-  <!-- <div class="dashboard__headline headline__wrapper">
-    <h1>Dashboard</h1>
-  </div> -->
+  <div class="dashboard__headline headline__wrapper">
+    <p>
+      <span [innerHTML]="userName"></span><br>
+      <span style="font-weight: 400; font-size: 12px;">92746534</span>
+    </p>
+  </div>
 
   <!-- Statistics -->
   <div class="dashboard__statistics">
@@ -161,5 +155,14 @@
     </mat-card>
 
   </div>
+
+  <button
+    class="dashboard__fab fab"
+    mat-fab
+    aria-label="Send a new Spark"
+    routerLink="/share-spark"
+    >
+    <app-logo size="44"></app-logo>
+  </button>
 
 </div>

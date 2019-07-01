@@ -4,13 +4,25 @@
   <app-logo size="80"></app-logo>
 
   <!-- Input Form -->
-  <form class="login-form">
+  <form
+    class="login-form form"
+    #loginForm="ngForm"
+    (ngSubmit)="attemptLogin(loginForm)"
+    >
 
     <!-- Fields -->
     <div class="login-form__fields">
 
       <mat-form-field class="login-form__field">
-        <input matInput placeholder="Name">
+        <input
+          #userName="ngModel"
+          ngModel
+          required
+          matInput
+          placeholder="User Name"
+          name="userName"
+          aria-label="User Name"
+          >
       </mat-form-field>
 
       <mat-form-field class="login-form__field">
@@ -24,6 +36,8 @@
 
     </div>
 
+
+
     <!-- Actions -->
     <div class="login-actions flex column">
 
@@ -35,10 +49,12 @@
       </a>
 
       <button
+        type="submit"
+        name="submit"
         class="login-actions__action login-actions__action--primary"
         mat-raised-button
-        (click)="attemptLogin()"
         >
+
         Log In
       </button>
 

@@ -1,26 +1,42 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-// import { Location } from '@angular/common';
+import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
+
 export class LoginComponent implements OnInit {
 
   constructor(
-    // private location: Location,
     private router: Router,
   ) {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  // public attemptLogin(): void {
+  //   this.router.navigate(['/home']);
+  // }
+
+  public attemptLogin(loginForm: NgForm):void {
+
+    console.log('loginForm.value.userName',loginForm.value.userName);
+
+    // TODO: process spark data here, >then navigate next
+    // this.submitSpark();
+
+    this.navNext(loginForm);
   }
 
-  public attemptLogin(): void {
-
-    // this.router.navigate(['/home', { id: 123456, foo: 'foo' }]);
-    this.router.navigate(['/home']);
+  private navNext(loginForm):void {
+    this.router.navigate([
+      '/dashboard',
+      {
+        userName: loginForm.value.userName,
+      }
+    ]);
 
   }
 

@@ -19,6 +19,7 @@ const routes: Routes = [
 
   // Main Screens
   { path: 'login', component: LoginComponent, data: { state: 'login' } },
+
   { path: 'home', component: HomeComponent, data: { state: 'home' } },
   { path: 'dashboard', component: DashboardComponent, data: { state: 'dashboard' } },
   { path: 'share-spark', component: ShareSparkComponent, data: { state: 'share-spark' } },
