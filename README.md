@@ -25,3 +25,21 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+## Build to GitHub Pages
+
+We are using GitHub pages to host the app
+
+We are also built on Angular so we must push the dist dir to the gh-pages branch
+
+See Angular CLI GHPages for details (https://www.npmjs.com/package/angular-cli-ghpages)
+
+### 1) Do a build:
+Run `ng build --prod` or `ng build --prod --base-href="wmhw-spark-care"` if a suffix is necessary
+
+### 2) Put the dist files in the gh-pages branch of the same repo (it's now dist control - not source control)
+Run `sudo angular-cli-ghpages --no-silent --dir=dist/wmhw-spark-care`
+
+  --no-silent (not sure why but it errors without it)
+  --dir=dist/[projectName] point to the dir to clone over, otherwise it will grab the project dir instead of it's contents
