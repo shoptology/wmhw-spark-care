@@ -1,9 +1,9 @@
 // @import "../variables.scss";
 // @import "../mixins.scss";
+
 .app {
 
   display: grid;
-
   grid-template-columns: 1em 50px auto 50px 1em;
   grid-template-rows: 56px auto;
 

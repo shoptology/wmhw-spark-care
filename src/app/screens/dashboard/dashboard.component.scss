@@ -1,4 +1,18 @@
+@import "../../../variables.scss";
+
 .dashboard {
+
+  &__fab.fab {
+    position: fixed;
+    z-index: 9;
+    bottom: 2em;
+    right: 2em;
+    background-color: $color-wm-dark-blue;
+    color: $color-white;
+  }
+
+
+
 
   &__headline {}
   &__statistics {
@@ -10,6 +24,28 @@
     margin-bottom: 1em;
 
     .statistics__block {
+
+
+      &--safety {
+        .statistic__label {
+          background-color: $color-safety;
+        }
+      }
+      &--kindness {
+        .statistic__label {
+          background-color: $color-kindness;
+        }
+      }
+      &--connection {
+        .statistic__label {
+          background-color: $color-connection;
+        }
+      }
+      &--simplicity {
+        .statistic__label {
+          background-color: $color-simplicity;
+        }
+      }
 
 
     }
@@ -39,9 +75,48 @@
       grid-row-end: 3;
     }
 
-    .statistics__data {
-      display: block;
-      width: 100%;
+    .statistics {
+
+      &__data {
+        display: block;
+        width: 100%;
+        padding: 0;
+        border-radius: 1em;
+        overflow: hidden;
+
+
+        .statistic {
+
+          &__status {
+
+            padding: 16px 16px 32px 16px;
+            font-size: 66px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 10vh;
+          }
+
+          &__icon {
+            margin-right: 1rem;
+            max-height: 100%;
+
+            svg {
+              width: 10vh;
+              // width: auto;
+              // height: 100%;
+            }
+          }
+
+          &__label {
+
+            color: white;
+            padding: 4px;
+            font-size: 1.2em;
+            p {margin: 0;}
+          }
+        }
+      }
     }
 
 
@@ -63,6 +138,10 @@
     .notifications {
       &__card {
 
+        mat-card-title {
+          margin: 0;
+        }
+
         .mat-expansion-panel-header-description {
           font-size: 0.7em;
         }
@@ -80,7 +159,7 @@
         .mat-content {
           display: flex;
           flex: 1;
-          flex-direction: column-reverse;
+          flex-direction: column;
           overflow: hidden;
         }
 

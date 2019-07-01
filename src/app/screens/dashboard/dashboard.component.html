@@ -1,71 +1,111 @@
 <div class="dashboard">
 
-  <div class="dashboard__headline headline_wrapper">
-    <p>Dashboard</p>
-  </div>
+  <button
+    class="dashboard__fab fab"
+    mat-fab
+    aria-label="Example icon-button with a heart icon"
+    routerLink="/share-spark"
+    >
+    <mat-icon>add</mat-icon>
+  </button>
+
+  <br>
+
+  <!-- <div class="dashboard__headline headline__wrapper">
+    <h1>Dashboard</h1>
+  </div> -->
 
   <!-- Statistics -->
   <div class="dashboard__statistics">
 
-    <div class="statistics__block">
+    <div class="statistics__block statistics__block--safety">
       <button mat-raised-button class="statistics__data">
 
-        <div>
-          <mat-icon>favorite</mat-icon>
-          <span>12</span>
+        <div class="statistic__status">
+          <app-icon
+            class="statistic__icon"
+            width=""
+            height=""
+            type="safety"
+            title="Safety Spark"
+          >
+          </app-icon>
+          <span class="statistic__amount">00</span>
         </div>
 
-        <div>
+        <div class="statistic__label">
           <p>Safety</p>
         </div>
 
       </button>
     </div>
 
-    <div class="statistics__block">
+    <div class="statistics__block statistics__block--kindness">
       <button mat-raised-button class="statistics__data">
 
-        <div>
-          <mat-icon>favorite</mat-icon>
-          <span>12</span>
+        <div class="statistic__status">
+          <app-icon
+            class="statistic__icon"
+            width=""
+            height=""
+            type="kindness"
+            title="Kindness Spark"
+          >
+          </app-icon>
+          <span class="statistic__amount">00</span>
         </div>
 
-        <div>
+        <div class="statistic__label">
           <p>Kindness</p>
         </div>
 
       </button>
     </div>
 
-    <div class="statistics__block">
+    <div class="statistics__block statistics__block--connection">
       <button mat-raised-button class="statistics__data">
 
-        <div>
-          <mat-icon>favorite</mat-icon>
-          <span>12</span>
+        <div class="statistic__status">
+          <app-icon
+            class="statistic__icon"
+            width=""
+            height=""
+            type="connection"
+            title="Connection Spark"
+          >
+          </app-icon>
+          <span class="statistic__amount">00</span>
         </div>
 
-        <div>
+        <div class="statistic__label">
           <p>Connection</p>
         </div>
 
       </button>
     </div>
 
-    <div class="statistics__block">
+    <div class="statistics__block statistics__block--simplicity">
       <button mat-raised-button class="statistics__data">
 
-        <div>
-          <mat-icon>favorite</mat-icon>
-          <span>12</span>
+        <div class="statistic__status">
+          <app-icon
+            class="statistic__icon"
+            width=""
+            height=""
+            type="simplicity"
+            title="Simplicity Spark"
+          >
+          </app-icon>
+          <span class="statistic__amount">00</span>
         </div>
 
-        <div>
+        <div class="statistic__label">
           <p>Simplicity</p>
         </div>
 
       </button>
     </div>
+
 
   </div>
 
@@ -75,7 +115,8 @@
     <mat-card class="notifications__card">
 
       <mat-card-header class="notifications__header" matBadge="2" matBadgeOverlap="true">
-        <div>My Notifications</div>
+        <mat-card-title>Notifications</mat-card-title>
+        <!-- <mat-card-subtitle>Notifications</mat-card-subtitle> -->
       </mat-card-header>
 
       <mat-divider></mat-divider>
@@ -88,8 +129,8 @@
             class="notification__header"
             [class.notification__header--active]="true"
             >
-            <mat-panel-description>1/23/45</mat-panel-description>
             <mat-panel-title>Stacy sent you a Kindness Spark!</mat-panel-title>
+            <mat-panel-description>Just now</mat-panel-description>
           </mat-expansion-panel-header>
 
           <div class="notification__content">
@@ -107,71 +148,18 @@
             </p>
           </div>
 
+          <mat-divider style="margin-left: -2em; margin-right: -2em;"></mat-divider>
+
           <div class="notification__actions">
-            <button mat-raised-button type="button" name="button">Say Thanks</button>
+            <button style="width: 100%;" mat-button type="button" name="button">Say Thanks</button>
           </div>
 
         </mat-expansion-panel>
-
-        <mat-expansion-panel class="notification">
-
-          <mat-expansion-panel-header
-            class="notification__header"
-            [class.notification__header--active]="true"
-            >
-            <mat-panel-description>1/23/45</mat-panel-description>
-            <mat-panel-title>Stacy sent you a Kindness Spark!</mat-panel-title>
-          </mat-expansion-panel-header>
-
-          <div class="notification__content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </div>
-
-          <button mat-raised-button type="button" name="button">Send Thank You</button>
-
-        </mat-expansion-panel>
-
-        <mat-expansion-panel class="notification">
-
-          <mat-expansion-panel-header
-            class="notification__header"
-            [class.notification__header--active]="false"
-            >
-            <mat-panel-description>1/23/45</mat-panel-description>
-            <mat-panel-title>Stacy sent you a Kindness Spark!</mat-panel-title>
-          </mat-expansion-panel-header>
-
-          <div class="notification__content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </div>
-
-          <button mat-raised-button type="button" name="button">Send Thank You</button>
-
-        </mat-expansion-panel>
-
-        <mat-expansion-panel class="notification">
-
-          <mat-expansion-panel-header
-            class="notification__header"
-            [class.notification__header--active]="false"
-            >
-            <mat-panel-description>1/23/45</mat-panel-description>
-            <mat-panel-title>Stacy sent you a Kindness Spark!</mat-panel-title>
-          </mat-expansion-panel-header>
-
-          <div class="notification__content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </div>
-
-          <button mat-raised-button type="button" name="button">Send Thank You</button>
-
-        </mat-expansion-panel>
-
-
 
       </mat-accordion>
 
     </mat-card>
+
   </div>
 
 </div>
