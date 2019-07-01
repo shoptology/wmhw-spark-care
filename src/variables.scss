@@ -14,7 +14,6 @@ $color-wm-yellow: #ffc220; // RGB: 255, 194, 32
 $color-wm-dark-green: #367c2b; // Walmart Fresh Product Dark Green // RGB: 54, 124, 43
 $color-wm-light-green: #76c043; // Walmart Fresh Product Light Green // RGB: 118, 192, 67
 
-
 // shades of grey
 $color-white: #FFFFFF;
 $color-grey-1: darken($color-white,15%);
@@ -35,7 +34,8 @@ $color-kindness: $color-kindness-orange;
 $color-simplicity: $color-simplicity-purple;
 
 // Screen Break Points
-$screen-sm-min: 480px;
+$screen-xs-min: 480px;
+$screen-sm-min: 600px;
 $screen-md-min: 720px;
 $screen-lg-min: 960px;
 $screen-xl-min: 1200px;

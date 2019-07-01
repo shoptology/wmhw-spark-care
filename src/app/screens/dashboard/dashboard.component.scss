@@ -1,4 +1,5 @@
 @import "../../../variables.scss";
+@import "../../../mixins.scss";
 
 .dashboard {
 
@@ -93,12 +94,22 @@
 
           &__status {
 
-            padding: 16px 16px 32px 16px;
-            font-size: 66px;
             display: flex;
             align-items: center;
             justify-content: space-around;
+
             height: 10vh;
+            font-size: 56px;
+            padding: 8px 8px 16px 8px;
+
+            @include md {
+              height: 10vh;
+              padding: 16px 16px 32px 16px;
+              font-size: 66px;
+            }
+
+
+
           }
 
           &__icon {

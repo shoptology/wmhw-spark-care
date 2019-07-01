@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  &__img {
-    
-
+  &--inline {
+    display: inline-flex;
   }
+  &__img {}
 }
