@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
 
   private navNext(loginForm):void {
     this.router.navigate([
-      '/dashboard',
+      '/home',
       {
         userName: loginForm.value.userName,
       }
