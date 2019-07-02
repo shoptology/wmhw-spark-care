@@ -3,9 +3,9 @@ import {FormControl} from '@angular/forms';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 import { Router } from '@angular/router';
-import { Associate } from '../../associate';
-import { WmhwApiService } from '../../wmhw-api.service';
-import { SPARKTYPES } from '../../spark-types';
+import { Associate } from '../../_models/associate';
+import { WmhwApiService } from '../../_services/wmhw-api.service';
+import { SPARKTYPES } from '../../_models/spark-types';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -58,7 +58,7 @@ export class ShareSparkComponent implements OnInit {
     // TODO: access/submit to spark service
     // this.spark.service.submit(spark to DB)
     // {
-    //   dateCode: 1234567890 
+    //   dateCode: 1234567890
     //   fromAssociate:
     //   toAssociate: this.associateCtrl.value,
     //   type: sparkForm.value.type,

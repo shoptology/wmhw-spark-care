@@ -8,8 +8,8 @@
     z-index: 9;
     bottom: 2em;
     right: 2em;
-    background-color: $color-wm-dark-blue;
-    color: $color-wm-yellow;
+    background-color: $color-primary;
+    color: $color-white;
 
     .mat-button-wrapper {
       padding: 4px;
@@ -98,7 +98,7 @@
             align-items: center;
             justify-content: space-around;
 
-            height: 10vh;
+            min-height: 10vh;
             font-size: 56px;
             padding: 8px 8px 16px 8px;
 
@@ -117,7 +117,7 @@
             max-height: 100%;
 
             svg {
-              width: 10vh;
+              // width: 10vh;
               // width: auto;
               // height: 100%;
             }

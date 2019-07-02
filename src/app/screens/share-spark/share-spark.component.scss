@@ -9,7 +9,7 @@
       width: 100%;
 
       &__label {
-        color: $color-primary-grey;
+        color: $color-grey;
       }
 
       &__field {
@@ -31,24 +31,15 @@
 
     }
   }
-
 }
-
-
 
 .spark-type {
   &__selector {
     display: grid;
-    // grid-template-columns: calc(25% - 0.78em) calc(25% - 0.78em) calc(25% - 0.78em) calc(25% - 0.78em);
-    // grid-template-rows: 20vw auto;
-    // grid-column-gap: 1em;
-    // grid-row-gap: 1em;
-
     grid-template-columns: 24.25% 24.25% 24.25% 24.25%;
     grid-template-rows: auto;
     grid-column-gap: 1%;
     grid-row-gap: 1%;
-
 
     box-sizing: border-box;
   }
@@ -57,9 +48,8 @@
     border-radius: 1em;
     min-height: min-content;
     outline: none;
-    svg {
 
-    }
+    svg {}
 
     &.mat-radio-checked {
       color: $color-white;
@@ -130,9 +120,6 @@
     .option {
 
       &__icon {
-        // width: 44px;
-        // height: 44px;
-        // font-size: 44px;
         margin-bottom: 4px;
         max-width: 50%;
       }
@@ -141,7 +128,6 @@
         font-size: 0.8em;
         margin: 0;
         text-transform: capitalize;
-
       }
     }
   }

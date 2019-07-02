@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
-import { Associate } from './associate';
-import { ASSOCIATES } from './associates';
+import { Associate } from '../_models/associate';
+import { ASSOCIATES } from '../_models/associates';
 
 @Injectable({
   providedIn: 'root'

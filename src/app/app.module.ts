@@ -22,17 +22,17 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { LoginComponent } from './screens/login/login.component';
 import { HomeComponent } from './screens/home/home.component';
-import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { ToolbarComponent } from './_components/toolbar/toolbar.component';
 import { DashboardComponent } from './screens/dashboard/dashboard.component';
-import { LogoComponent } from './components/logo/logo.component';
+import { LogoComponent } from './_components/logo/logo.component';
 import { HelpComponent } from './screens/help/help.component';
 import { SettingsComponent } from './screens/settings/settings.component';
 import { ShareSparkComponent } from './screens/share-spark/share-spark.component';
 import { SparkConfirmationComponent } from './screens/spark-confirmation/spark-confirmation.component';
-import { IconComponent } from './components/icon/icon.component';
+import { IconComponent } from './_components/icon/icon.component';
 import { CreateAccountComponent } from './screens/create-account/create-account.component';
 import { ForgotPasswordComponent } from './screens/forgot-password/forgot-password.component';
-import { MainMenuComponent } from './components/main-menu/main-menu.component';
+import { MainMenuComponent } from './_components/main-menu/main-menu.component';
 
 @NgModule({
   declarations: [
