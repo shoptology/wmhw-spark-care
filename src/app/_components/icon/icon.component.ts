@@ -12,6 +12,8 @@ export class IconComponent {
 
   @Input('type') icon: string;
   @Input('title') title: string;
+  @Input('height') height: string;
+  @Input('width') width: string;
 
   constructor() {}
 
