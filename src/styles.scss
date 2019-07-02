@@ -9,7 +9,7 @@ html, body { height: 100%; }
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: rgba($color-wm-dark-blue,5%);
+  background-color: rgba($color-primary ,5%);
 }
 img { max-width: 100%; max-height: 100%; height: auto;}
 main {
@@ -30,7 +30,7 @@ h1 {
     font-weight: bold;
     font-size: 1.2em;
     margin-bottom: 1em;
-    border-bottom: 1px solid $color-grey-1;
+    border-bottom: 1px solid $color-light-grey;
     &--center {
       text-align: center;
     }

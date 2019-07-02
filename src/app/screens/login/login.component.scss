@@ -32,12 +32,12 @@
       &--primary {
         padding-left: 4em;
         padding-right: 4em;
-        background-color: $color-wm-dark-blue;
+        background-color: $color-primary;
         color: white;
       }
 
       &--secondary {
-        color: $color-primary-grey;
+        color: $color-grey;
         font-size: 0.8em;
       }
     }
