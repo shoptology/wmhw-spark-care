@@ -15,7 +15,6 @@
       </mat-card-title>
       <mat-card-subtitle>
         <span *ngIf="associateCtrl.value">To: {{associateCtrl.value}}</span>
-
         <span *ngIf="type.value"> for <span style="text-transform: capitalize;">{{type.value}}</span></span>
       </mat-card-subtitle>
 
@@ -36,8 +35,7 @@
         >
         <mat-autocomplete #auto="matAutocomplete">
           <mat-option *ngFor="let associate of filteredAssociates | async" [value]="associate.name">
-            <span>{{associate.name}}</span> |
-            <small>{{associate.win}}</small>
+            <span>{{associate.name}}</span>
           </mat-option>
         </mat-autocomplete>
       </mat-form-field>
