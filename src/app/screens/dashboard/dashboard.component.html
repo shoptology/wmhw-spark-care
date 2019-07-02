@@ -4,8 +4,7 @@
 
   <div class="dashboard__headline headline__wrapper">
     <p>
-      <span [innerHTML]="userName"></span><br>
-      <span style="font-weight: 400; font-size: 12px;">92746534</span>
+      <span [innerHTML]="userName ? userName : 'Unknown user'"></span><br>
     </p>
   </div>
 
