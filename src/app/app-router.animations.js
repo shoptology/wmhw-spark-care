@@ -29,17 +29,17 @@ export const routerTransition = trigger('routerTransition', [
     ]),
 
     query(':enter', [
-      style({ opacity: 0, transform: 'scale(0.5)' })
+      style({ opacity: 0, transform: 'scale(0.9)' })
     ]),
 
     query(':leave', animateChild()),
 
     group([
       query(':leave', [
-        animate('400ms 00ms ease-out', style({ opacity: 0, transform: 'scale(0.5)' }))
+        animate('200ms 00ms ease-out', style({ opacity: 0, transform: 'scale(0.9)' }))
       ]),
       query(':enter', [
-        animate('400ms 400ms ease-out', style({ opacity: 1, transform: 'scale(1)' }))
+        animate('200ms 200ms ease-out', style({ opacity: 1, transform: 'scale(1)' }))
       ])
     ]),
 
@@ -63,17 +63,17 @@ export const routerTransition = trigger('routerTransition', [
     ]),
 
     query(':enter', [
-      style({ opacity: 0, transform: 'scale(0.5) translateX(100vw)' })
+      style({ opacity: 0, transform: 'scale(0.9) translateX(25vw)' })
     ]),
 
     query(':leave', animateChild()),
 
     group([
       query(':leave', [
-        animate('400ms 200ms ease-out', style({ opacity: 0, transform: 'scale(0.5) translateX(-100vw)' }))
+        animate('200ms 0ms ease-out', style({ opacity: 0, transform: 'scale(0.9) translateX(-25vw)' }))
       ]),
       query(':enter', [
-        animate('400ms 200ms ease-out', style({ opacity: 1, transform: 'scale(1) translateX(0vw)' }))
+        animate('200ms 100ms ease-out', style({ opacity: 1, transform: 'scale(1) translateX(0vw)' }))
       ])
     ]),
 
