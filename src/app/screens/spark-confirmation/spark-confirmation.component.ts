@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 export class SparkConfirmationComponent implements OnInit {
 
   public toAssociate: string;
-  public fromAssociate: string;
+  public username: string;
   public type: string;
   public message: string;
 
