@@ -24,8 +24,8 @@ export class SparkConfirmationComponent implements OnInit {
     this.toAssociate = this.route.snapshot.params['toAssociate'];
     console.log('this.toAssociate',this.toAssociate);
 
-    this.fromAssociate = this.route.snapshot.params['fromAssociate'];
-    console.log('this.fromAssociate',this.fromAssociate);
+    this.username = localStorage.getItem('username');
+    console.log('this.username',this.username);
 
     this.type = this.route.snapshot.params['type'];
     console.log('this.type',this.type);

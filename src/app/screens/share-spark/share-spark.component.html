@@ -11,7 +11,7 @@
       <form class="form" #sparkForm="ngForm" (ngSubmit)="onSubmit(sparkForm)">
 
       <mat-card-title>
-        From: user.name
+        From: {{username}}
       </mat-card-title>
       <mat-card-subtitle>
         <span *ngIf="associateCtrl.value">To: {{associateCtrl.value}}</span>
@@ -19,8 +19,6 @@
       </mat-card-subtitle>
 
       <mat-divider></mat-divider>
-
-
 
       <!-- Associate selector -->
       <mat-form-field class="form__field">
