@@ -18,14 +18,14 @@
       My Dashboard
     </button>
 
-    <!-- Managers Flow: TODO: add logic to toggle this ngIf -->
+    <!-- Managers Flow: TODO: add logic to toggle this [ *ngIf="user.isManager" ]-->
     <button
       *ngIf="false"
       class="home-screen-actions__button"
       mat-raised-button
       (click)="navToTeamDashboard()"
       >
-      * Team Dashboard
+      Team Dashboard
     </button>
 
   </div>

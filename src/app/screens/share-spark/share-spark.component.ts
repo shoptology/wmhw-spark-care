@@ -13,14 +13,15 @@ import { NgForm } from '@angular/forms';
   templateUrl: './share-spark.component.html',
   styleUrls: ['./share-spark.component.scss'],
   encapsulation: ViewEncapsulation.None,
-
 })
+
 export class ShareSparkComponent implements OnInit {
 
   public associateCtrl = new FormControl();
   public filteredAssociates: Observable<Associate[]>;
   public associates: Associate[];
   public sparkTypes = SPARKTYPES;
+  public username;
 
   constructor(
     private router: Router,
@@ -44,7 +45,9 @@ export class ShareSparkComponent implements OnInit {
     return this.associates.filter(associate => associate.name.toLowerCase().indexOf(filterValue) === 0);
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.username = localStorage.getItem('username');
+  }
 
   public onSubmit(sparkForm: NgForm):void {
 

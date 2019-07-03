@@ -1,5 +1,5 @@
 @import "../../../variables.scss";
-// @import "../mixins.scss";
+@import "../../../mixins.scss";
 
 .share-spark {
 
@@ -35,13 +35,17 @@
 
 .spark-type {
   &__selector {
+    box-sizing: border-box;
     display: grid;
-    grid-template-columns: 24.25% 24.25% 24.25% 24.25%;
     grid-template-rows: auto;
     grid-column-gap: 1%;
     grid-row-gap: 1%;
+    grid-template-columns: 49.25% 49.25%;
 
-    box-sizing: border-box;
+    @include xs {
+      grid-template-columns: 24.25% 24.25% 24.25% 24.25%;
+    }
+    
   }
   &__option {
     background-color: transparent;

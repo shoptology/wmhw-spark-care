@@ -9,14 +9,14 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
 
-  public userName;
+  public username;
 
   constructor(
     private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
-    this.userName = this.route.snapshot.params['userName']
+    this.username = localStorage.getItem('username');
   }
 
 }
