@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/home';
 
    // redundancy
-   this.authService.logout();
+   this.authenticationService.logout();
   }
 
   public attemptLogin(loginForm: NgForm):void {
@@ -55,7 +55,7 @@ export class LoginComponent implements OnInit {
       if(true){ // TODO: if login is valid
         console.log("Login successful");
 
-        // TODO: pass this to service - this.authService.authLogin(this.model);
+        // TODO: pass this to service - this.authenticationService.authLogin(this.model);
         localStorage.setItem('isLoggedIn', "true");
         console.log('login username', loginForm.value.userName);
         localStorage.setItem('username', loginForm.value.userName);
