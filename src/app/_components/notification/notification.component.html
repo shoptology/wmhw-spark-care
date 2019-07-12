@@ -1,0 +1,117 @@
+<!--
+  Notification Component
+ -->
+
+<mat-expansion-panel
+  class="notification"
+  [class.notification--new]="isNew"
+  >
+
+  <mat-expansion-panel-header
+    class="notification__header"
+    [class.notification__header--active]="true"
+    >
+
+    <!-- Title for Received Spark Log -->
+    <mat-panel-title
+      *ngIf="noteType === 'received'"
+      class="notification__title"
+      [class.notification__title--new]="isNew"
+      >
+      <app-icon
+        [class]="'notification__icon notification__icon--'+type"
+        [class.complete]="thankYouSent"
+        width="32"
+        height="32"
+        [type]="type"
+        title="Safety Spark"
+      >
+      </app-icon>
+      <span class="title">{{fromAssociate.firstName}} sent you a {{type}} Spark!</span>
+    </mat-panel-title>
+
+    <!-- Title for Sent Spark Log -->
+    <mat-panel-title
+      *ngIf="noteType === 'sent'"
+      class="notification__title"
+      >
+      <app-icon
+        [class]="'notification__icon notification__icon--'+type"
+        [class.complete]="thankYouSent"
+        width="32"
+        height="32"
+        [type]="type"
+        title="Safety Spark"
+      >
+      </app-icon>
+      <span class="title">You sent {{toAssociate.firstName}} a {{type}} Spark!</span>
+    </mat-panel-title>
+
+  </mat-expansion-panel-header>
+
+  <!-- Inside the expansion panel -->
+  <div class="notification__content">
+
+    <p class="content-item fine-print notification__date">
+      <span class="content-item__body" [innerHTML]="date"></span>
+    </p>
+
+    <p class="content-item">
+      <span class="content-item__body" [innerHTML]="message"></span>
+    </p>
+
+  </div>
+
+  <!-- Actions for Received Spark Log -->
+  <div class="notification__actions actions actions--center">
+    <div
+      *ngIf="noteType === 'received'"
+      class="">
+
+      <button
+        *ngIf="!thankYouSent && noteType != 'sent'"
+        mat-raised-button
+        type="button"
+        name="button"
+        >
+        Say Thanks
+      </button>
+
+      <button
+        *ngIf="thankYouSent || noteType === 'sent'"
+        disabled
+        mat-raised-button
+        type="button"
+        name="button"
+        >
+        You said thanks
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Thanks for Sent Spark Log -->
+  <div
+    *ngIf="noteType === 'sent'"
+    class="notification__thanks">
+
+    <span
+      *ngIf="thankYouSent"
+      >
+      <p>
+        <span class="header">Thank You!</span>
+        <br>
+        <span class="fine-print">{{toAssociate.firstName}}</span>
+      </p>
+    </span>
+
+    <span
+      *ngIf="!thankYouSent"
+      class="fine-print"
+      >
+      {{toAssociate.firstName}} has not said Thank You yet
+    </span>
+
+  </div>
+
+</mat-expansion-panel>

@@ -1,7 +1,16 @@
 @import "../../../variables.scss";
 @import "../../../mixins.scss";
 
+.notifications__header {
+  width: 100%;
+}
+
+
 .dashboard {
+
+  &__notifications {
+    margin-bottom: 1em;
+  }
 
   &__fab.fab {
     position: fixed;
@@ -148,71 +157,6 @@
     //   }
     // }
   }
-  &__notifications {
 
-    .notifications {
-      &__card {
-
-        mat-card-title {
-          margin: 0;
-        }
-
-        .mat-expansion-panel-header-description {
-          font-size: 0.7em;
-        }
-
-        .mat-divider.mat-divider-horizontal {
-          position: static;
-          margin-top: 1em;
-          margin-bottom: 1em;
-          margin-left: -1em;
-          margin-right: -1em;
-          left: auto;
-          width: auto;
-        }
-
-        .mat-content {
-          display: flex;
-          flex: 1;
-          flex-direction: column;
-          overflow: hidden;
-        }
-
-
-
-      }
-      &__header {
-        font-weight: bold;
-      }
-      &__accordion {
-        background: red;
-        .notification {
-          &__header {
-            &--active {
-              font-weight: bold;
-            }
-          }
-          &__content {
-            padding: 1em;
-            margin-bottom: 1em;
-            .content-item {
-              &__title {
-                font-weight: bold;
-              }
-              &__body {
-
-              }
-            }
-          }
-          &__actions {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-        }
-      }
-    }
-
-  }
 
 }

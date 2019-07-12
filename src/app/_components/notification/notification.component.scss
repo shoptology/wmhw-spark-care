@@ -1,0 +1,97 @@
+@import "../../../variables.scss";
+
+.notification {
+  margin-bottom: 1em;
+
+  &--new {
+    background-color: rgba($color-primary, 0.16);
+  }
+
+  &__header {
+    padding: 0 1em;
+  }
+
+  &__thanks {
+    font-style: italic;
+    padding-left: 1em;
+    .header {
+      font-weight: bold;
+    }
+  }
+
+  &__icon {
+    margin-right: 1em;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--kindness {
+
+      background: rgba($color-kindness, 25%);
+      border: 2px dashed $color-kindness;
+
+      &.complete {
+        background: $color-kindness;
+        svg path {fill: #FFFFFF !important;}
+      }
+    }
+    &--connection {
+
+      background: rgba($color-connection, 25%);
+      border: 2px dashed $color-connection;
+
+      &.complete {
+        background: $color-connection;
+        svg path {fill: #FFFFFF !important;}
+      }
+    }
+    &--safety {
+
+      background: rgba($color-safety, 25%);
+      border: 2px dashed $color-safety;
+
+      &.complete {
+        background: $color-safety;
+        svg path {fill: #FFFFFF !important;}
+      }
+    }
+    &--simplicity {
+
+      background: rgba($color-simplicity, 25%);
+      border: 2px dashed $color-simplicity;
+
+      &.complete {
+        background: $color-simplicity;
+        svg path {fill: #FFFFFF !important;}
+      }
+    }
+
+  }
+
+  &__title {
+    width: 100%;
+    margin: 0;
+
+    &--new {
+      font-weight: bold;
+    }
+
+    .title {
+      padding: 14px 0;
+
+      width: 60%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+    }
+  }
+
+  &__date {
+    margin: 0;
+  }
+}

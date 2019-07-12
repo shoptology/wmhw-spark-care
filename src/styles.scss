@@ -26,14 +26,19 @@ h1 {
 
 /* Global Classes */
 .headline {
+
+  margin: 1em 0;
+  
   &__wrapper {
     font-weight: bold;
     font-size: 1.2em;
     margin-bottom: 1em;
-    border-bottom: 1px solid $color-light-grey;
+
+
     &--center {
       text-align: center;
     }
+
   }
 }
 
@@ -54,5 +59,7 @@ h1 {
   color: $color-grey;
   font-style: italic;
   font-size: 12px;
-  text-align: center;
+  &--center {
+    text-align: center;
+  }
 }

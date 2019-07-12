@@ -1,0 +1,13 @@
+import { SparkType } from './spark-type';
+import { Associate } from './associate';
+
+
+export interface SparkType {
+  isNew: boolean;
+  thankYouSent: boolean;
+  date: number;
+  toAssociate: Associate;
+  fromAssociate: string;
+  type: SparkType;
+  message: string;
+}

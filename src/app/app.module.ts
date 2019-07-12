@@ -33,6 +33,7 @@ import { IconComponent } from './_components/icon/icon.component';
 import { CreateAccountComponent } from './screens/create-account/create-account.component';
 import { ForgotPasswordComponent } from './screens/forgot-password/forgot-password.component';
 import { MainMenuComponent } from './_components/main-menu/main-menu.component';
+import { NotificationComponent } from './_components/notification/notification.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { MainMenuComponent } from './_components/main-menu/main-menu.component';
     CreateAccountComponent,
     ForgotPasswordComponent,
     MainMenuComponent,
+    NotificationComponent,
   ],
   imports: [
     AppRoutingModule,
