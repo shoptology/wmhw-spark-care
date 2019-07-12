@@ -37,7 +37,22 @@ h1 {
   }
 }
 
+.actions {
+  display: flex;
+  &--center {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .mat-badge-content {
   color: $color-white;
   background: $color-primary;
+}
+
+.fine-print {
+  color: $color-grey;
+  font-style: italic;
+  font-size: 12px;
+  text-align: center;
 }

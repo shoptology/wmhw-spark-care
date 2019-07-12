@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthenticationService } from '../../_services';
 
 @Component({
   selector: 'app-home',
@@ -9,11 +10,15 @@ import { Router } from '@angular/router';
 
 export class HomeComponent implements OnInit {
 
+  public username: string;
+
   constructor(
     private router: Router,
+    private authenticationService: AuthenticationService,
   ) { }
 
   ngOnInit() {
+    this.username = localStorage.getItem('username');
   }
 
   public navToShareSpark(): void {
@@ -26,6 +31,14 @@ export class HomeComponent implements OnInit {
 
   public navToTeamDashboard(): void {
     this.router.navigate(["/team-dashboard"]);
+  }
+
+  public signOut(): void {
+
+    this.authenticationService.logout();
+    this.router.navigate(["/login"]);
+
+
   }
 
 }
