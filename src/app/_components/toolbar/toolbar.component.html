@@ -20,7 +20,10 @@
       </span>
     </span>
 
+    <span *ngIf="!isLoggedIn"></span>
+
     <button
+      *ngIf="isLoggedIn"
       mat-icon-button
       aria-hidden="false"
       aria-label="Spark Care App Menu"

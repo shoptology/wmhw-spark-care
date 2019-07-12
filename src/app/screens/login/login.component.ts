@@ -56,7 +56,7 @@ export class LoginComponent implements OnInit {
         console.log("Login successful");
 
         // TODO: pass this to service - this.authenticationService.authLogin(this.model);
-        localStorage.setItem('isLoggedIn', "true");
+        localStorage.setItem('isLoggedIn', 'true');
         console.log('login username', loginForm.value.userName);
         localStorage.setItem('username', loginForm.value.userName);
 

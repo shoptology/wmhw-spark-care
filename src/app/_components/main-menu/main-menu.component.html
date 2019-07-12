@@ -1,8 +1,11 @@
 <div class="">
 
-  <button mat-menu-item routerLink="/dashboard">{{username}}</button>
+  <button mat-menu-item routerLink="/dashboard"><mat-icon>person</mat-icon>{{username}}</button>
 
   <mat-divider style="margin-left: -2em; margin-right: -2em;"></mat-divider>
+
+  <button mat-menu-item routerLink="/dashboard"><mat-icon>dashboard</mat-icon>Dashboard</button>
+  <button mat-menu-item routerLink="/share-spark"><mat-icon>share</mat-icon>Share a Spark</button>
 
   <button mat-menu-item routerLink="/help"><mat-icon>help</mat-icon>Help</button>
   <button mat-menu-item routerLink="/settings"><mat-icon>settings</mat-icon>Setting</button>
@@ -10,11 +13,11 @@
   <br>
 
   <button
-    mat-raised-button
-    class="button button--primary"
+    mat-stroked-button
+    class="button button--logout button--primary"
     (click)="signOut()"
     >
-    Sign Out
+    Log Out
   </button>
 
 </div>

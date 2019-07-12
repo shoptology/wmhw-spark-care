@@ -11,12 +11,17 @@ import { Location } from '@angular/common';
 
 export class ToolbarComponent implements OnInit {
 
+  public isLoggedIn;
+
   constructor(
     private location: Location,
     private router: Router,
   ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.isLoggedIn = localStorage.getItem('isLoggedIn');
+    console.log('--this.isLoggedIn',this.isLoggedIn);
+  }
 
   public goBack(): void {
     this.location.back();

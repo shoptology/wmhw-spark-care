@@ -9,8 +9,9 @@ export class AuthenticationService {
   constructor() { }
 
   logout(): void {
-    localStorage.setItem('isLoggedIn', "false");
+    // localStorage.setItem('isLoggedIn', "false");
     localStorage.removeItem('username');
+    localStorage.removeItem('isLoggedIn');
   }
 
 }

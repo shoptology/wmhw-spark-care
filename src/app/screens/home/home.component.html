@@ -1,5 +1,9 @@
 <div class="screen home-screen">
 
+  <div class="headline__wrapper headline__wrapper--center">
+    <h1 [innerHTML]="username"></h1>
+  </div>
+
   <div class="home-screen-actions flex">
 
     <button
@@ -28,6 +32,17 @@
       Team Dashboard
     </button>
 
+  </div>
+
+  <div class="actions actions--center">
+    <button
+      (click)="signOut()"
+      mat-raised-button
+      type="button"
+      name="button"
+    >
+    Log Out
+    </button>
   </div>
 
 </div>
