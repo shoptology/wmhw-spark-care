@@ -77,15 +77,13 @@
         Say Thanks
       </button>
 
-      <button
+      <span
         *ngIf="thankYouSent || noteType === 'sent'"
-        disabled
-        mat-raised-button
-        type="button"
-        name="button"
         >
-        You said thanks
-      </button>
+        <p>
+          <span class="header">Thank you sent!</span>
+        </p>
+      </span>
 
     </div>
   </div>
