@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 
@@ -14,9 +15,15 @@ export class SparkConfirmationComponent implements OnInit {
   public type: string;
   public message: string;
 
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
   constructor(
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    public dialogRef: MatDialogRef<SparkConfirmationComponent>,
+    @Inject(MAT_DIALOG_DATA) public data,
   ) { }
 
   ngOnInit() {

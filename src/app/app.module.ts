@@ -1,11 +1,12 @@
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
@@ -20,6 +21,8 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatRippleModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+
 import { LoginComponent } from './screens/login/login.component';
 import { HomeComponent } from './screens/home/home.component';
 import { ToolbarComponent } from './_components/toolbar/toolbar.component';
@@ -34,6 +37,7 @@ import { CreateAccountComponent } from './screens/create-account/create-account.
 import { ForgotPasswordComponent } from './screens/forgot-password/forgot-password.component';
 import { MainMenuComponent } from './_components/main-menu/main-menu.component';
 import { NotificationComponent } from './_components/notification/notification.component';
+import { ShareSparkModalComponent } from './_components/share-spark-modal/share-spark-modal.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +56,7 @@ import { NotificationComponent } from './_components/notification/notification.c
     ForgotPasswordComponent,
     MainMenuComponent,
     NotificationComponent,
+    ShareSparkModalComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -72,7 +77,11 @@ import { NotificationComponent } from './_components/notification/notification.c
     MatRippleModule,
     MatSelectModule,
     MatToolbarModule,
+    MatDialogModule,
     ReactiveFormsModule,
+  ],
+  entryComponents: [
+    ShareSparkModalComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

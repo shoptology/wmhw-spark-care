@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
 import { Associate } from '../_models/associate';
-import { ASSOCIATES } from '../_models/associates';
+import { ASSOCIATES } from '../_services/associates';
 
 @Injectable({
   providedIn: 'root'

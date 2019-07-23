@@ -14,7 +14,7 @@
         From: {{username}}
       </mat-card-title>
       <mat-card-subtitle>
-        <span *ngIf="associateCtrl.value">To: {{associateCtrl.value}}</span>
+        To: <span *ngIf="associateCtrl.value">{{associateCtrl.value}}</span>
         <span *ngIf="type.value"> for <span style="text-transform: capitalize;">{{type.value}}</span></span>
       </mat-card-subtitle>
 
@@ -132,7 +132,6 @@
           cols="150"
           name="message"
           ngModel
-          required
           #message="ngModel"
           matInput
           placeholder="Tell us about your moment of care"

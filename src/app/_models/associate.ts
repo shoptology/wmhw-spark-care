@@ -5,6 +5,6 @@ export interface Associate {
   name: string; // simple sting for associates name
   email: string; // every associate has an assigned walmart email address
   isManager: boolean; // is this associate a manager?
-  managersId: number; // the manager of this associate if applicable
+  managersWin: number; // the manager of this associate if applicable
   // are we storing the managers info here? or referencing the managers info via the number
 }

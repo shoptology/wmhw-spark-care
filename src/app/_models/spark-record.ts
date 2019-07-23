@@ -1,7 +1,6 @@
 import { SparkType } from './spark-type';
 import { Associate } from './associate';
 
-
 export interface SparkType {
   isNew: boolean;
   thankYouSent: boolean;

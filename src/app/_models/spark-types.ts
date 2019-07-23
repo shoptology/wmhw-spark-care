@@ -1,4 +1,6 @@
-import { SparkType } from './spark-type';
+export interface SparkType {
+  title: string;
+}
 
 export const SPARKTYPES: SparkType[] = [
   {

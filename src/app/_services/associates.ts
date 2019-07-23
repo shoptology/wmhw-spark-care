@@ -1,11 +1,5 @@
-import { Associate } from './associate';
-// win: number;
-// storeId: number;
-// name: string;
-// managerId: number;
+import { Associate } from '../_models/associate';
 
-
-// TODO: is this all the fake data points?
 // TODO: use real data
 
 export const ASSOCIATES: Associate[] = [
@@ -15,7 +9,7 @@ export const ASSOCIATES: Associate[] = [
     name: 'Matt Parry',
     email: 'Matt.Parry@walmart.com',
     isManager: true,
-    managersId: 123456,
+    managersWin: 123456,
   },
   {
     win: 213659722,
@@ -23,7 +17,7 @@ export const ASSOCIATES: Associate[] = [
     name: 'Nicole Daigle',
     email: 'Nicole.Daigle@walmart.com',
     isManager: false,
-    managersId: 123456,
+    managersWin: 123456,
   },
   {
     win: 345123,
@@ -31,7 +25,7 @@ export const ASSOCIATES: Associate[] = [
     name: 'Mark Roy',
     email: 'Mark.Roy@walmart.com',
     isManager: false,
-    managersId: 123456,
+    managersWin: 123456,
   },
   {
     win: 345246,
@@ -39,7 +33,7 @@ export const ASSOCIATES: Associate[] = [
     name: 'Aleena Stubbs',
     email: 'Aleena.Stubbs@walmart.com',
     isManager: false,
-    managersId: 123456,
+    managersWin: 123456,
   },
   {
     win: 345369,
@@ -47,7 +41,7 @@ export const ASSOCIATES: Associate[] = [
     name: 'Toby Martinez',
     email: 'Toby.Martinez@walmart.com',
     isManager: false,
-    managersId: 123456,
+    managersWin: 123456,
   },
   {
     win: 345492,
@@ -55,7 +49,7 @@ export const ASSOCIATES: Associate[] = [
     name: 'Sumayya Crosby',
     email: 'Sumayya.Crosby@walmart.com',
     isManager: false,
-    managersId: 123456,
+    managersWin: 123456,
   },
   {
     win: 345492,
@@ -63,7 +57,7 @@ export const ASSOCIATES: Associate[] = [
     name: 'Danial Liu',
     email: 'Danial.Liu@walmart.com',
     isManager: false,
-    managersId: 123456,
+    managersWin: 123456,
   },
   {
     win: 345492,
@@ -71,7 +65,7 @@ export const ASSOCIATES: Associate[] = [
     name: 'Bradley Farmer',
     email: 'Bradley.Farmer@walmart.com',
     isManager: false,
-    managersId: 123456,
+    managersWin: 123456,
   },
   {
     win: 345492,
@@ -79,7 +73,7 @@ export const ASSOCIATES: Associate[] = [
     name: 'Eryk Short',
     email: 'Eryk.Short@walmart.com',
     isManager: false,
-    managersId: 123456,
+    managersWin: 123456,
   },
   {
     win: 345492,
@@ -87,7 +81,7 @@ export const ASSOCIATES: Associate[] = [
     name: 'Elora Nolan',
     email: 'Elora.Nolan@walmart.com',
     isManager: false,
-    managersId: 123456,
+    managersWin: 123456,
   },
   {
     win: 345492,
@@ -95,7 +89,7 @@ export const ASSOCIATES: Associate[] = [
     name: 'Aaliyah Alvarado',
     email: 'Aaliyah.Alvarado@walmart.com',
     isManager: false,
-    managersId: 123456,
+    managersWin: 123456,
   },
   {
     win: 345492,
@@ -103,7 +97,7 @@ export const ASSOCIATES: Associate[] = [
     name: 'Carley Santiago',
     email: 'Carley.Santiago@walmart.com',
     isManager: false,
-    managersId: 123456,
+    managersWin: 123456,
   },
   {
     win: 345492,
@@ -111,7 +105,7 @@ export const ASSOCIATES: Associate[] = [
     name: 'Ava-Grace Fulton',
     email: 'Ava-Grace.Fulton@walmart.com',
     isManager: false,
-    managersId: 123456,
+    managersWin: 123456,
   },
   {
     win: 345492,
@@ -119,7 +113,7 @@ export const ASSOCIATES: Associate[] = [
     name: 'Martyna Fernandez',
     email: 'Martyna.Fernandez@walmart.com',
     isManager: false,
-    managersId: 123456,
+    managersWin: 123456,
   },
   {
     win: 345492,
@@ -127,7 +121,7 @@ export const ASSOCIATES: Associate[] = [
     name: 'Amar Dixon',
     email: 'Amar.Dixon@walmart.com',
     isManager: false,
-    managersId: 123456,
+    managersWin: 123456,
   },
   {
     win: 345492,
@@ -135,7 +129,7 @@ export const ASSOCIATES: Associate[] = [
     name: 'Evelina Wainwright',
     email: 'Evelina.Wainwright@walmart.com',
     isManager: false,
-    managersId: 123456,
+    managersWin: 123456,
   },
 
 ];

@@ -8,6 +8,10 @@ import { WmhwApiService } from '../../_services/wmhw-api.service';
 import { SPARKTYPES } from '../../_models/spark-types';
 import { NgForm } from '@angular/forms';
 
+import { ShareSparkModalComponent } from '../../_components/share-spark-modal/share-spark-modal.component';
+
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+
 @Component({
   selector: 'app-share-spark',
   templateUrl: './share-spark.component.html',
@@ -26,6 +30,7 @@ export class ShareSparkComponent implements OnInit {
   constructor(
     private router: Router,
     public associateService: WmhwApiService,
+    public dialog: MatDialog
   ) {
 
     // fetch the associates list
@@ -45,17 +50,47 @@ export class ShareSparkComponent implements OnInit {
     return this.associates.filter(associate => associate.name.toLowerCase().indexOf(filterValue) === 0);
   }
 
+  private _openDialog(sparkForm): void {
+    const dialogRef = this.dialog.open(ShareSparkModalComponent, {
+      disableClose: true,
+      // width: '250px',
+      data: {
+        toAssociate: this.associateCtrl.value,
+        fromAssociate: 'loggedin.user',
+        type: sparkForm.value.type,
+        message: sparkForm.value.message ? sparkForm.value.message : 'I noticed when you showed a moment of altruistic care. Sparks to you!',
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
+
   ngOnInit() {
     this.username = localStorage.getItem('username');
   }
 
   public onSubmit(sparkForm: NgForm):void {
 
+    console.log('sparkForm.valid',sparkForm.valid);
+
+    if (sparkForm.valid){
+      this._openDialog(sparkForm);
+    } else {
+      alert('FPO: please check for required fields');
+    }
+
     // TODO: process spark data here, >then navigate next
     // this.submitSpark();
 
-    this.navNext(sparkForm);
+    // this.navNext(sparkForm);
+    // this._openDialog(sparkForm);
+    // OPEN SPARK CONFIRMATION MODAL
+
   }
+
+
 
   private submitSpark(sparkForm):void {
     // TODO: access/submit to spark service
@@ -71,15 +106,16 @@ export class ShareSparkComponent implements OnInit {
   }
 
   private navNext(sparkForm):void {
-    this.router.navigate([
-      '/spark-confirmation',
-      {
-        toAssociate: this.associateCtrl.value,
-        fromAssociate: 'loggedin.user',
-        type: sparkForm.value.type,
-        message: sparkForm.value.message,
-      }
-    ]);
+    alert('oops');
+    // this.router.navigate([
+    //   '/spark-confirmation',
+    //   {
+    //     toAssociate: this.associateCtrl.value,
+    //     fromAssociate: 'loggedin.user',
+    //     type: sparkForm.value.type,
+    //     message: sparkForm.value.message ? sparkForm.value.message : 'I noticed when you showed a moment of altruistic care. Sparks to you!',
+    //   }
+    // ]);
 
   }
 
