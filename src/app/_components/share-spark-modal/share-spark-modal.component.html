@@ -50,7 +50,16 @@
 
     <mat-card-actions class="spark-confirmation__actions">
 
-      <button (click)="done()" mat-button type="button" name="button"><span class="timer"></span>Done</button>
+      <button
+        (click)="done()"
+        mat-stroked-button
+        type="button"
+        name="button"
+        >
+        <span class="timer"></span>
+        Done
+      </button>
+      
     </mat-card-actions>
 
   </mat-card>

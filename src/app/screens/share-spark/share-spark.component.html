@@ -36,10 +36,16 @@
             <span>{{associate.name}}</span>
           </mat-option>
         </mat-autocomplete>
+        <!-- <mat-error *ngIf="sparkForm.submitted && associate.invalid">Select an Associate</mat-error> -->
       </mat-form-field>
 
       <!-- Spark type selector -->
-      <p class="form__label">Select Type *</p>
+      <p
+        class="form__label"
+        [class.error]="sparkForm.submitted && type.invalid"
+        >
+        Select Type *
+      </p>
 
       <mat-radio-group
         name="type"
@@ -125,6 +131,8 @@
 
       </mat-radio-group>
 
+      <!-- <mat-error *ngIf="sparkForm.submitted && type.invalid">Select a Spark Care type.</mat-error> -->
+
       <!-- Spark message -->
       <mat-form-field class="form__field">
         <textarea
@@ -143,7 +151,7 @@
 
       <!-- Submit -->
       <div class="form__actions">
-        <button mat-button type="submit" name="submit">Submit</button>
+        <button mat-stroked-button type="submit" name="submit">Submit</button>
       </div>
 
       </form>

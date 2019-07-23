@@ -1,6 +1,5 @@
 @import "../../../variables.scss";
 
-
 .spark-confirmation {
   &__card {
     .card {
@@ -49,11 +48,10 @@
         left: 0;
         background: rgba($color-grey, 10%);
         animation-name: example;
-        animation-duration: 4s;
+        animation-duration: 8s;
         animation-timing-function: ease-out;
       }
     }
-
   }
 }
 

@@ -8,6 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './share-spark-modal.component.html',
   styleUrls: ['./share-spark-modal.component.scss']
 })
+
 export class ShareSparkModalComponent implements OnInit {
 
   public toAssociate: string;
@@ -30,7 +31,7 @@ export class ShareSparkModalComponent implements OnInit {
     // the modal shall only be open for a brief moment
     this.nextTimer = setTimeout(()=>{
       this._navNext();
-    }, 4000);
+    }, 8000);
 
   }
 
