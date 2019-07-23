@@ -1,0 +1,63 @@
+@import "../../../variables.scss";
+
+
+.spark-confirmation {
+  &__card {
+    .card {
+      &__content {
+        padding: 2em 0;
+
+        .label {
+          font-style: italic;
+          color: $color-grey;
+        }
+        .value {
+          font-weight: bold;
+          text-transform: capitalize;
+          &--message {
+            display: block;
+            font-weight: normal;
+            text-transform: none;
+            padding: 1em;
+            font-size: 1.2em;
+            text-indent: 1em;
+          }
+        }
+      }
+    }
+  }
+
+  &__type {
+    text-transform: capitalize;
+  }
+  &__label {
+    font-size: 0.8rem;
+    font-weight: normal;
+  }
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+      width: 100%;
+      position: relative;
+      .timer {
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba($color-grey, 10%);
+        animation-name: example;
+        animation-duration: 4s;
+        animation-timing-function: ease-out;
+      }
+    }
+
+  }
+}
+
+@keyframes example {
+  from {width: 0%;}
+  to {width: 100%;}
+}
