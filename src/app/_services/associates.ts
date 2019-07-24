@@ -4,20 +4,28 @@ import { Associate } from '../_models/associate';
 
 export const ASSOCIATES: Associate[] = [
   {
+    win: 100000001,
+    storeId: 100000,
+    name: 'Clifford Nelson',
+    email: 'clifford.nelson@walmart.com',
+    isManager: true,
+    managersWin: 111111,
+  },
+  {
     win: 220385722,
     storeId: 123456,
     name: 'Matt Parry',
     email: 'Matt.Parry@walmart.com',
     isManager: true,
-    managersWin: 123456,
+    managersWin: 111111,
   },
   {
     win: 213659722,
     storeId: 123456,
     name: 'Nicole Daigle',
     email: 'Nicole.Daigle@walmart.com',
-    isManager: false,
-    managersWin: 123456,
+    isManager: true,
+    managersWin: 111111,
   },
   {
     win: 345123,
