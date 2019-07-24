@@ -11,7 +11,7 @@ import { Location } from '@angular/common';
 
 export class ToolbarComponent implements OnInit {
 
-  public isLoggedIn;
+  public associate;
 
   constructor(
     private location: Location,
@@ -19,8 +19,7 @@ export class ToolbarComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.isLoggedIn = localStorage.getItem('isLoggedIn');
-    console.log('--this.isLoggedIn',this.isLoggedIn);
+    this.associate = JSON.parse(localStorage.getItem('associate'));
   }
 
   public goBack(): void {

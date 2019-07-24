@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
-import { Associate } from '../_models/associate';
+import { Associate } from '../_models';
 import { ASSOCIATES } from '../_services/associates';
 
 @Injectable({
@@ -12,28 +12,20 @@ export class WmhwApiService {
 
   constructor() { }
 
-  // Get all the associates
-  // TODO: this is too broad, refine get methods
-  getAssociates(): Associate[] {
-
-    // console.log('AssociateService - getAssociates - ASSOCIATES',ASSOCIATES);
-
-    return ASSOCIATES;
-
+  /* Get list of Associates by StoreID */
+  getAssociatesByStoreId(storeId: number): Associate[] {
+    const associates = ASSOCIATES.filter(associate => associate.storeId == storeId);
+    return associates;
   }
 
-  getAssociate(win: number): Associate {
-
-    // console.log('AssociateService - getAssociate - ASSOCIATES',ASSOCIATES);
-    // console.log('AssociateService - getAssociate - ASSOCIATE.ID',win);
-
-    // get associate by win filter
+  /* Get Associate by WIN number */
+  getAssociateByWin(win: number): Associate {
     const associate = ASSOCIATES.find(associate => associate.win == win);
-
-    // console.log('AssociateService - getAssociate - ASSOCIATE',associate);
-
     return associate;
-
   }
+
+  // TODO: this is where the DB calls should happen.
+  // TODO: functions like sumbitSpark and sumbitThankYouNote
+  submitSpark(sparkForm): void {}
 
 }

@@ -1,7 +1,7 @@
 <div class="screen home-screen">
 
   <div class="headline__wrapper headline__wrapper--center">
-    <h1 [innerHTML]="username"></h1>
+    <h1 [innerHTML]="associate.name"></h1>
   </div>
 
   <div class="home-screen-actions flex">
@@ -24,7 +24,7 @@
 
     <!-- Managers Flow: TODO: add logic to toggle this [ *ngIf="user.isManager" ]-->
     <button
-      *ngIf="false"
+      *ngIf="associate.isManager"
       class="home-screen-actions__button"
       mat-raised-button
       (click)="navToTeamDashboard()"

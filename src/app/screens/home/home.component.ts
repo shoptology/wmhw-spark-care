@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../../_services';
+import { Associate } from '../../_models';
 
 @Component({
   selector: 'app-home',
@@ -10,17 +11,20 @@ import { AuthenticationService } from '../../_services';
 
 export class HomeComponent implements OnInit {
 
-  public username: string;
+  public associate: Associate;
 
   constructor(
     private router: Router,
     private authenticationService: AuthenticationService,
-  ) { }
-
-  ngOnInit() {
-    this.username = localStorage.getItem('username');
+  ) {
+    this.associate = JSON.parse(localStorage.getItem('associate'));
   }
 
+  ngOnInit() {
+
+  }
+
+  // TODO: move routing to template link element unless specifically needed
   public navToShareSpark(): void {
     this.router.navigate(["/share-spark"]);
   }
@@ -34,11 +38,8 @@ export class HomeComponent implements OnInit {
   }
 
   public signOut(): void {
-
     this.authenticationService.logout();
     this.router.navigate(["/login"]);
-
-
   }
 
 }

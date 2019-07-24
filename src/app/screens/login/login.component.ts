@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AuthenticationService } from '../../_services';
+import { Associate } from '../../_models';
 import { NgForm, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 // notes on building authentication with in angular
@@ -15,12 +16,11 @@ import { NgForm, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 export class LoginComponent implements OnInit {
 
-  loginForm: FormGroup;
-  returnUrl: string;
-  associate;
+  public loginForm: FormGroup;
+  public associate: Associate;
+  private _returnUrl: string;
 
   constructor(
-    // public associateService: WmhwApiService,
     private route: ActivatedRoute,
     private router: Router,
     private formBuilder: FormBuilder,
@@ -40,9 +40,9 @@ export class LoginComponent implements OnInit {
     });
 
   // In the fringe case of being directed to login from within app,
-  // returnUrl will be a better user experience than being sent to the home page after login
+  // _returnUrl will be a better user experience than being sent to the home page after login
   // * get return url from route parameters or default to '/' (routing = /home)
-  this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/home';
+  this._returnUrl = this.route.snapshot.queryParams['_returnUrl'] || '/home';
 
    // redundancy
    this.authenticationService.logout();
@@ -64,10 +64,10 @@ export class LoginComponent implements OnInit {
 
       if(this.associate){
 
-        // store associate object in local storage for the session
-        localStorage.setItem('associate', this.associate);
+        // store associate object as a string in local storage for the session
+        localStorage.setItem('associate', JSON.stringify(this.associate));
 
-        // this.router.navigate([this.returnUrl]); // ^ see above
+        // this.router.navigate([this._returnUrl]); // ^ see above
         this.router.navigate(['/home']);
 
       } else {

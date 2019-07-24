@@ -11,7 +11,7 @@
       <form class="form" #sparkForm="ngForm" (ngSubmit)="onSubmit(sparkForm)">
 
       <mat-card-title>
-        From: {{username}}
+        From: {{associate.name}}
       </mat-card-title>
       <mat-card-subtitle>
         To: <span *ngIf="associateCtrl.value">{{associateCtrl.value}}</span>

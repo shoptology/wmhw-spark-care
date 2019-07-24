@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Associate } from '../../_models';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,29 +10,14 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
 
-  public username;
+  public associate: Associate;
   public log;
   public notifications;
 
   constructor(
-    private route: ActivatedRoute
-  ) { }
-
-  ngOnInit() {
-    this.username = localStorage.getItem('username');
-
-//
-//
-// Rajan Neale
-// Octavia Healy
-
-// kindness
-// connection
-// safety
-// simplicity
-
-
-
+    private route: ActivatedRoute,
+  ) {
+    this.associate = JSON.parse(localStorage.getItem('associate'));
 
     this.notifications = [
       {
@@ -156,7 +142,6 @@ export class DashboardComponent implements OnInit {
       },
     ];
 
-
     this.log = [
       {
         viewed: false,
@@ -269,11 +254,9 @@ export class DashboardComponent implements OnInit {
         message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       },
     ];
-
-
-
-
-
   }
 
+  ngOnInit() {
+
+  }
 }

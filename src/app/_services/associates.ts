@@ -1,4 +1,4 @@
-import { Associate } from '../_models/associate';
+import { Associate } from '../_models';
 
 // TODO: use real data
 
@@ -8,6 +8,14 @@ export const ASSOCIATES: Associate[] = [
     storeId: 100000,
     name: 'Clifford Nelson',
     email: 'clifford.nelson@walmart.com',
+    isManager: true,
+    managersWin: 111111,
+  },
+  {
+    win: 100000001,
+    storeId: 100000,
+    name: 'Scott Schlee',
+    email: 'scott.schlee@walmart.com',
     isManager: true,
     managersWin: 111111,
   },

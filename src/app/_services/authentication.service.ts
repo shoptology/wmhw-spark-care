@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Associate } from '../_models/associate';
+import { Associate } from '../_models';
 import { ASSOCIATES } from '../_services/associates';
 
 @Injectable({
