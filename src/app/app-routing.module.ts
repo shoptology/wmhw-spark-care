@@ -10,7 +10,6 @@ import { CreateAccountComponent } from './screens/create-account/create-account.
 import { ForgotPasswordComponent } from './screens/forgot-password/forgot-password.component';
 
 import { ShareSparkComponent } from './screens/share-spark/share-spark.component';
-import { SparkConfirmationComponent } from './screens/spark-confirmation/spark-confirmation.component';
 
 const routes: Routes = [
 
@@ -23,7 +22,6 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent, data: { state: 'home' } },
   { path: 'dashboard', component: DashboardComponent, data: { state: 'dashboard' } },
   { path: 'share-spark', component: ShareSparkComponent, data: { state: 'share-spark' } },
-  { path: 'spark-confirmation', component: SparkConfirmationComponent, data: { state: 'spark-confirmation' } },
 
   // Utility Screens
   { path: 'help', component: HelpComponent, data: { state: 'help' } },

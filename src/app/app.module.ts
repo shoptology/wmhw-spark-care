@@ -31,7 +31,6 @@ import { LogoComponent } from './_components/logo/logo.component';
 import { HelpComponent } from './screens/help/help.component';
 import { SettingsComponent } from './screens/settings/settings.component';
 import { ShareSparkComponent } from './screens/share-spark/share-spark.component';
-import { SparkConfirmationComponent } from './screens/spark-confirmation/spark-confirmation.component';
 import { IconComponent } from './_components/icon/icon.component';
 import { CreateAccountComponent } from './screens/create-account/create-account.component';
 import { ForgotPasswordComponent } from './screens/forgot-password/forgot-password.component';
@@ -50,7 +49,6 @@ import { ShareSparkModalComponent } from './_components/share-spark-modal/share-
     HelpComponent,
     SettingsComponent,
     ShareSparkComponent,
-    SparkConfirmationComponent,
     IconComponent,
     CreateAccountComponent,
     ForgotPasswordComponent,
