@@ -13,8 +13,8 @@ export class WmhwApiService {
   constructor() { }
 
   /* Get list of Associates by StoreID */
-  getAssociatesByStoreId(storeId: number): Associate[] {
-    const associates = ASSOCIATES.filter(associate => associate.storeId == storeId);
+  getAssociatesByStoreId(storeId: number, win: number): Associate[] {
+    let associates = ASSOCIATES.filter(associate => associate.storeId == storeId).filter(associate => associate.win !== win);
     return associates;
   }
 

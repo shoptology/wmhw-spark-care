@@ -35,7 +35,7 @@ export class ShareSparkComponent implements OnInit {
     this.associate = JSON.parse(localStorage.getItem('associate'));
 
     // fetch the associates list
-    this.associates = this.associateService.getAssociatesByStoreId(this.associate.storeId);
+    this.associates = this.associateService.getAssociatesByStoreId(this.associate.storeId, this.associate.win);
 
     // filter associates object for autocomplete
     this.filteredAssociates = this.associateCtrl.valueChanges
