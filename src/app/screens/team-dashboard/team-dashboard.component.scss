@@ -2,14 +2,26 @@
 @import "../../../mixins.scss";
 
 .team-dashboard {
+
   &__headline {
+
+    &--sub {
+      font-weight: bold;
+      font-size: 1.4em;
+      color: $color-primary;
+      text-align: center;
+      margin-bottom: 1em;
+    }
+
     .headline {}
+
     .sub-headline {
       margin: -1.6em 0 0 0;
       font-size: 0.8em;
       font-weight: 100;
       font-style: italic;
     }
+    
   }
 
   &__statistics {
@@ -17,11 +29,7 @@
 
     .statistics {
       &__headline {
-        font-weight: bold;
-        font-size: 1.4em;
-        color: $color-primary;
-        text-align: center;
-        margin-bottom: 1em;
+
       }
       &__blocks {
 
@@ -44,7 +52,7 @@
         @include xxs {
           margin: 0;
         }
-        
+
         .number {
           font-size: 2em;
           font-weight: bold;
