@@ -3,6 +3,10 @@
 
 .team-dashboard {
 
+  .highcharts-title {
+    display: none;
+  }
+
   &__headline {
 
     &--sub {
@@ -21,7 +25,7 @@
       font-weight: 100;
       font-style: italic;
     }
-    
+
   }
 
   &__statistics {
@@ -63,4 +67,9 @@
       }
     }
   }
+
+  &__sparks {
+    @include componentSpacing();
+  }
+
 }

@@ -26,14 +26,14 @@
 
   </mat-card>
 
-  <!-- Sparks -->
+  <!-- Sparks Chart -->
   <mat-card class="team-dashboard__sparks">
 
     <div class="team-dashboard__headline--sub">
-      Sparks
+      {{this.sparksGivenChart.options.title.text}}
     </div>
 
-
+    <div [chart]="sparksGivenChart"></div>
 
   </mat-card>
 

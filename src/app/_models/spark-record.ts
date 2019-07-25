@@ -1,4 +1,4 @@
-import { SparkType } from './spark-type';
+import { SparkType } from './spark-types';
 import { Associate } from './associate';
 
 export interface SparkType {

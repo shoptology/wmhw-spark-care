@@ -22,10 +22,12 @@ $_wm_dark_green: #367c2b; // Walmart Fresh Product Dark Green // RGB: 54, 124, 4
 $_wm_light_green: #76c043; // Walmart Fresh Product Light Green // RGB: 118, 192, 67
 
 // Spark Care color palette
-$_safety_blue: #1276ca;  // TODO: verify and add the approved colors
-$_connection_yellow: #fcba30; // TODO: verify and add the approved colors
-$_kindness_orange: #fa6400; // TODO: verify and add the approved colors
-$_simplicity_purple: #6bcae8; // TODO: verify and add the approved colors
+$_safety_blue: #0071CE;  // TODO: verify and add the approved colors
+$_connection_yellow: #FFC220; // TODO: verify and add the approved colors
+$_kindness_orange: #FA6400; // TODO: verify and add the approved colors
+$_simplicity_purple: #6BCAE8; // TODO: verify and add the approved colors
+
+$_spark_blue: #273972;
 
 /*
   Public Color Variables
@@ -34,7 +36,7 @@ $_simplicity_purple: #6bcae8; // TODO: verify and add the approved colors
   TODO: assign the real template colors to the spark types
 */
 
-$color-primary: $_grey_5; // TODO: make this Spark Blue ?
+$color-primary: $_spark_blue;
 $color-secondary: $_grey_4; // TODO: make this Spark Yellow ?
 
 $color-safety: $_grey_5; // $color-safety-blue;

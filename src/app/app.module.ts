@@ -39,6 +39,8 @@ import { NotificationComponent } from './_components/notification/notification.c
 import { ShareSparkModalComponent } from './_components/share-spark-modal/share-spark-modal.component';
 import { TeamDashboardComponent } from './screens/team-dashboard/team-dashboard.component';
 
+import { ChartModule } from 'angular-highcharts'; // https://api.highcharts.com/highcharts/
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,6 +64,7 @@ import { TeamDashboardComponent } from './screens/team-dashboard/team-dashboard.
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
+    ChartModule,
     FormsModule,
     MatAutocompleteModule,
     MatBadgeModule,
