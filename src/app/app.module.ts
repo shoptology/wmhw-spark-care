@@ -37,6 +37,7 @@ import { ForgotPasswordComponent } from './screens/forgot-password/forgot-passwo
 import { MainMenuComponent } from './_components/main-menu/main-menu.component';
 import { NotificationComponent } from './_components/notification/notification.component';
 import { ShareSparkModalComponent } from './_components/share-spark-modal/share-spark-modal.component';
+import { TeamDashboardComponent } from './screens/team-dashboard/team-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { ShareSparkModalComponent } from './_components/share-spark-modal/share-
     MainMenuComponent,
     NotificationComponent,
     ShareSparkModalComponent,
+    TeamDashboardComponent,
   ],
   imports: [
     AppRoutingModule,
