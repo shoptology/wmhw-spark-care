@@ -5,6 +5,7 @@
   <mat-divider style="margin-left: -2em; margin-right: -2em;"></mat-divider>
 
   <button mat-menu-item routerLink="/dashboard"><mat-icon>dashboard</mat-icon>Dashboard</button>
+  <button *ngIf="this.associate.isManager" mat-menu-item routerLink="/team-dashboard"><mat-icon>dashboard</mat-icon>Team Dashboard</button>
   <button mat-menu-item routerLink="/share-spark"><mat-icon>share</mat-icon>Share a Spark</button>
 
   <button mat-menu-item routerLink="/help"><mat-icon>help</mat-icon>Help</button>
