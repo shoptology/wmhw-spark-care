@@ -45,9 +45,7 @@ export class ShareSparkComponent implements OnInit {
       );
   }
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
   private _filterAssociates(value: string): Associate[] {
     const filterValue = value.toLowerCase();
@@ -84,6 +82,7 @@ export class ShareSparkComponent implements OnInit {
 
   public onSubmit(sparkForm: NgForm):void {
 
+    // check if forum has all required fields populated
     if (sparkForm.valid){
 
       // submit the spark to the record
@@ -100,6 +99,7 @@ export class ShareSparkComponent implements OnInit {
 
   private submitSpark(sparkForm):void {
     // TODO: submit to spark service
+    console.log('Log this to DataBase',sparkForm);
   }
 
 }

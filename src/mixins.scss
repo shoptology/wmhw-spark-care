@@ -1,4 +1,25 @@
-// Xtra Small devices
+// Mixins
+
+// Common Styles
+
+// Card
+@mixin card(){
+  border-radius: 1em;
+}
+@mixin componentSpacing(){
+  margin-bottom: 1em;
+}
+
+// Media Queries
+
+// XXtra Small devices
+@mixin xxs {
+   @media (min-width: #{$screen-xxs-min}) {
+       @content;
+   }
+}
+
+// XXtra Small devices
 @mixin xs {
    @media (min-width: #{$screen-xs-min}) {
        @content;

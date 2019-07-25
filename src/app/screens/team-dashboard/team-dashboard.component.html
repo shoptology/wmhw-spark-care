@@ -1,1 +1,29 @@
-<p>team-dashboard works!</p>
+<div class="team-dashboard dashboard">
+
+  <!-- Headline -->
+  <div class="team-dashboard__headline headline__wrapper headline__wrapper--center">
+    <h1 class="headline" [innerHTML]="associate ? associate.name : 'Unknown user!'"></h1>
+    <p class="sub-headline">Team Dashboard</p>
+  </div>
+
+  <!-- Statistics -->
+  <mat-card class="team-dashboard__statistics">
+
+    <div class="statistics__headline">
+      Statistics
+    </div>
+
+    <div class="statistics__blocks">
+      <mat-card
+        class="statistics__block signed-up"
+        *ngFor="let statistic of statistics"
+        >
+        <div *ngIf="statistic.valueDisplay == 'percent'" class="number" [innerHTML]="statistic.value | percent"></div>
+        <div *ngIf="statistic.valueDisplay != 'percent'" class="number" [innerHTML]="statistic.value"></div>
+        <div class="title" [innerHTML]="statistic.title"></div>
+      </mat-card>
+    </div>
+
+  </mat-card>
+
+</div>
