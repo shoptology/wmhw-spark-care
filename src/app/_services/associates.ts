@@ -80,8 +80,8 @@ export const ASSOCIATES: Associate[] = [
   {
     win: 132548805,
     storeId: 100000,
-    name: '',
-    email: '@walmart.com',
+    name: 'Ann Frazier',
+    email: 'Ann.Frazier@walmart.com',
     isManager: true,
     managersWin: 135792472,
   },
