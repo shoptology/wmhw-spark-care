@@ -1,6 +1,9 @@
 @import "../../../variables.scss";
-.button {
-  &--logout {
-    width: 100%;
+
+.main-menu {
+  &__button {
+    &--logout {
+      width: 100%;
+    }
   }
 }
