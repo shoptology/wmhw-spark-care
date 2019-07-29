@@ -15,7 +15,7 @@
 
   @include sm {
     grid-template-rows: auto;
-    
+
     // this supports toolbar in the grid
     // grid-template-rows: 64px auto;
   }
@@ -59,6 +59,8 @@
     width: 100%;
     max-width: $screen-md-min;
     min-width: 0;
+    margin-left: auto;
+    margin-right: auto;
 
     // this supports floating toolbar
     margin-top: 56px;

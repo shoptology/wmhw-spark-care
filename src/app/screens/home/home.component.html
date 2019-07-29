@@ -4,10 +4,20 @@
     <h1 [innerHTML]="associate.name"></h1>
   </div>
 
-  <div class="home-screen-actions flex">
+  <div class="home-screen__actions">
+
+    <!-- Managers Flow: TODO: add logic to toggle this [ *ngIf="user.isManager" ]-->
+    <button
+      *ngIf="associate.isManager"
+      class="actions__button"
+      mat-raised-button
+      (click)="navToTeamDashboard()"
+      >
+      Team Dashboard
+    </button>
 
     <button
-      class="home-screen-actions__button"
+      class="actions__button"
       mat-raised-button
       (click)="navToShareSpark()"
       >
@@ -15,21 +25,11 @@
     </button>
 
     <button
-      class="home-screen-actions__button"
+      class="actions__button"
       mat-raised-button
       (click)="navToDashboard()"
       >
       My Dashboard
-    </button>
-
-    <!-- Managers Flow: TODO: add logic to toggle this [ *ngIf="user.isManager" ]-->
-    <button
-      *ngIf="associate.isManager"
-      class="home-screen-actions__button"
-      mat-raised-button
-      (click)="navToTeamDashboard()"
-      >
-      Team Dashboard
     </button>
 
   </div>

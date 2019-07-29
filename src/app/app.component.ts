@@ -1,4 +1,4 @@
-import { Component, HostListener, ViewChild } from '@angular/core';
+import { Component, HostListener, ViewChild, ElementRef } from '@angular/core';
 import { routerTransition } from './app-router.animations';
 
 @Component({
@@ -9,7 +9,7 @@ import { routerTransition } from './app-router.animations';
 })
 export class AppComponent {
 
-  @ViewChild('toolbar') toolbar: ElementRef;
+  @ViewChild('toolbar', null) toolbar: ElementRef;
 
   @HostListener("window:scroll", [])
   onWindowScroll() {
