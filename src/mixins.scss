@@ -6,8 +6,15 @@
 @mixin card(){
   border-radius: 1em;
 }
+
+// Component Spacing
 @mixin componentSpacing(){
   margin-bottom: 1em;
+}
+
+// Common Shadow
+@mixin shadow($color: $color-primary){
+  box-shadow: 0 4px 4px rgba($color, 16%);
 }
 
 // Media Queries
