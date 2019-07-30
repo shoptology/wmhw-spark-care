@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ShareSparkModalComponent } from './spark-sent-modal.component';
+import { SparkSentModalComponent } from './spark-sent-modal.component';
 
-describe('ShareSparkModalComponent', () => {
-  let component: ShareSparkModalComponent;
-  let fixture: ComponentFixture<ShareSparkModalComponent>;
+describe('SparkSentModalComponent', () => {
+  let component: SparkSentModalComponent;
+  let fixture: ComponentFixture<SparkSentModalComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ShareSparkModalComponent ]
+      declarations: [ SparkSentModalComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ShareSparkModalComponent);
+    fixture = TestBed.createComponent(SparkSentModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

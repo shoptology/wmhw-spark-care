@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 import { WmhwApiService } from '../../_services/wmhw-api.service';
 import { SPARKTYPES } from '../../_models/spark-types';
 import { NgForm } from '@angular/forms';
-import { ShareSparkModalComponent } from '../../_components/spark-sent-modal/spark-sent-modal.component';
+import { SparkSentModalComponent } from '../../_components/spark-sent-modal/spark-sent-modal.component';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Associate } from '../../_models';
 
@@ -53,7 +53,7 @@ export class ShareSparkComponent implements OnInit {
   }
 
   private _openDialog(sparkForm): void {
-    const dialogRef = this.dialog.open(ShareSparkModalComponent, {
+    const dialogRef = this.dialog.open(SparkSentModalComponent, {
 
       //-- modal options --//
       disableClose: true, // disable out of modal click to close

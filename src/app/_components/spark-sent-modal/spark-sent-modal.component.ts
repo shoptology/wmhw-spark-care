@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./spark-sent-modal.component.scss']
 })
 
-export class ShareSparkModalComponent implements OnInit {
+export class SparkSentModalComponent implements OnInit {
 
   public toAssociate: string;
   public username: string;
@@ -20,7 +20,7 @@ export class ShareSparkModalComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    public dialogRef: MatDialogRef<ShareSparkModalComponent>,
+    public dialogRef: MatDialogRef<SparkSentModalComponent>,
     @Inject(MAT_DIALOG_DATA) public data,
   ) { }
 
