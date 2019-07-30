@@ -36,13 +36,11 @@ export class ShareSparkModalComponent implements OnInit {
   }
 
   onNoClick(): void {
-    alert('close');
     this.dialogRef.close();
   }
 
   closeDialog() {
-    alert('close');
-    this.dialogRef.close('Pizza!');
+    this.dialogRef.close();
   }
 
   public done(): void {

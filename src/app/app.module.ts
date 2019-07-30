@@ -38,8 +38,8 @@ import { MainMenuComponent } from './_components/main-menu/main-menu.component';
 import { NotificationComponent } from './_components/notification/notification.component';
 import { ShareSparkModalComponent } from './_components/share-spark-modal/share-spark-modal.component';
 import { TeamDashboardComponent } from './screens/team-dashboard/team-dashboard.component';
-
-import { ChartModule } from 'angular-highcharts'; // https://api.highcharts.com/highcharts/
+import { ChartModule } from 'angular-highcharts';
+import { SendThanksModalComponent } from './_components/send-thanks-modal/send-thanks-modal.component'; // https://api.highcharts.com/highcharts/
 
 @NgModule({
   declarations: [
@@ -59,6 +59,7 @@ import { ChartModule } from 'angular-highcharts'; // https://api.highcharts.com/
     NotificationComponent,
     ShareSparkModalComponent,
     TeamDashboardComponent,
+    SendThanksModalComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -85,6 +86,7 @@ import { ChartModule } from 'angular-highcharts'; // https://api.highcharts.com/
   ],
   entryComponents: [
     ShareSparkModalComponent,
+    SendThanksModalComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
