@@ -36,40 +36,24 @@
     justify-content: center;
 
     &--kindness {
-
-      background: rgba($color-kindness, 25%);
-      border: 2px dashed $color-kindness;
-
       &.complete {
         background: $color-kindness;
         svg path {fill: #FFFFFF !important;}
       }
     }
     &--connection {
-
-      background: rgba($color-connection, 25%);
-      border: 2px dashed $color-connection;
-
       &.complete {
         background: $color-connection;
         svg path {fill: #FFFFFF !important;}
       }
     }
     &--safety {
-
-      background: rgba($color-safety, 25%);
-      border: 2px dashed $color-safety;
-
       &.complete {
         background: $color-safety;
         svg path {fill: #FFFFFF !important;}
       }
     }
     &--simplicity {
-
-      background: rgba($color-simplicity, 25%);
-      border: 2px dashed $color-simplicity;
-
       &.complete {
         background: $color-simplicity;
         svg path {fill: #FFFFFF !important;}
