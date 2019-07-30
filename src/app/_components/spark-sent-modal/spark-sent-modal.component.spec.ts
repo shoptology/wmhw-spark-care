@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ShareSparkModalComponent } from './share-spark-modal.component';
+import { ShareSparkModalComponent } from './spark-sent-modal.component';
 
 describe('ShareSparkModalComponent', () => {
   let component: ShareSparkModalComponent;

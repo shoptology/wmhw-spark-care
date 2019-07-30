@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 import { WmhwApiService } from '../../_services/wmhw-api.service';
 import { SPARKTYPES } from '../../_models/spark-types';
 import { NgForm } from '@angular/forms';
-import { ShareSparkModalComponent } from '../../_components/share-spark-modal/share-spark-modal.component';
+import { ShareSparkModalComponent } from '../../_components/spark-sent-modal/spark-sent-modal.component';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Associate } from '../../_models';
 

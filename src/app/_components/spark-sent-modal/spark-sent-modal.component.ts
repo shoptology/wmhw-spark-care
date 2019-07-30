@@ -4,9 +4,9 @@ import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-share-spark-modal',
-  templateUrl: './share-spark-modal.component.html',
-  styleUrls: ['./share-spark-modal.component.scss']
+  selector: 'app-spark-sent-modal',
+  templateUrl: './spark-sent-modal.component.html',
+  styleUrls: ['./spark-sent-modal.component.scss']
 })
 
 export class ShareSparkModalComponent implements OnInit {
