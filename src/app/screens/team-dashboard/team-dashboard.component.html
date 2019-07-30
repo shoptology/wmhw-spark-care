@@ -49,7 +49,7 @@
       <mat-accordion *ngIf="true" class="notifications__accordion">
 
         <app-notification
-          *ngFor="let notification of notifications"
+          *ngFor="let notification of teamNotifications"
           [notificationType]="'admin'"
           [isNew]="notification.isNew"
           [thankYouSent]="notification.thankYouSent"

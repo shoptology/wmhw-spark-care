@@ -163,7 +163,7 @@
           <mat-accordion class="archives__accordion">
 
             <app-notification
-              *ngFor="let record of log"
+              *ngFor="let record of activityLog"
               [isNew]="record.isNew"
               [thankYouSent]="record.thankYouSent"
               [notificationType]="'sent'"

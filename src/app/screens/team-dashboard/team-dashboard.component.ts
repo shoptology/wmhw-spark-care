@@ -16,7 +16,7 @@ export class TeamDashboardComponent implements OnInit {
 
   public associate: Associate;
   public log;
-  public notifications;
+  public teamNotifications;
   public statistics;
   public sparkTypes = SPARKTYPES;
   public sparksGivenChart;
@@ -27,6 +27,7 @@ export class TeamDashboardComponent implements OnInit {
   ) {
     this.associate = JSON.parse(localStorage.getItem('associate'));
     this.statistics = this.wmApi.getStatisticsByManagersWin(this.associate.win);
+    this.teamNotifications = this.wmApi.getTeamNotificationsByManagersWin(this.associate.win);
     this.sparksGivenChart = new Chart(<any>{
 
       chart: {
@@ -61,139 +62,6 @@ export class TeamDashboardComponent implements OnInit {
         },
       ],
     });
-    this.notifications = [
-      {
-        isNew: true,
-        thankYouSent: false,
-        date: 1562903452,
-        toAssociate: {
-          name: 'Jaime Vasquez',
-        },
-        fromAssociate: {
-          name: 'Leoni Baxter',
-        },
-        sparkType: 'kindness',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-      },
-      {
-        isNew: true,
-        thankYouSent: false,
-        date: 1562903452,
-        toAssociate: {
-          name: 'Leoni Baxter',
-        },
-        fromAssociate: {
-          name: 'Jaime Vasquez',
-        },
-        sparkType: 'connection',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-      },
-      {
-        isNew: true,
-        thankYouSent: false,
-        date: 1562903452,
-        toAssociate: {
-          name: 'Nikodem Greer',
-        },
-        fromAssociate: {
-          name: 'Johanna Roberts',
-        },
-        sparkType: 'safety',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-      },
-      {
-        isNew: true,
-        thankYouSent: false,
-        date: 1562903452,
-        toAssociate: {
-          name: 'Johanna Roberts',
-        },
-        fromAssociate: {
-          name: 'Nikodem Greer',
-        },
-        sparkType: 'simplicity',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-      },
-      {
-        isNew: false,
-        thankYouSent: false,
-        date: 1562903452,
-        toAssociate: {
-          name: 'Jaime Vasquez',
-        },
-        fromAssociate: {
-          name: 'Leoni Baxter',
-        },
-        sparkType: 'kindness',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-      },
-      {
-        isNew: false,
-        thankYouSent: true,
-        date: 1562903452,
-        toAssociate: {
-          name: 'Leoni Baxter',
-        },
-        fromAssociate: {
-          name: 'Jaime Vasquez',
-        },
-        sparkType: 'connection',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-      },
-      {
-        isNew: false,
-        thankYouSent: true,
-        date: 1562903452,
-        toAssociate: {
-          name: 'Nikodem Greer',
-        },
-        fromAssociate: {
-          name: 'Johanna Roberts',
-        },
-        sparkType: 'safety',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-      },
-      {
-        isNew: false,
-        thankYouSent: true,
-        date: 1562903452,
-        toAssociate: {
-          name: 'Johanna Roberts',
-        },
-        fromAssociate: {
-          name: 'Nikodem Greer',
-        },
-        sparkType: 'simplicity',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-      },
-      {
-        isNew: false,
-        thankYouSent: false,
-        date: 1562903452,
-        toAssociate: {
-          name: 'Nikodem Greer',
-        },
-        fromAssociate: {
-          name: 'Johanna Roberts',
-        },
-        sparkType: 'safety',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-      },
-      {
-        isNew: false,
-        thankYouSent: true,
-        date: 1562903452,
-        toAssociate: {
-          name: 'Johanna Roberts',
-        },
-        fromAssociate: {
-          name: 'Nikodem Greer',
-        },
-        sparkType: 'simplicity',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-      },
-    ];
-
   }
 
   ngOnInit() {}
