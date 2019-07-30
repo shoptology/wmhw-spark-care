@@ -10,11 +10,11 @@ export class NotificationComponent implements OnInit {
 
   @Input('isNew') isNew: boolean;
   @Input('thankYouSent') thankYouSent: boolean;
-  @Input('noteType') noteType: string;
+  @Input('notificationType') notificationType: string;
   @Input('date') date: string;
   @Input('toAssociate') toAssociate: string;
   @Input('fromAssociate') fromAssociate: object;
-  @Input('type') type: string;
+  @Input('sparkType') sparkType: string;
   @Input('message') message: string;
 
   constructor() { }

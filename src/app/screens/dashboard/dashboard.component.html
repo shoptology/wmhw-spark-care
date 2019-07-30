@@ -98,7 +98,7 @@
 
   </div>
 
-  <!-- Notifications -->
+  <!-- Received Notifications -->
   <div
     *ngIf="true"
     class="dashboard__notifications"
@@ -122,13 +122,13 @@
             <app-notification
               *ngFor="let notification of notifications"
               [isNew]="notification.isNew"
+              [notificationType]="'received'"
               [thankYouSent]="notification.thankYouSent"
-              [noteType]="'received'"
               [date]="notification.date"
-              [toAssociate]="username"
+              [toAssociate]="{name: 'you'}"
               [fromAssociate]="notification.fromAssociate"
               [message]="notification.message"
-              [type]="notification.type"
+              [sparkType]="notification.sparkType"
             ></app-notification>
 
             <div class="actions actions--center">
@@ -166,12 +166,12 @@
               *ngFor="let record of log"
               [isNew]="record.isNew"
               [thankYouSent]="record.thankYouSent"
-              [noteType]="'sent'"
+              [notificationType]="'sent'"
               [date]="record.date"
               [toAssociate]="record.toAssociate"
-              [fromAssociate]="username"
+              [fromAssociate]="{name: 'You'}"
               [message]="record.message"
-              [type]="record.type"
+              [sparkType]="record.sparkType"
             ></app-notification>
 
             <div class="actions actions--center">

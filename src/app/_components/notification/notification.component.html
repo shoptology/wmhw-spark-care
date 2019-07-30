@@ -12,9 +12,7 @@
     [class.notification__header--active]="true"
     >
 
-    <!-- Title for Received Spark Log -->
     <mat-panel-title
-      *ngIf="noteType === 'received'"
       class="notification__title"
       [class.notification__title--new]="isNew"
       >
@@ -23,28 +21,11 @@
         [class.complete]="thankYouSent"
         width="32"
         height="32"
-        [type]="type"
+        [type]="sparkType"
         title="Safety Spark"
       >
       </app-icon>
-      <span class="title">{{fromAssociate.firstName}} sent you a {{type}} Spark!</span>
-    </mat-panel-title>
-
-    <!-- Title for Sent Spark Log -->
-    <mat-panel-title
-      *ngIf="noteType === 'sent'"
-      class="notification__title"
-      >
-      <app-icon
-        [class]="'notification__icon notification__icon--'+type"
-        [class.complete]="thankYouSent"
-        width="32"
-        height="32"
-        [type]="type"
-        title="Safety Spark"
-      >
-      </app-icon>
-      <span class="title">You sent {{toAssociate.firstName}} a {{type}} Spark!</span>
+      <span class="title">{{fromAssociate.name}} sent {{toAssociate.name}} a {{sparkType}} Spark!</span>
     </mat-panel-title>
 
   </mat-expansion-panel-header>
@@ -53,7 +34,7 @@
   <div class="notification__content">
 
     <p class="content-item fine-print notification__date">
-      <span class="content-item__body" [innerHTML]="date"></span>
+      <span class="content-item__body" [innerHTML]="date * 1000 | date"></span>
     </p>
 
     <p class="content-item">
@@ -65,11 +46,11 @@
   <!-- Actions for Received Spark Log -->
   <div class="notification__actions actions actions--center">
     <div
-      *ngIf="noteType === 'received'"
-      class="">
+      *ngIf="notificationType == 'received'"
+      class="notification__recieved">
 
       <button
-        *ngIf="!thankYouSent && noteType != 'sent'"
+        *ngIf="!thankYouSent"
         mat-raised-button
         type="button"
         name="button"
@@ -78,7 +59,7 @@
       </button>
 
       <span
-        *ngIf="thankYouSent || noteType === 'sent'"
+        *ngIf="thankYouSent"
         >
         <p>
           <span class="header">Thank you sent!</span>
@@ -90,7 +71,7 @@
 
   <!-- Thanks for Sent Spark Log -->
   <div
-    *ngIf="noteType === 'sent'"
+    *ngIf="notificationType == 'sent'"
     class="notification__thanks">
 
     <span
@@ -99,7 +80,7 @@
       <p>
         <span class="header">Thank You!</span>
         <br>
-        <span class="fine-print">{{toAssociate.firstName}}</span>
+        <span class="fine-print">{{toAssociate.name}}</span>
       </p>
     </span>
 
@@ -107,7 +88,31 @@
       *ngIf="!thankYouSent"
       class="fine-print"
       >
-      {{toAssociate.firstName}} has not said Thank You yet
+      {{toAssociate.name}} has not said Thank You yet
+    </span>
+
+  </div>
+
+  <!-- Admin View -->
+  <div
+    *ngIf="notificationType == 'admin'"
+    class="notification__thanks">
+
+    <span
+      *ngIf="thankYouSent"
+      >
+      <p>
+        <span class="header">{{toAssociate.name}}</span>
+        <br>
+        <span class="fine-print">sent a thank you note</span>
+      </p>
+    </span>
+
+    <span
+      *ngIf="!thankYouSent"
+      class="fine-print"
+      >
+      {{toAssociate.name}} has not sent a thank you note
     </span>
 
   </div>

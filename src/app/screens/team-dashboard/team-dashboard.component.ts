@@ -61,9 +61,145 @@ export class TeamDashboardComponent implements OnInit {
         },
       ],
     });
+    this.notifications = [
+      {
+        isNew: true,
+        thankYouSent: false,
+        date: 1562903452,
+        toAssociate: {
+          name: 'Jaime Vasquez',
+        },
+        fromAssociate: {
+          name: 'Leoni Baxter',
+        },
+        sparkType: 'kindness',
+        message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      },
+      {
+        isNew: true,
+        thankYouSent: false,
+        date: 1562903452,
+        toAssociate: {
+          name: 'Leoni Baxter',
+        },
+        fromAssociate: {
+          name: 'Jaime Vasquez',
+        },
+        sparkType: 'connection',
+        message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      },
+      {
+        isNew: true,
+        thankYouSent: false,
+        date: 1562903452,
+        toAssociate: {
+          name: 'Nikodem Greer',
+        },
+        fromAssociate: {
+          name: 'Johanna Roberts',
+        },
+        sparkType: 'safety',
+        message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      },
+      {
+        isNew: true,
+        thankYouSent: false,
+        date: 1562903452,
+        toAssociate: {
+          name: 'Johanna Roberts',
+        },
+        fromAssociate: {
+          name: 'Nikodem Greer',
+        },
+        sparkType: 'simplicity',
+        message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      },
+      {
+        isNew: false,
+        thankYouSent: false,
+        date: 1562903452,
+        toAssociate: {
+          name: 'Jaime Vasquez',
+        },
+        fromAssociate: {
+          name: 'Leoni Baxter',
+        },
+        sparkType: 'kindness',
+        message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      },
+      {
+        isNew: false,
+        thankYouSent: true,
+        date: 1562903452,
+        toAssociate: {
+          name: 'Leoni Baxter',
+        },
+        fromAssociate: {
+          name: 'Jaime Vasquez',
+        },
+        sparkType: 'connection',
+        message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      },
+      {
+        isNew: false,
+        thankYouSent: true,
+        date: 1562903452,
+        toAssociate: {
+          name: 'Nikodem Greer',
+        },
+        fromAssociate: {
+          name: 'Johanna Roberts',
+        },
+        sparkType: 'safety',
+        message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      },
+      {
+        isNew: false,
+        thankYouSent: true,
+        date: 1562903452,
+        toAssociate: {
+          name: 'Johanna Roberts',
+        },
+        fromAssociate: {
+          name: 'Nikodem Greer',
+        },
+        sparkType: 'simplicity',
+        message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      },
+      {
+        isNew: false,
+        thankYouSent: false,
+        date: 1562903452,
+        toAssociate: {
+          name: 'Nikodem Greer',
+        },
+        fromAssociate: {
+          name: 'Johanna Roberts',
+        },
+        sparkType: 'safety',
+        message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      },
+      {
+        isNew: false,
+        thankYouSent: true,
+        date: 1562903452,
+        toAssociate: {
+          name: 'Johanna Roberts',
+        },
+        fromAssociate: {
+          name: 'Nikodem Greer',
+        },
+        sparkType: 'simplicity',
+        message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      },
+    ];
 
   }
 
   ngOnInit() {}
+
+  export(){
+    alert("Open Export Options Modal: \n Export options included but not limited to print, email, pdf of this.Spark data");
+  }
 
 }

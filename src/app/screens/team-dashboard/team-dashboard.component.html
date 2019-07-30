@@ -37,4 +37,42 @@
 
   </mat-card>
 
+  <!-- Team Notifications -->
+  <mat-expansion-panel>
+
+    <mat-expansion-panel-header>
+      <div class="notifications__header">
+        <h1>Team Notifications</h1>
+      </div>
+    </mat-expansion-panel-header>
+
+      <mat-accordion *ngIf="true" class="notifications__accordion">
+
+        <app-notification
+          *ngFor="let notification of notifications"
+          [notificationType]="'admin'"
+          [isNew]="notification.isNew"
+          [thankYouSent]="notification.thankYouSent"
+          [date]="notification.date"
+          [toAssociate]="notification.toAssociate"
+          [fromAssociate]="notification.fromAssociate"
+          [message]="notification.message"
+          [sparkType]="notification.sparkType"
+        ></app-notification>
+
+        <div class="actions actions--center">
+          <button mat-raised-button type="button" name="button">load more</button>
+        </div>
+
+      </mat-accordion>
+
+  </mat-expansion-panel>
+
+  <br>
+
+  <!-- Export -->
+  <div class="">
+    <button mat-raised-button type="button" name="button" (click)="export()">Export</button>
+  </div>
+
 </div>

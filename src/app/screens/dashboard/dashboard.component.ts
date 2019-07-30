@@ -18,126 +18,105 @@ export class DashboardComponent implements OnInit {
     private route: ActivatedRoute,
   ) {
     this.associate = JSON.parse(localStorage.getItem('associate'));
-
     this.notifications = [
       {
         isNew: true,
         thankYouSent: false,
-        date: 1562903452,
-        toAssociate: 'you',
+        date: 1564516054,
         fromAssociate: {
-          firstName: 'Leoni',
-          lastName: 'Baxter',
+          name: 'Leoni Baxter',
         },
-        type: 'kindness',
+        sparkType: 'kindness',
         message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       },
       {
         isNew: true,
         thankYouSent: false,
-        date: 1562903452,
-        toAssociate: 'you',
+        date: 1564516054,
         fromAssociate: {
-          firstName: 'Jaime',
-          lastName: 'Vasquez',
+          name: 'Jaime Vasquez',
         },
-        type: 'connection',
+        sparkType: 'connection',
         message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       },
       {
         isNew: true,
         thankYouSent: false,
-        date: 1562903452,
-        toAssociate: 'you',
+        date: 1564516054,
         fromAssociate: {
-          firstName: 'Johanna',
-          lastName: 'Roberts',
+          name: 'Johanna Roberts',
         },
-        type: 'safety',
+        sparkType: 'safety',
         message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       },
       {
         isNew: true,
         thankYouSent: false,
-        date: 1562903452,
-        toAssociate: 'you',
+        date: 1564516054,
         fromAssociate: {
-          firstName: 'Nikodem',
-          lastName: 'Greer',
+          name: 'Nikodem Greer',
         },
-        type: 'simplicity',
+        sparkType: 'simplicity',
         message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       },
       {
         isNew: false,
         thankYouSent: false,
-        date: 1562903452,
-        toAssociate: 'you',
+        date: 1564516054,
         fromAssociate: {
-          firstName: 'Leoni',
-          lastName: 'Baxter',
+          name: 'Leoni Baxter',
         },
-        type: 'kindness',
+        sparkType: 'kindness',
         message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       },
       {
         isNew: false,
         thankYouSent: true,
-        date: 1562903452,
-        toAssociate: 'you',
+        date: 1564516054,
         fromAssociate: {
-          firstName: 'Jaime',
-          lastName: 'Vasquez',
+          name: 'Jaime Vasquez',
         },
-        type: 'connection',
+        sparkType: 'connection',
         message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       },
       {
         isNew: false,
         thankYouSent: true,
-        date: 1562903452,
-        toAssociate: 'you',
+        date: 1564516054,
         fromAssociate: {
-          firstName: 'Johanna',
-          lastName: 'Roberts',
+          name: 'Johanna Roberts',
         },
-        type: 'safety',
+        sparkType: 'safety',
         message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       },
       {
         isNew: false,
         thankYouSent: true,
-        date: 1562903452,
-        toAssociate: 'you',
+        date: 1564516054,
         fromAssociate: {
-          firstName: 'Nikodem',
-          lastName: 'Greer',
+          name: 'Nikodem Greer',
         },
-        type: 'simplicity',
+        sparkType: 'simplicity',
         message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       },
       {
         isNew: false,
         thankYouSent: false,
-        date: 1562903452,
-        toAssociate: 'you',
+        date: 1564516054,
         fromAssociate: {
-          firstName: 'Johanna',
-          lastName: 'Roberts',
+          name: 'Johanna Roberts',
         },
-        type: 'safety',
+        sparkType: 'safety',
         message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       },
       {
         isNew: false,
         thankYouSent: true,
-        date: 1562903452,
-        toAssociate: 'you',
+        date: 1564516054,
         fromAssociate: {
-          firstName: 'Nikodem',
-          lastName: 'Greer',
+          name: 'Nikodem Greer',
         },
-        type: 'simplicity',
+        sparkType: 'simplicity',
         message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       },
     ];
@@ -146,111 +125,101 @@ export class DashboardComponent implements OnInit {
       {
         viewed: false,
         thankYouSent: false,
-        date: 1562903452,
+        date: 1564516054,
         toAssociate: {
-          firstName: 'Karam',
-          lastName: 'Griffith',
+          name: 'Karam Griffith',
         },
-        type: 'kindness',
+        sparkType: 'kindness',
         message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       },
       {
         viewed: false,
         thankYouSent: false,
-        date: 1562903452,
+        date: 1564516054,
         toAssociate: {
-          firstName: 'Iqrah',
-          lastName: 'Woodcock',
+          name: 'Iqrah Woodcock',
         },
-        type: 'connection',
+        sparkType: 'connection',
         message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       },
       {
         viewed: true,
         thankYouSent: false,
-        date: 1562903452,
+        date: 1564516054,
         toAssociate: {
-          firstName: 'Dawid',
-          lastName: 'Bernard',
+          name: 'Dawid Bernard',
         },
-        type: 'safety',
+        sparkType: 'safety',
         message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       },
       {
         viewed: true,
         thankYouSent: false,
-        date: 1562903452,
+        date: 1564516054,
         toAssociate: {
-          firstName: 'Isla-Mae',
-          lastName: 'Cox',
+          name: 'Isla-Mae Cox',
         },
-        type: 'simplicity',
+        sparkType: 'simplicity',
         message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       },
       {
         viewed: true,
         thankYouSent: true,
-        date: 1562903452,
+        date: 1564516054,
         toAssociate: {
-          firstName: 'Karam',
-          lastName: 'Griffith',
+          name: 'Karam Griffith',
         },
-        type: 'kindness',
+        sparkType: 'kindness',
         message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       },
       {
         viewed: true,
         thankYouSent: false,
-        date: 1562903452,
+        date: 1564516054,
         toAssociate: {
-          firstName: 'Iqrah',
-          lastName: 'Woodcock',
+          name: 'Iqrah Woodcock',
         },
-        type: 'connection',
+        sparkType: 'connection',
         message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       },
       {
         viewed: true,
         thankYouSent: true,
-        date: 1562903452,
+        date: 1564516054,
         toAssociate: {
-          firstName: 'Dawid',
-          lastName: 'Bernard',
+          name: 'Dawid Bernard',
         },
-        type: 'safety',
+        sparkType: 'safety',
         message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       },
       {
         viewed: true,
         thankYouSent: false,
-        date: 1562903452,
+        date: 1564516054,
         toAssociate: {
-          firstName: 'Isla-Mae',
-          lastName: 'Cox',
+          name: 'Isla-Mae Cox',
         },
-        type: 'simplicity',
+        sparkType: 'simplicity',
         message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       },
       {
         viewed: true,
         thankYouSent: true,
-        date: 1562903452,
+        date: 1564516054,
         toAssociate: {
-          firstName: 'Dawid',
-          lastName: 'Bernard',
+          name: 'Dawid Bernard',
         },
-        type: 'safety',
+        sparkType: 'safety',
         message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       },
       {
         viewed: true,
         thankYouSent: true,
-        date: 1562903452,
+        date: 1564516054,
         toAssociate: {
-          firstName: 'Isla-Mae',
-          lastName: 'Cox',
+          name: 'Isla-Mae Cox',
         },
-        type: 'simplicity',
+        sparkType: 'simplicity',
         message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       },
     ];
