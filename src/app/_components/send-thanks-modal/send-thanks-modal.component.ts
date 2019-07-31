@@ -14,14 +14,15 @@ export class SendThanksModalComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    console.log('this.data',this.data);
   }
 
   onNoClick(): void {
     this.dialogRef.close();
   }
 
-  closeDialog() {
-    this.dialogRef.close();
+  onSubmit(thanksForm): void {
+    console.log(thanksForm);
   }
 
 }
