@@ -40,6 +40,7 @@ import { SparkSentModalComponent } from './_components/spark-sent-modal/spark-se
 import { TeamDashboardComponent } from './screens/team-dashboard/team-dashboard.component';
 import { ChartModule } from 'angular-highcharts';
 import { SendThanksModalComponent } from './_components/send-thanks-modal/send-thanks-modal.component'; // https://api.highcharts.com/highcharts/
+import { NguCarouselModule } from '@ngu/carousel';
 
 @NgModule({
   declarations: [
@@ -82,6 +83,7 @@ import { SendThanksModalComponent } from './_components/send-thanks-modal/send-t
     MatSelectModule,
     MatToolbarModule,
     MatDialogModule,
+    NguCarouselModule,
     ReactiveFormsModule,
   ],
   entryComponents: [
