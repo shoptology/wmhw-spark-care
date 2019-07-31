@@ -14,23 +14,24 @@ export class NotificationComponent implements OnInit {
   @Input('thankYouSent') thankYouSent: boolean;
   @Input('notificationType') notificationType: string;
   @Input('date') date: string;
-  @Input('toAssociate') toAssociate: string;
-  @Input('fromAssociate') fromAssociate: object;
+  @Input('toAssociate') toAssociate: any;
+  @Input('fromAssociate') fromAssociate: any;
   @Input('sparkType') sparkType: string;
   @Input('message') message: string;
 
   constructor(
     public dialog: MatDialog,
-  ) { }
+  ) {}
 
   ngOnInit() {
+    // the unix date must be converted to milliseconds for the date | pipe
+    this.date = this.date * 1000;
   }
 
   public openDialog(): void {
     const dialogRef = this.dialog.open(SendThanksModalComponent, {
-
       //-- modal options --//
-      disableClose: true, // disable out of modal click to close
+      disableClose: false, // disable out of modal click to close
       autoFocus: true, // be sure to focus on first focusable element (the 'done' button)
       hasBackdrop: true, // using a backdrop for now but this may change when adding the blurred backdrop
       backdropClass: 'sned-thanks-modal__backdrop', // custom style class to add to the backdrop
@@ -38,6 +39,8 @@ export class NotificationComponent implements OnInit {
       // width: '250px', // fixed modal width
       data: { // data to pass to modal
         foo: 'bar',
+        toAssociate: this.toAssociate,
+        fromAssociate: this.fromAssociate,
       }
 
     });
