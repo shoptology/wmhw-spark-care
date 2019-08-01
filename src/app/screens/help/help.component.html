@@ -54,4 +54,56 @@
 
   </mat-accordion>
 
+  <mat-divider></mat-divider>
+
+  <h2>Feed Back?</h2>
+
+  <mat-card class="send-thanks__card send-thanks__body">
+
+
+
+    <mat-card-content class="card__content">
+
+      <p>Hey, <span *ngIf="associate">{{associate.name}},</span> here's your chance to help design this app. Send us some feedback on your thoughts.</p>
+
+      <mat-divider></mat-divider>
+
+      <form class="send-thanks__form" #thanksForm="ngForm" (ngSubmit)="onSubmit(thanksForm)">
+
+        <!-- Spark message -->
+        <mat-form-field class="form__field" style="width: 100%;">
+          <textarea
+            rows="4"
+            cols="150"
+            name="suggestion"
+            ngModel
+            #message="ngModel"
+            matInput
+            placeholder="Suggestion"
+          >
+          </textarea>
+        </mat-form-field>
+
+        <div>
+
+          <button
+            tabindex="1"
+            mat-raised-button
+            color="primary"
+            type="submit"
+            name="button"
+            >
+            Send Feedback
+          </button>
+
+        </div>
+
+      </form>
+
+    </mat-card-content>
+
+  </mat-card>
+
+
+
 </div>

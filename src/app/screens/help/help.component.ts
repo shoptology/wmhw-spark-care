@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { NguCarouselConfig } from '@ngu/carousel'; // https://www.npmjs.com/package/@ngu/carousel
+import { Associate } from '../../_models';
 import { FAQS } from '../../_models/faqs';
 import { INTROSTEPS } from '../../_models/intro-steps';
 @Component({
@@ -10,6 +11,7 @@ import { INTROSTEPS } from '../../_models/intro-steps';
 })
 export class HelpComponent implements OnInit {
 
+  public associate: Associate;
   public faqs: Array<any> = FAQS;
   public introTiles: Array<any> = INTROSTEPS;
   public carouselTile: NguCarouselConfig = {
@@ -28,7 +30,9 @@ export class HelpComponent implements OnInit {
     animation: 'lazy',
   };
 
-  constructor() { }
+  constructor() {
+    this.associate = JSON.parse(localStorage.getItem('associate'));
+  }
 
   ngOnInit() {
 
