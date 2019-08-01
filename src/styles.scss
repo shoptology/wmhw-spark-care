@@ -20,6 +20,11 @@ body {
       color: $color-white;
       background: $color-primary;
     }
+    &-raised-button,
+    &-stroked-button {
+      border-radius: 80px;
+      font-size: 1.2rem !important;
+    }
   }
 
   &.modal-open {

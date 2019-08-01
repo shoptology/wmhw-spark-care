@@ -1,7 +1,7 @@
 <div class="login-screen screen">
 
   <!-- Logo -->
-  <app-logo size="80"></app-logo>
+  <app-logo for="login-screen"></app-logo>
 
   <!-- Input Form -->
   <form
@@ -49,8 +49,8 @@
         name="submit"
         class="login-actions__action login-actions__action--primary"
         mat-raised-button
+        color="primary"
         >
-
         Log In
       </button>
 
@@ -71,5 +71,12 @@
     </div>
 
   </form>
+
+  <div class="login-screen__powered-by">
+    <span class="fine-print" style="margin-bottom: 4px;">powered by</span>
+    <app-wm-logo
+      width="120"
+    ></app-wm-logo>
+  </div>
 
 </div>

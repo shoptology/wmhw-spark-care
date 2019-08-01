@@ -41,6 +41,7 @@ import { TeamDashboardComponent } from './screens/team-dashboard/team-dashboard.
 import { ChartModule } from 'angular-highcharts';
 import { SendThanksModalComponent } from './_components/send-thanks-modal/send-thanks-modal.component'; // https://api.highcharts.com/highcharts/
 import { NguCarouselModule } from '@ngu/carousel';
+import { WmLogoComponent } from './_components/wm-logo/wm-logo.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { NguCarouselModule } from '@ngu/carousel';
     SparkSentModalComponent,
     TeamDashboardComponent,
     SendThanksModalComponent,
+    WmLogoComponent,
   ],
   imports: [
     AppRoutingModule,

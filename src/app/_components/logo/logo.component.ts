@@ -7,8 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class LogoComponent {
 
-  @Input() size: number;
-  @Input() isInline: boolean = false;
+  @Input() width: number;
+  @Input() height: number;
+  @Input() for: string;
 
   constructor() { }
 
