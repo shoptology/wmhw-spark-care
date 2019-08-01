@@ -38,4 +38,8 @@ export class HelpComponent implements OnInit {
 
   }
 
+  onSubmit(feedbackForm) {
+    console.log(feedbackForm);
+  }
+
 }
