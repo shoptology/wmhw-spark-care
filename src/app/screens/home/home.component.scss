@@ -6,7 +6,7 @@
   &__actions {
 
     padding: 0 40px;
-    
+
     display: grid;
 
     grid-template-columns: 1fr;
@@ -69,7 +69,7 @@
     @include componentSpacing();
 
     .actions__button {
-      border-radius: 8px;
+
       padding: 2em 0.2em;
       margin: 0;
       font-size: 2em;

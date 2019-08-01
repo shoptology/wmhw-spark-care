@@ -1,4 +1,4 @@
-<div class="dashboard">
+<div class="dashboard dashboard-screen">
 
   <div class="dashboard__headline headline__wrapper headline__wrapper--center">
     <h1 class="headline" [innerHTML]="associate ? associate.name : 'Unknown user!'"></h1>
@@ -8,93 +8,80 @@
   <div class="dashboard__statistics">
 
     <div class="statistics__block statistics__block--safety">
-      <button mat-raised-button class="statistics__data">
 
-        <div class="statistic__status">
-          <app-icon
-            class="statistic__icon"
-            width="40"
-            height="40"
-            type="safety"
-            title="Safety Spark"
-          >
-          </app-icon>
-          <span class="statistic__amount">00</span>
-        </div>
+      <app-icon
+        class="statistic__icon"
+        width="60"
+        height="60"
+        type="safety"
+        title="Safety Spark"
+      >
+      </app-icon>
 
-        <div class="statistic__label">
-          <p>Safety</p>
-        </div>
+      <div class="statistic__label">
+        Safety
+      </div>
 
-      </button>
+      <span class="statistic__amount">00</span>
+
     </div>
 
     <div class="statistics__block statistics__block--kindness">
-      <button mat-raised-button class="statistics__data">
 
-        <div class="statistic__status">
-          <app-icon
-            class="statistic__icon"
-            width="40"
-            height="40"
-            type="kindness"
-            title="Kindness Spark"
-          >
-          </app-icon>
-          <span class="statistic__amount">00</span>
-        </div>
+      <app-icon
+        class="statistic__icon"
+        width="60"
+        height="60"
+        type="kindness"
+        title="Kindness Spark"
+      >
+      </app-icon>
 
-        <div class="statistic__label">
-          <p>Kindness</p>
-        </div>
+      <div class="statistic__label">
+        Kindness
+      </div>
 
-      </button>
+      <span class="statistic__amount">00</span>
+
     </div>
 
     <div class="statistics__block statistics__block--connection">
-      <button mat-raised-button class="statistics__data">
 
-        <div class="statistic__status">
-          <app-icon
-            class="statistic__icon"
-            width="40"
-            height="40"
-            type="connection"
-            title="Connection Spark"
-          >
-          </app-icon>
-          <span class="statistic__amount">00</span>
-        </div>
+      <app-icon
+        class="statistic__icon"
+        width="60"
+        height="60"
+        type="connection"
+        title="Connection Spark"
+      >
+      </app-icon>
 
-        <div class="statistic__label">
-          <p>Connection</p>
-        </div>
+      <div class="statistic__label">
+        Connection
+      </div>
 
-      </button>
+      <span class="statistic__amount">00</span>
+
     </div>
 
     <div class="statistics__block statistics__block--simplicity">
-      <button mat-raised-button class="statistics__data">
 
-        <div class="statistic__status">
-          <app-icon
-            class="statistic__icon"
-            width="40"
-            height="40"
-            type="simplicity"
-            title="Simplicity Spark"
-          >
-          </app-icon>
-          <span class="statistic__amount">00</span>
-        </div>
+      <app-icon
+        class="statistic__icon"
+        width="60"
+        height="60"
+        type="simplicity"
+        title="Simplicity Spark"
+      >
+      </app-icon>
 
-        <div class="statistic__label">
-          <p>Simplicity</p>
-        </div>
+      <div class="statistic__label">
+        Simplicity
+      </div>
 
-      </button>
+      <span class="statistic__amount">00</span>
+
     </div>
-
 
   </div>
 

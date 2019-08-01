@@ -8,6 +8,8 @@
 
 .dashboard {
 
+  &-screen { padding: 0 40px; }
+
   &__statistics {
     display: grid;
     grid-template-columns: auto auto;
@@ -17,26 +19,55 @@
     margin-bottom: 1em;
 
     .statistics__block {
+      padding: 1em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: $color-white;
+      border-radius: 32px;
+
+      svg path { fill: $color-white; }
 
       &--safety {
-        .statistic__label {
-          background-color: $color-safety;
-        }
+        background-color: $color-safety;
+        box-shadow:
+          0 0 4px rgba(black, 5%),
+          0 4px 0 rgba($color-safety, 50%);
+
+        .statistic__label {}
+
       }
       &--kindness {
-        .statistic__label {
-          background-color: $color-kindness;
-        }
+        background-color: $color-kindness;
+        box-shadow:
+          0 0 4px rgba(black, 5%),
+          0 4px 0 rgba($color-kindness, 50%);
+
+        .statistic__label {}
+
       }
       &--connection {
-        .statistic__label {
-          background-color: $color-connection;
-        }
+        background-color: $color-connection;
+        box-shadow:
+          0 0 4px rgba(black, 5%),
+          0 4px 0 rgba($color-connection, 50%);
+
+        .statistic__label {}
+
       }
       &--simplicity {
-        .statistic__label {
-          background-color: $color-simplicity;
-        }
+        background-color: $color-simplicity;
+        box-shadow:
+          0 0 4px rgba(black, 5%),
+          0 4px 0 rgba($color-simplicity, 50%);
+
+        .statistic__label {}
+
+      }
+
+      .statistic__amount {
+        font-size: 4em;
       }
 
 
@@ -144,12 +175,5 @@
       padding: 4px;
     }
   }
-
-
-
-
-  &__headline {}
-
-
 
 }
