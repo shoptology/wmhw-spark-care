@@ -13,7 +13,7 @@
 
     @include sm {
 
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
       grid-template-rows: auto auto;
       grid-column-gap: 1em;
       grid-row-gap: 1em;
@@ -57,13 +57,47 @@
       }
     }
 
+    &--manager-view {
+      @include sm {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
 
     @include componentSpacing();
 
     .actions__button {
-      padding: 4em 0.5em;
+      border-radius: 8px;
+      padding: 2em 0.2em;
       margin: 0;
-      font-size: 1em;
+      font-size: 2em;
+
+      &--team-dashboard {
+        box-shadow:
+          0 1px 0 $color-connection,
+          0 2px 0 $color-connection,
+          0 3px 0 $color-connection,
+          0 4px 0 $color-connection,
+          0 5px 0 $color-connection,
+          0 6px 0 $color-connection;
+      }
+      &--share {
+        box-shadow:
+          0 1px 0 $color-simplicity,
+          0 2px 0 $color-simplicity,
+          0 3px 0 $color-simplicity,
+          0 4px 0 $color-simplicity,
+          0 5px 0 $color-simplicity,
+          0 6px 0 $color-simplicity;
+      }
+      &--dashboard {
+        box-shadow:
+          0 1px 0 $color-kindness,
+          0 2px 0 $color-kindness,
+          0 3px 0 $color-kindness,
+          0 4px 0 $color-kindness,
+          0 5px 0 $color-kindness,
+          0 6px 0 $color-kindness;
+      }
 
       @include sm {
         font-size: 1.5em;
