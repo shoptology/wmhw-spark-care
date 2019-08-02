@@ -1,24 +1,13 @@
 <div class="screen home-screen">
 
   <div class="headline__wrapper headline__wrapper--center">
-    <h1 [innerHTML]="associate.name"></h1>
+    <h1 [innerHTML]="'Hello! '+associate.name"></h1>
   </div>
 
   <div
     class="home-screen__actions"
     [class.home-screen__actions--manager-view]="associate.isManager"
     >
-
-    <!-- Managers Flow: TODO: add logic to toggle this [ *ngIf="user.isManager" ]-->
-    <button
-      *ngIf="associate.isManager"
-      class="actions__button actions__button--team-dashboard"
-      mat-raised-button
-      color="primary"
-      (click)="navToTeamDashboard()"
-      >
-      Team Dashboard
-    </button>
 
     <button
       class="actions__button actions__button--share"
@@ -36,6 +25,16 @@
       (click)="navToDashboard()"
       >
       My Dashboard
+    </button>
+
+    <button
+      *ngIf="associate.isManager"
+      class="actions__button actions__button--team-dashboard"
+      mat-raised-button
+      color="primary"
+      (click)="navToTeamDashboard()"
+      >
+      Team Dashboard
     </button>
 
   </div>

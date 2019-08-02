@@ -1,50 +1,60 @@
 <div *ngIf="this.associate" class="main-menu">
 
-  <!-- Logged In Profile -->
+  <button
+    mat-icon-button
+    class="main-menu__button--close">
+    <mat-icon color="primary">close</mat-icon>
+  </button>
+
   <button
     mat-menu-item
+    class="main-menu__button"
     routerLink="/dashboard">
-    <mat-icon>person</mat-icon>
+    <mat-icon color="primary">person</mat-icon>
     {{associate.name}}
   </button>
 
   <mat-divider style="margin-left: -2em; margin-right: -2em;"></mat-divider>
 
-  <!-- Manager Options -->
-  <button *ngIf="this.associate.isManager"
-    mat-menu-item
-    routerLink="/team-dashboard">
-    <mat-icon>dashboard</mat-icon>
-    Team Dashboard
-  </button>
-
-  <!-- Associate Options -->
   <button
     mat-menu-item
-    routerLink="/dashboard">
-    <mat-icon>dashboard</mat-icon>
-    Dashboard
-  </button>
-
-  <button
-    mat-menu-item
+    class="main-menu__button"
     routerLink="/share-spark">
-    <mat-icon>share</mat-icon>
+    <mat-icon color="primary">share</mat-icon>
     Share a Spark
   </button>
 
   <button
     mat-menu-item
+    class="main-menu__button"
+    routerLink="/dashboard">
+    <mat-icon color="primary">dashboard</mat-icon>
+    Dashboard
+  </button>
+
+  <button
+    *ngIf="this.associate.isManager"
+    mat-menu-item
+    class="main-menu__button"
+    routerLink="/team-dashboard">
+    <mat-icon color="primary">dashboard</mat-icon>
+    Team Dashboard
+  </button>
+
+  <button
+    mat-menu-item
+    class="main-menu__button"
     routerLink="/help">
-    <mat-icon>help</mat-icon>
+    <mat-icon color="primary">help</mat-icon>
     Help
   </button>
 
   <button
     mat-menu-item
+    class="main-menu__button"
     routerLink="/settings">
-    <mat-icon>settings</mat-icon>
-    settings
+    <mat-icon color="primary">settings</mat-icon>
+    Settings
   </button>
 
   <br>

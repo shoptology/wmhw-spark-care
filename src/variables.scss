@@ -98,8 +98,6 @@ $_wm_yellow--map: (
     )
 );
 
-
-
 $color-primary: $_spark_blue;
 $primary: mat-palette($_spark_blue--map);
 
@@ -114,10 +112,6 @@ $theme: mat-light-theme($primary, $accent);
   Use these variables in the app .scss files
   dont forget to @import (// @import "[.path]/variables.scss";)
 */
-
-
-
-
 $color-safety: $_safety_blue; // $color-safety-blue;
 $color-connection: $_connection_yellow; // $color-connection-yellow;
 $color-kindness: $_kindness_orange; // $color-kindness-orange;
@@ -126,9 +120,6 @@ $color-simplicity: $_simplicity_purple; // $color-simplicity-purple;
 $color-white: $_white;
 $color-light-grey: $_grey_1;
 $color-grey: $_grey_4;
-
-
-
 
 /*
   Size Variables

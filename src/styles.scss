@@ -10,11 +10,17 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background-color: rgba($color-primary ,5%);
+  color: $color-primary;
 
   // Customize Material Styles (inside of body for importance in cascade)
   .mat {
+    &-menu-item {
+      color: $color-primary !important;
+    }
     &-card {
       @include card();
+      color: $color-primary;
+      background-color: $color-white;
     }
     &-badge-content {
       color: $color-white;

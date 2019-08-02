@@ -20,9 +20,7 @@ export class HomeComponent implements OnInit {
     this.associate = JSON.parse(localStorage.getItem('associate'));
   }
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
   // TODO: move routing to template link element unless specifically needed
   public navToShareSpark(): void {

@@ -30,6 +30,7 @@
       aria-hidden="false"
       aria-label="Spark Care App Menu"
       [matMenuTriggerFor]="hamburgerMenu"
+
       >
       <mat-icon>menu</mat-icon>
     </button>
@@ -38,7 +39,7 @@
 
 </mat-toolbar>
 
-<mat-menu #hamburgerMenu="matMenu">
+<mat-menu #hamburgerMenu="matMenu" overlapTrigger="true">
 
   <app-main-menu></app-main-menu>
 
