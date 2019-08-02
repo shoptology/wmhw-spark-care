@@ -2,6 +2,31 @@
 @import '~@angular/material/theming';
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
+
+
+
+// https://css-tricks.com/snippets/css/using-font-face/
+@font-face {
+  font-family: 'Bogle';
+  src: url('/assets/Bogle/BogleWeb-Regular.eot'); /* IE9 Compat Modes */
+  src: url('/assets/Bogle/BogleWeb-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/assets/Bogle/BogleWeb-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/assets/Bogle/BogleWeb-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/assets/Bogle/BogleWeb-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Bogle-Bold';
+  src: url('/assets/Bogle/BogleWeb-Bold.eot'); /* IE9 Compat Modes */
+  src: url('/assets/Bogle/BogleWeb-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/assets/Bogle/BogleWeb-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/assets/Bogle/BogleWeb-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/assets/Bogle/BogleWeb-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+$custom-typography: mat-typography-config($font-family: '"Bogle", sans-serif;');
+@include mat-core($custom-typography);
+
 /*
   Private Color Variables
   - only colors with the '$color-' prefix shall be used outside of this file

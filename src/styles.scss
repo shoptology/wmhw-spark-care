@@ -8,7 +8,7 @@
 html, body { height: 100%; }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Bogle, "Helvetica Neue", sans-serif;
   background-color: rgba($color-primary ,5%);
   color: $color-primary;
 
@@ -41,6 +41,9 @@ body {
 }
 img { max-width: 100%; max-height: 100%; height: auto;}
 main {}
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Bogle-Bold", "Helvetica Neue", sans-serif;
+}
 h1 {
   font-size: 1.6em;
 
