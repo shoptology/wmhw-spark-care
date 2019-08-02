@@ -1,0 +1,121 @@
+<!--
+  Notification Component
+ -->
+
+<mat-expansion-panel
+  class="notification"
+  [class.notification--new]="isNew"
+  >
+
+  <mat-expansion-panel-header
+    class="notification__header"
+    [class.notification__header--active]="true"
+    >
+
+    <mat-panel-title
+      class="notification__title"
+      [class.notification__title--new]="isNew"
+      >
+      <app-icon
+        [class]="'notification__icon notification__icon--'+sparkType"
+        [class.complete]="thankYouSent"
+        width="32"
+        height="32"
+        [type]="sparkType"
+        title="Safety Spark"
+      >
+      </app-icon>
+      <span class="title">{{fromAssociate.name}} sent {{toAssociate.name}} a {{sparkType}} Spark!</span>
+    </mat-panel-title>
+
+  </mat-expansion-panel-header>
+
+  <!-- Inside the expansion panel -->
+  <div class="notification__content">
+
+    <p class="content-item fine-print notification__date">
+      <span class="content-item__body" [innerHTML]="date | date"></span>
+    </p>
+
+    <p class="content-item">
+      <span class="content-item__body" [innerHTML]="message"></span>
+    </p>
+
+  </div>
+
+  <!-- Actions for Received Spark Log -->
+  <div class="notification__actions actions actions--center">
+    <div
+      *ngIf="notificationType == 'received'"
+      class="notification__recieved">
+
+      <button
+        *ngIf="!thankYouSent"
+        mat-raised-button
+        type="button"
+        name="button"
+        (click)="openDialog()"
+        >
+        Say Thanks
+      </button>
+
+      <span
+        *ngIf="thankYouSent"
+        >
+        <p>
+          <span class="header">Thank you sent!</span>
+        </p>
+      </span>
+
+    </div>
+  </div>
+
+  <!-- Thanks for Sent Spark Log -->
+  <div
+    *ngIf="notificationType == 'sent'"
+    class="notification__thanks">
+
+    <span
+      *ngIf="thankYouSent"
+      >
+      <p>
+        <span class="header">Thank You!</span>
+        <br>
+        <span class="fine-print">{{toAssociate.name}}</span>
+      </p>
+    </span>
+
+    <span
+      *ngIf="!thankYouSent"
+      class="fine-print"
+      >
+      {{toAssociate.name}} has not said Thank You yet
+    </span>
+
+  </div>
+
+  <!-- Admin View -->
+  <div
+    *ngIf="notificationType == 'admin'"
+    class="notification__thanks">
+
+    <span
+      *ngIf="thankYouSent"
+      >
+      <p>
+        <span class="header">{{toAssociate.name}}</span>
+        <br>
+        <span class="fine-print">sent a thank you note</span>
+      </p>
+    </span>
+
+    <span
+      *ngIf="!thankYouSent"
+      class="fine-print"
+      >
+      {{toAssociate.name}} has not sent a thank you note
+    </span>
+
+  </div>
+
+</mat-expansion-panel>

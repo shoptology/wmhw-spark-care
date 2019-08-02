@@ -1,11 +1,12 @@
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
@@ -20,6 +21,8 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatRippleModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+
 import { LoginComponent } from './screens/login/login.component';
 import { HomeComponent } from './screens/home/home.component';
 import { ToolbarComponent } from './_components/toolbar/toolbar.component';
@@ -28,11 +31,17 @@ import { LogoComponent } from './_components/logo/logo.component';
 import { HelpComponent } from './screens/help/help.component';
 import { SettingsComponent } from './screens/settings/settings.component';
 import { ShareSparkComponent } from './screens/share-spark/share-spark.component';
-import { SparkConfirmationComponent } from './screens/spark-confirmation/spark-confirmation.component';
 import { IconComponent } from './_components/icon/icon.component';
 import { CreateAccountComponent } from './screens/create-account/create-account.component';
 import { ForgotPasswordComponent } from './screens/forgot-password/forgot-password.component';
 import { MainMenuComponent } from './_components/main-menu/main-menu.component';
+import { NotificationComponent } from './_components/notification/notification.component';
+import { SparkSentModalComponent } from './_components/spark-sent-modal/spark-sent-modal.component';
+import { TeamDashboardComponent } from './screens/team-dashboard/team-dashboard.component';
+import { ChartModule } from 'angular-highcharts';
+import { SendThanksModalComponent } from './_components/send-thanks-modal/send-thanks-modal.component'; // https://api.highcharts.com/highcharts/
+import { NguCarouselModule } from '@ngu/carousel';
+import { WmLogoComponent } from './_components/wm-logo/wm-logo.component';
 
 @NgModule({
   declarations: [
@@ -45,16 +54,21 @@ import { MainMenuComponent } from './_components/main-menu/main-menu.component';
     HelpComponent,
     SettingsComponent,
     ShareSparkComponent,
-    SparkConfirmationComponent,
     IconComponent,
     CreateAccountComponent,
     ForgotPasswordComponent,
     MainMenuComponent,
+    NotificationComponent,
+    SparkSentModalComponent,
+    TeamDashboardComponent,
+    SendThanksModalComponent,
+    WmLogoComponent,
   ],
   imports: [
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
+    ChartModule,
     FormsModule,
     MatAutocompleteModule,
     MatBadgeModule,
@@ -70,7 +84,13 @@ import { MainMenuComponent } from './_components/main-menu/main-menu.component';
     MatRippleModule,
     MatSelectModule,
     MatToolbarModule,
+    MatDialogModule,
+    NguCarouselModule,
     ReactiveFormsModule,
+  ],
+  entryComponents: [
+    SparkSentModalComponent,
+    SendThanksModalComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

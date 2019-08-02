@@ -1,33 +1,55 @@
 <div class="screen home-screen">
 
-  <div class="home-screen-actions flex">
+  <div class="headline__wrapper headline__wrapper--center">
+    <h1 [innerHTML]="associate.name"></h1>
+  </div>
+
+  <div
+    class="home-screen__actions"
+    [class.home-screen__actions--manager-view]="associate.isManager"
+    >
+
+    <!-- Managers Flow: TODO: add logic to toggle this [ *ngIf="user.isManager" ]-->
+    <button
+      *ngIf="associate.isManager"
+      class="actions__button actions__button--team-dashboard"
+      mat-raised-button
+      color="primary"
+      (click)="navToTeamDashboard()"
+      >
+      Team Dashboard
+    </button>
 
     <button
-      class="home-screen-actions__button"
+      class="actions__button actions__button--share"
       mat-raised-button
+      color="primary"
       (click)="navToShareSpark()"
       >
       Share a Spark
     </button>
 
     <button
-      class="home-screen-actions__button"
+      class="actions__button actions__button--dashboard"
       mat-raised-button
+      color="primary"
       (click)="navToDashboard()"
       >
       My Dashboard
     </button>
 
-    <!-- Managers Flow: TODO: add logic to toggle this [ *ngIf="user.isManager" ]-->
-    <button
-      *ngIf="false"
-      class="home-screen-actions__button"
-      mat-raised-button
-      (click)="navToTeamDashboard()"
-      >
-      Team Dashboard
-    </button>
+  </div>
 
+  <div class="actions actions--center">
+    <button
+      (click)="signOut()"
+      mat-raised-button
+      color="primary"
+      type="button"
+      name="button"
+    >
+    Log Out
+    </button>
   </div>
 
 </div>

@@ -1,8 +1,10 @@
 @import '../../../variables';
 
-.mat-toolbar.mat-primary {
-  background: $color-primary;
-  color: $color-white;
+.mat-toolbar.mat-primary,
+.mat-toolbar,
+.toolbar {
+  color: $color-primary !important;
+  background-color: $color-white !important;
 }
 
 .mat-menu-content {

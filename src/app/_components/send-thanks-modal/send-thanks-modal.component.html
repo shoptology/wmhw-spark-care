@@ -1,0 +1,75 @@
+<div class="send-thanks">
+
+  <div class="send-thanks__headline headline__wrapper">
+    <h1>Send Thanks!</h1>
+  </div>
+
+  <mat-card class="send-thanks__card send-thanks__body">
+
+    <!-- <mat-card-header class="card__header">
+      <div mat-card-avatar class="">
+        <app-icon
+          class=""
+          width=""
+          height=""
+          [type]="type"
+          title="Spark"
+        >
+        </app-icon>
+      </div>
+      <mat-card-title>
+        <span [innerHTML]="data.toAssociate"></span>
+      </mat-card-title>
+      <mat-card-subtitle>
+        <span class="send-thanks__type" [innerHTML]="data.sparkType"></span>&nbsp;<span>Spark</span>
+      </mat-card-subtitle>
+    </mat-card-header> -->
+
+    <!-- <mat-divider></mat-divider> -->
+
+    <mat-card-content class="card__content">
+      <p>
+        <span class="label">To:&nbsp;&nbsp;</span>
+        <span class="value" [innerHTML]="data.fromAssociate.name"></span>
+      </p>
+
+      <form class="send-thanks__form" #thanksForm="ngForm" (ngSubmit)="onSubmit(thanksForm)">
+
+        <!-- Spark message -->
+        <mat-form-field class="form__field">
+          <textarea
+            rows="4"
+            cols="150"
+            name="message"
+            ngModel
+            #message="ngModel"
+            matInput
+            placeholder="Thank you!"
+          >
+          </textarea>
+        </mat-form-field>
+
+        <mat-divider></mat-divider>
+
+        <mat-card-actions class="send-thanks__actions">
+
+          <button
+            tabindex="1"
+            mat-raised-button
+            color="primary"
+            type="submit"
+            name="button"
+            >
+            <span *ngIf="!message.value">Send Quick Thanks</span>
+            <span *ngIf="message.value">Send Special Thanks</span>
+          </button>
+
+        </mat-card-actions>
+
+      </form>
+
+    </mat-card-content>
+
+  </mat-card>
+
+</div>

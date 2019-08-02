@@ -1,3 +1,7 @@
+/* Add application styles & imports to this file! */
+@import '~@angular/material/theming';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 /*
   Private Color Variables
   - only colors with the '$color-' prefix shall be used outside of this file
@@ -12,7 +16,7 @@ $_grey_4: darken($_white,60%);
 $_grey_5: darken($_white,75%);
 $_grey_6: darken($_white,90%);
 
-// Walmart color palette (I found these online - Clifford)
+// Walmart color palette (I found these online)
 $_wm_dark_blue: #004c91; // RGB: 0, 76, 145
 $_wm_medium_blue: #007dc6; // RGB: 0, 125, 198
 $_wm_light_blue: #78b9e7; // RGB: 120, 185, 231
@@ -22,35 +26,116 @@ $_wm_dark_green: #367c2b; // Walmart Fresh Product Dark Green // RGB: 54, 124, 4
 $_wm_light_green: #76c043; // Walmart Fresh Product Light Green // RGB: 118, 192, 67
 
 // Spark Care color palette
-$_safety_blue: #1276ca;  // TODO: verify and add the approved colors
-$_connection_yellow: #fcba30; // TODO: verify and add the approved colors
-$_kindness_orange: #fa6400; // TODO: verify and add the approved colors
-$_simplicity_purple: #6bcae8; // TODO: verify and add the approved colors
+$_spark_blue: #273972;
+$_safety_blue: #0071CE;
+$_connection_yellow: #FFC220;
+$_kindness_orange: #FA6400;
+$_simplicity_purple: #6BCAE8;
+
+// generated color maps from http://mcg.mbitson.com
+$_spark_blue--map: (
+    50 : #e5e7ee,
+    100 : #bec4d5,
+    200 : #939cb9,
+    300 : #68749c,
+    400 : #475787,
+    500 : #273972,
+    600 : #23336a,
+    700 : #1d2c5f,
+    800 : #172455,
+    900 : #0e1742,
+    A100 : #7b90ff,
+    A200 : #4865ff,
+    A400 : #153aff,
+    A700 : #0027fb,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+$_wm_yellow--map: (
+    50 : #fff8e4,
+    100 : #ffedbc,
+    200 : #ffe190,
+    300 : #ffd463,
+    400 : #ffcb41,
+    500 : #ffc220,
+    600 : #ffbc1c,
+    700 : #ffb418,
+    800 : #ffac13,
+    900 : #ff9f0b,
+    A100 : #ffffff,
+    A200 : #fffbf6,
+    A400 : #ffe5c3,
+    A700 : #ffdaa9,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+
+$color-primary: $_spark_blue;
+$primary: mat-palette($_spark_blue--map);
+
+$color-accent: $_wm_yellow;
+$accent: mat-palette($_wm_yellow--map);
+
+$theme: mat-light-theme($primary, $accent);
+@include angular-material-theme($theme);
 
 /*
   Public Color Variables
   Use these variables in the app .scss files
   dont forget to @import (// @import "[.path]/variables.scss";)
-  TODO: assign the real template colors to the spark types
 */
 
-$color-primary: $_grey_5; // TODO: make this Spark Blue ?
-$color-secondary: $_grey_4; // TODO: make this Spark Yellow ?
 
-$color-safety: $_grey_5; // $color-safety-blue;
-$color-connection: $_grey_5; // $color-connection-yellow;
-$color-kindness: $_grey_5; // $color-kindness-orange;
-$color-simplicity: $_grey_5; // $color-simplicity-purple;
+
+
+$color-safety: $_safety_blue; // $color-safety-blue;
+$color-connection: $_connection_yellow; // $color-connection-yellow;
+$color-kindness: $_kindness_orange; // $color-kindness-orange;
+$color-simplicity: $_simplicity_purple; // $color-simplicity-purple;
 
 $color-white: $_white;
 $color-light-grey: $_grey_1;
 $color-grey: $_grey_4;
+
+
+
 
 /*
   Size Variables
 */
 
 /* Screen Break Points */
+$screen-xxs-min: 320px;
 $screen-xs-min: 480px;
 $screen-sm-min: 600px;
 $screen-md-min: 768px;

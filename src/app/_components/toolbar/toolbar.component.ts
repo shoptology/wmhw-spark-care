@@ -11,12 +11,16 @@ import { Location } from '@angular/common';
 
 export class ToolbarComponent implements OnInit {
 
+  public associate;
+
   constructor(
     private location: Location,
     private router: Router,
   ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.associate = JSON.parse(localStorage.getItem('associate'));
+  }
 
   public goBack(): void {
     this.location.back();

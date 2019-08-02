@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Associate } from '../../_models';
+import { WmhwApiService } from '../../_services/wmhw-api.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,14 +11,19 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
 
-  public username;
+  public associate: Associate;
+  public activityLog;
+  public notifications;
 
   constructor(
-    private route: ActivatedRoute
-  ) { }
-
-  ngOnInit() {
-    this.username = localStorage.getItem('username');
+    private route: ActivatedRoute,
+    public wmApi: WmhwApiService,
+  ) {
+    this.associate = JSON.parse(localStorage.getItem('associate'));
+    this.notifications = this.wmApi.getRecievedNotifictionsByAssociateWin(this.associate.win);
+    this.activityLog = this.wmApi.getActivityLogByAssociateWin(this.associate.win);
   }
 
+  ngOnInit() {}
+  
 }

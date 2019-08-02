@@ -14,6 +14,8 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
+*-- see 'Build to GitHub Pages' for proof of concept build*
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
@@ -35,7 +37,9 @@ See 'variables.scss' for futher details.
 
 ## Build to GitHub Pages
 
-We are using GitHub pages to host the app.
+We are using GitHub pages to host the proof of concept progressive web app.
+
+In order to deliver 'dist' to github, follow the 'How to' below. DO NOT merge into or out of _gh-pages_ branch.
 
 Any code that exists in the __gh-pages__ branch is what is hosted at __spark.goshoptology.com__.
 
@@ -51,7 +55,7 @@ Run `ng build --prod`
 
 or
 
-Run `ng build --prod --base-href="/wmhw-spark-care"` if a suffix is necessary (in this readme it is not necessary )
+Run `ng build --prod --base-href="/wmhw-spark-care"` if a suffix is necessary
 
 #### 2) Put the dist files in the gh-pages branch of the same repo (it's now dist control - not source control ;)
 Run `sudo angular-cli-ghpages --no-silent --dir=dist/wmhw-spark-care`

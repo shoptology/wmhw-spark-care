@@ -63,17 +63,17 @@ export const routerTransition = trigger('routerTransition', [
     ]),
 
     query(':enter', [
-      style({ opacity: 0, transform: 'scale(0.9) translateX(25vw)' })
+      style({ transform: 'translateX(100vw)' })
     ]),
 
     query(':leave', animateChild()),
 
     group([
       query(':leave', [
-        animate('200ms 0ms ease-out', style({ opacity: 0, transform: 'scale(0.9) translateX(-25vw)' }))
+        animate('400ms 0ms ease-out', style({ transform: 'translateX(-100vw)' }))
       ]),
       query(':enter', [
-        animate('200ms 100ms ease-out', style({ opacity: 1, transform: 'scale(1) translateX(0vw)' }))
+        animate('400ms 0ms ease-out', style({ transform: 'translateX(0vw)' }))
       ])
     ]),
 

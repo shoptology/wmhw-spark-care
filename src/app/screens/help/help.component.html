@@ -1,1 +1,109 @@
-<p>help works!</p>
+<div class="help">
+
+  <!-- Intro Slide Show -->
+
+  <mat-card
+    class="help__introduction-card">
+
+  <ngu-carousel
+    class="carousel"
+    #myCarousel
+    [inputs]="carouselTile"
+    [dataSource]="introTiles"
+    >
+
+      <ngu-tile *nguCarouselDef="let slide; let i = index;">
+
+        <div class="">
+          <h1>Step {{i+1}}</h1>
+          <app-icon
+            class=""
+            width="40"
+            height="40"
+            [type]="slide.icon"
+            title="Safety Spark"
+          >
+          </app-icon>
+          <h2>{{slide.title}}</h2>
+          <p>{{slide.message}}</p>
+        </div>
+
+      </ngu-tile>
+
+      <button NguCarouselPrev mat-icon-button class="button leftRs"><mat-icon>navigate_before</mat-icon></button>
+      <button NguCarouselNext mat-icon-button class="button rightRs"><mat-icon>navigate_next</mat-icon></button>
+
+  </ngu-carousel>
+
+  </mat-card>
+
+  <mat-divider></mat-divider>
+
+  <h2>Faqs</h2>
+
+  <mat-accordion>
+
+    <mat-expansion-panel *ngFor="let faq of faqs">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{faq.q}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      {{faq.a}}
+    </mat-expansion-panel>
+
+  </mat-accordion>
+
+  <mat-divider></mat-divider>
+
+  <h2>Feed Back?</h2>
+
+  <mat-card class="send-thanks__card send-thanks__body">
+
+
+
+    <mat-card-content class="card__content">
+
+      <p>Hey, <span *ngIf="associate">{{associate.name}},</span> here's your chance to help design this app. Send us some feedback on your thoughts.</p>
+
+      <mat-divider></mat-divider>
+
+      <form class="send-thanks__form" #feedbackForm="ngForm" (ngSubmit)="onSubmit(feedbackForm)">
+
+        <!-- Spark message -->
+        <mat-form-field class="form__field" style="width: 100%;">
+          <textarea
+            rows="4"
+            cols="150"
+            name="suggestion"
+            ngModel
+            #message="ngModel"
+            matInput
+            placeholder="Suggestion"
+          >
+          </textarea>
+        </mat-form-field>
+
+        <div>
+
+          <button
+            tabindex="1"
+            mat-raised-button
+            color="primary"
+            type="submit"
+            name="button"
+            >
+            Send Feedback
+          </button>
+
+        </div>
+
+      </form>
+
+    </mat-card-content>
+
+  </mat-card>
+
+
+
+</div>

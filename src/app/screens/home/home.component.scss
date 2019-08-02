@@ -2,14 +2,105 @@
 @import "../../../mixins.scss";
 
 .home-screen {
-  &-actions {
-    display: flex;
-    flex-direction: column;
 
-    &__button {
-      padding: 4em;
-      margin: 1em 0;
-      font-size: 1em;
+  &__actions {
+
+    padding: 0 40px;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+
+    @include sm {
+
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      grid-column-gap: 1em;
+      grid-row-gap: 1em;
+
+      &:nth-child(1){
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+      &:nth-child(2){
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+      &:nth-child(3){
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+
+      &:nth-child(4){
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
+      &:nth-child(5){
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
+      &:nth-child(6){
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
+    }
+
+    &--manager-view {
+      @include sm {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+
+    @include componentSpacing();
+
+    .actions__button {
+
+      padding: 2em 0.2em;
+      margin: 0;
+      font-size: 2em;
+
+      &--team-dashboard {
+        box-shadow:
+          0 1px 0 $color-connection,
+          0 2px 0 $color-connection,
+          0 3px 0 $color-connection,
+          0 4px 0 $color-connection,
+          0 5px 0 $color-connection,
+          0 6px 0 $color-connection;
+      }
+      &--share {
+        box-shadow:
+          0 1px 0 $color-simplicity,
+          0 2px 0 $color-simplicity,
+          0 3px 0 $color-simplicity,
+          0 4px 0 $color-simplicity,
+          0 5px 0 $color-simplicity,
+          0 6px 0 $color-simplicity;
+      }
+      &--dashboard {
+        box-shadow:
+          0 1px 0 $color-kindness,
+          0 2px 0 $color-kindness,
+          0 3px 0 $color-kindness,
+          0 4px 0 $color-kindness,
+          0 5px 0 $color-kindness,
+          0 6px 0 $color-kindness;
+      }
 
       @include sm {
         font-size: 1.5em;

@@ -1,0 +1,16 @@
+@import "../../../variables.scss";
+@import "../../../mixins.scss";
+
+.help {
+  @include componentSpacing();
+  &__introduction-card {
+    margin-top: 1em;
+    text-align: center;
+  }
+}
+
+.carousel {
+  .tile {
+    box-shadow: none !important;
+  }
+}

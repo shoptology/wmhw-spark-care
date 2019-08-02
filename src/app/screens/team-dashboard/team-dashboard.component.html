@@ -1,0 +1,78 @@
+<div class="team-dashboard dashboard">
+
+  <!-- Headline -->
+  <div class="team-dashboard__headline headline__wrapper headline__wrapper--center">
+    <h1 class="headline" [innerHTML]="associate ? associate.name : 'Unknown user!'"></h1>
+    <p class="sub-headline">Team Dashboard</p>
+  </div>
+
+  <!-- Statistics -->
+  <mat-card class="team-dashboard__statistics">
+
+    <div class="statistics__headline team-dashboard__headline--sub">
+      Statistics
+    </div>
+
+    <div class="statistics__blocks">
+      <mat-card
+        class="statistics__block signed-up"
+        *ngFor="let statistic of statistics"
+        >
+        <div *ngIf="statistic.valueDisplay == 'percent'" class="number" [innerHTML]="statistic.value | percent"></div>
+        <div *ngIf="statistic.valueDisplay != 'percent'" class="number" [innerHTML]="statistic.value"></div>
+        <div class="title" [innerHTML]="statistic.title"></div>
+      </mat-card>
+    </div>
+
+  </mat-card>
+
+  <!-- Sparks Chart -->
+  <mat-card class="team-dashboard__sparks">
+
+    <div class="team-dashboard__headline--sub">
+      {{this.sparksGivenChart.options.title.text}}
+    </div>
+
+    <div [chart]="sparksGivenChart"></div>
+
+  </mat-card>
+
+  <!-- Team Notifications -->
+  <mat-expansion-panel>
+
+    <mat-expansion-panel-header>
+      <div class="notifications__header">
+        <h1>Team Notifications</h1>
+      </div>
+    </mat-expansion-panel-header>
+
+      <mat-accordion *ngIf="true" class="notifications__accordion">
+
+        <app-notification
+          *ngFor="let notification of teamNotifications"
+          [notificationType]="'admin'"
+          [isNew]="notification.isNew"
+          [thankYouSent]="notification.thankYouSent"
+          [date]="notification.date"
+          [toAssociate]="notification.toAssociate"
+          [fromAssociate]="notification.fromAssociate"
+          [message]="notification.message"
+          [sparkType]="notification.sparkType"
+        ></app-notification>
+
+        <div class="actions actions--center">
+          <button mat-raised-button type="button" name="button">load more</button>
+        </div>
+
+      </mat-accordion>
+
+  </mat-expansion-panel>
+
+  <br>
+
+  <!-- Export -->
+  <div class="">
+    <button mat-raised-button type="button" name="button" (click)="export()">Export</button>
+  </div>
+
+</div>

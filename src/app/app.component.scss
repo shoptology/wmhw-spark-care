@@ -6,31 +6,68 @@
   display: grid;
   // set grid sides to be able to shrink on small screens with minmax
   grid-template-columns: minmax(0.2em, 1em) auto minmax(0.2em, 1em);
-  grid-template-rows: 56px auto;
+  grid-template-rows: auto;
 
-  justify-items: center;
+  // this supports toolbar in the grid
+  // grid-template-rows: 56px auto;
+
+  // justify-items: center; // remove this if no bugs cause by commenting out
 
   @include sm {
-    // toolbar grows from 56px to 64px at min-width 600
-    grid-template-rows: 64px auto;
+    grid-template-rows: auto;
+
+    // this supports toolbar in the grid
+    // grid-template-rows: 64px auto;
   }
 
-  &__toolbar {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2;
+  &__toolbar { // **toolbar grows from height 56px to 64px at min-width 600
+
     width: 100%;
+    height: 56px;
+    transition: box-shadow 200ms ease-in-out;
+
+    // use this to fit the toolbar into the grid
+    // grid-column-start: 1;
+    // grid-column-end: 4;
+    // grid-row-start: 1;
+    // grid-row-end: 2;
+
+    // use this for a floating toolbar
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+
+    &--scrolled {
+      @include shadow();
+    }
+
+    @include sm {
+      height: 64px;
+    }
+
   }
 
   &__main {
     grid-column-start: 2;
     grid-column-end: 3;
-    grid-row-start: 2;
+    grid-row-start: start;
     grid-row-end: end;
     box-sizing: border-box;
     width: 100%;
     max-width: $screen-md-min;
+    min-width: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    // this supports floating toolbar
+    margin-top: 56px;
+    @include sm {
+      margin-top: 64px;
+    }
+
   }
 
 }

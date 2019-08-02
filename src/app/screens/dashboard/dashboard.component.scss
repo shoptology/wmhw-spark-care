@@ -1,55 +1,73 @@
 @import "../../../variables.scss";
 @import "../../../mixins.scss";
 
+.notifications__header {
+  width: 100%;
+}
+
+
 .dashboard {
 
-  &__fab.fab {
-    position: fixed;
-    z-index: 9;
-    bottom: 2em;
-    right: 2em;
-    background-color: $color-primary;
-    color: $color-white;
+  &-screen { padding: 0 40px; }
 
-    .mat-button-wrapper {
-      padding: 4px;
-    }
-  }
-
-
-
-
-  &__headline {}
   &__statistics {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     grid-column-gap: 1em;
     grid-row-gap: 1em;
     margin-bottom: 1em;
 
     .statistics__block {
+      padding: 1em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: $color-white;
+      border-radius: 32px;
 
+      svg path { fill: $color-white; }
 
       &--safety {
-        .statistic__label {
-          background-color: $color-safety;
-        }
+        background-color: $color-safety;
+        box-shadow:
+          0 0 4px rgba(black, 5%),
+          0 4px 0 rgba($color-safety, 50%);
+
+        .statistic__label {}
+
       }
       &--kindness {
-        .statistic__label {
-          background-color: $color-kindness;
-        }
+        background-color: $color-kindness;
+        box-shadow:
+          0 0 4px rgba(black, 5%),
+          0 4px 0 rgba($color-kindness, 50%);
+
+        .statistic__label {}
+
       }
       &--connection {
-        .statistic__label {
-          background-color: $color-connection;
-        }
+        background-color: $color-connection;
+        box-shadow:
+          0 0 4px rgba(black, 5%),
+          0 4px 0 rgba($color-connection, 50%);
+
+        .statistic__label {}
+
       }
       &--simplicity {
-        .statistic__label {
-          background-color: $color-simplicity;
-        }
+        background-color: $color-simplicity;
+        box-shadow:
+          0 0 4px rgba(black, 5%),
+          0 4px 0 rgba($color-simplicity, 50%);
+
+        .statistic__label {}
+
+      }
+
+      .statistic__amount {
+        font-size: 4em;
       }
 
 
@@ -134,85 +152,28 @@
       }
     }
 
-
-
-    // .statistics {
-    //   &__block {
-    //     width: 50%;
-    //     box-sizing: border-box;
-    //     padding: .5em;
-    //   }
-    //   &__data {
-    //     display: block;
-    //     width: 100%;
-    //   }
-    // }
   }
+
   &__notifications {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    margin-bottom: 1em;
+  }
 
-    .notifications {
-      &__card {
+  &__fab.fab {
+    position: fixed;
+    z-index: 9;
+    bottom: 2em;
+    right: 2em;
+    background-color: $color-primary;
+    color: $color-white;
 
-        mat-card-title {
-          margin: 0;
-        }
-
-        .mat-expansion-panel-header-description {
-          font-size: 0.7em;
-        }
-
-        .mat-divider.mat-divider-horizontal {
-          position: static;
-          margin-top: 1em;
-          margin-bottom: 1em;
-          margin-left: -1em;
-          margin-right: -1em;
-          left: auto;
-          width: auto;
-        }
-
-        .mat-content {
-          display: flex;
-          flex: 1;
-          flex-direction: column;
-          overflow: hidden;
-        }
-
-
-
-      }
-      &__header {
-        font-weight: bold;
-      }
-      &__accordion {
-        background: red;
-        .notification {
-          &__header {
-            &--active {
-              font-weight: bold;
-            }
-          }
-          &__content {
-            padding: 1em;
-            margin-bottom: 1em;
-            .content-item {
-              &__title {
-                font-weight: bold;
-              }
-              &__body {
-
-              }
-            }
-          }
-          &__actions {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-        }
-      }
+    .mat-button-wrapper {
+      padding: 4px;
     }
-
   }
 
 }

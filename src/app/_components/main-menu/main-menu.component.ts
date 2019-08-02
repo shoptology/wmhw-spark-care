@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../../_services';
+import { Associate } from '../../_models';
 
 @Component({
   selector: 'app-main-menu',
@@ -10,24 +11,22 @@ import { AuthenticationService } from '../../_services';
 
 export class MainMenuComponent implements OnInit {
 
-  public username: string;
+  public associate: Associate;
 
   constructor(
     private router: Router,
     private authenticationService: AuthenticationService,
-  ) { }
+  ) {
+    this.associate = JSON.parse(localStorage.getItem('associate'));
+  }
 
   ngOnInit() {
-    this.username = localStorage.getItem('username');
+
   }
 
   public signOut(): void {
-
-    // TODO: create log in/out service and do log out here
-
     this.authenticationService.logout();
     this.router.navigate(["/login"]);
-
   }
 
 }

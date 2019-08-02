@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SparkConfirmationComponent } from './spark-confirmation.component';
+import { TeamDashboardComponent } from './team-dashboard.component';
 
-describe('SparkConfirmationComponent', () => {
-  let component: SparkConfirmationComponent;
-  let fixture: ComponentFixture<SparkConfirmationComponent>;
+describe('TeamDashboardComponent', () => {
+  let component: TeamDashboardComponent;
+  let fixture: ComponentFixture<TeamDashboardComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SparkConfirmationComponent ]
+      declarations: [ TeamDashboardComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SparkConfirmationComponent);
+    fixture = TestBed.createComponent(TeamDashboardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

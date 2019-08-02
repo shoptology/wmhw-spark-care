@@ -1,7 +1,7 @@
 <div class="login-screen screen">
 
   <!-- Logo -->
-  <app-logo size="80"></app-logo>
+  <app-logo for="login-screen"></app-logo>
 
   <!-- Input Form -->
   <form
@@ -41,25 +41,16 @@
 
     </div>
 
-
-
     <!-- Actions -->
     <div class="login-actions flex column">
-
-      <a
-        class="login-actions__action login-actions__action--secondary"
-        routerLink="/forgot-password"
-        >
-        Forgot Password?
-      </a>
 
       <button
         type="submit"
         name="submit"
         class="login-actions__action login-actions__action--primary"
         mat-raised-button
+        color="primary"
         >
-
         Log In
       </button>
 
@@ -70,8 +61,22 @@
         Create Account
       </a>
 
+      <a
+        class="login-actions__action login-actions__action--secondary"
+        routerLink="/forgot-password"
+        >
+        Forgot Password?
+      </a>
+
     </div>
 
   </form>
+
+  <div class="login-screen__powered-by">
+    <span class="fine-print" style="margin-bottom: 4px; font-size: 10px; opacity: 0.4;">powered by</span>
+    <app-wm-logo
+      width="80"
+    ></app-wm-logo>
+  </div>
 
 </div>

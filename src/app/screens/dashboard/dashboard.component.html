@@ -1,160 +1,180 @@
-<div class="dashboard">
+<div class="dashboard dashboard-screen">
 
-  <br>
-
-  <div class="dashboard__headline headline__wrapper">
-    <p>
-      <span [innerHTML]="username ? username : 'Unknown user'"></span><br>
-    </p>
+  <div class="dashboard__headline headline__wrapper headline__wrapper--center">
+    <h1 class="headline" [innerHTML]="associate ? associate.name : 'Unknown user!'"></h1>
   </div>
 
   <!-- Statistics -->
   <div class="dashboard__statistics">
 
     <div class="statistics__block statistics__block--safety">
-      <button mat-raised-button class="statistics__data">
 
-        <div class="statistic__status">
-          <app-icon
-            class="statistic__icon"
-            width="40"
-            height="40"
-            type="safety"
-            title="Safety Spark"
-          >
-          </app-icon>
-          <span class="statistic__amount">00</span>
-        </div>
+      <app-icon
+        class="statistic__icon"
+        width="60"
+        height="60"
+        type="safety"
+        title="Safety Spark"
+      >
+      </app-icon>
 
-        <div class="statistic__label">
-          <p>Safety</p>
-        </div>
+      <div class="statistic__label">
+        Safety
+      </div>
 
-      </button>
+      <span class="statistic__amount">00</span>
+
     </div>
 
     <div class="statistics__block statistics__block--kindness">
-      <button mat-raised-button class="statistics__data">
 
-        <div class="statistic__status">
-          <app-icon
-            class="statistic__icon"
-            width="40"
-            height="40"
-            type="kindness"
-            title="Kindness Spark"
-          >
-          </app-icon>
-          <span class="statistic__amount">00</span>
-        </div>
+      <app-icon
+        class="statistic__icon"
+        width="60"
+        height="60"
+        type="kindness"
+        title="Kindness Spark"
+      >
+      </app-icon>
 
-        <div class="statistic__label">
-          <p>Kindness</p>
-        </div>
+      <div class="statistic__label">
+        Kindness
+      </div>
 
-      </button>
+      <span class="statistic__amount">00</span>
+
     </div>
 
     <div class="statistics__block statistics__block--connection">
-      <button mat-raised-button class="statistics__data">
 
-        <div class="statistic__status">
-          <app-icon
-            class="statistic__icon"
-            width="40"
-            height="40"
-            type="connection"
-            title="Connection Spark"
-          >
-          </app-icon>
-          <span class="statistic__amount">00</span>
-        </div>
+      <app-icon
+        class="statistic__icon"
+        width="60"
+        height="60"
+        type="connection"
+        title="Connection Spark"
+      >
+      </app-icon>
 
-        <div class="statistic__label">
-          <p>Connection</p>
-        </div>
+      <div class="statistic__label">
+        Connection
+      </div>
 
-      </button>
+      <span class="statistic__amount">00</span>
+
     </div>
 
     <div class="statistics__block statistics__block--simplicity">
-      <button mat-raised-button class="statistics__data">
 
-        <div class="statistic__status">
-          <app-icon
-            class="statistic__icon"
-            width="40"
-            height="40"
-            type="simplicity"
-            title="Simplicity Spark"
-          >
-          </app-icon>
-          <span class="statistic__amount">00</span>
-        </div>
+      <app-icon
+        class="statistic__icon"
+        width="60"
+        height="60"
+        type="simplicity"
+        title="Simplicity Spark"
+      >
+      </app-icon>
 
-        <div class="statistic__label">
-          <p>Simplicity</p>
-        </div>
+      <div class="statistic__label">
+        Simplicity
+      </div>
 
-      </button>
+      <span class="statistic__amount">00</span>
+
     </div>
 
+  </div>
+
+  <!-- Received Notifications -->
+  <div
+    *ngIf="true"
+    class="dashboard__notifications"
+    matBadge="4"
+    matBadgeOverlap="true"
+    >
+
+    <!-- <mat-accordion> -->
+
+      <mat-expansion-panel>
+
+        <mat-expansion-panel-header>
+          <div class="notifications__header">
+            <h1>Notifications</h1>
+          </div>
+        </mat-expansion-panel-header>
+
+        <!-- <mat-card class="notifications__card"> -->
+          <mat-accordion *ngIf="true" class="notifications__accordion">
+
+            <app-notification
+              *ngFor="let notification of notifications"
+              [isNew]="notification.isNew"
+              [notificationType]="'received'"
+              [thankYouSent]="notification.thankYouSent"
+              [date]="notification.date"
+              [toAssociate]="{name: 'you'}"
+              [fromAssociate]="notification.fromAssociate"
+              [message]="notification.message"
+              [sparkType]="notification.sparkType"
+            ></app-notification>
+
+            <div class="actions actions--center">
+              <button mat-raised-button type="button" name="button">load more</button>
+            </div>
+
+          </mat-accordion>
+        <!-- </mat-card> -->
+
+      </mat-expansion-panel>
+
+    <!-- </mat-accordion> -->
 
   </div>
 
-  <!-- Notifications -->
-  <div class="dashboard__notifications">
+  <!-- Activity Log -->
+  <div
+    *ngIf="true"
+    class="dashboard__notifications"
+    >
 
-    <mat-card class="notifications__card">
+    <!-- <mat-accordion> -->
 
-      <mat-card-header class="notifications__header" matBadge="1" matBadgeOverlap="true">
-        <mat-card-title>Notifications</mat-card-title>
-        <!-- <mat-card-subtitle>Notifications</mat-card-subtitle> -->
-      </mat-card-header>
+      <mat-expansion-panel>
 
-      <mat-divider></mat-divider>
-
-      <mat-accordion class="notifications__accordion">
-
-        <mat-expansion-panel class="notification">
-
-          <mat-expansion-panel-header
-            class="notification__header"
-            [class.notification__header--active]="true"
-            >
-            <mat-panel-title>Stacy sent you a Kindness Spark!</mat-panel-title>
-            <mat-panel-description>Just now</mat-panel-description>
-          </mat-expansion-panel-header>
-
-          <div class="notification__content">
-            <p class="content-item">
-              <span class="content-item__title">From: </span>
-              <span class="content-item__body">Stacy</span>
-            </p>
-            <p class="content-item">
-              <span class="content-item__title">Type of Care: </span>
-              <span class="content-item__body">Kindness</span>
-            </p>
-            <p class="content-item">
-              <span class="content-item__title">Details: </span>
-              <span class="content-item__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
-            </p>
+        <mat-expansion-panel-header>
+          <div class="archives__header">
+            <h1>Activity Log</h1>
           </div>
+        </mat-expansion-panel-header>
 
-          <mat-divider style="margin-left: -2em; margin-right: -2em;"></mat-divider>
+          <mat-accordion class="archives__accordion">
 
-          <div class="notification__actions">
-            <button style="width: 100%;" mat-button type="button" name="button">Say Thanks</button>
-          </div>
+            <app-notification
+              *ngFor="let record of activityLog"
+              [isNew]="record.isNew"
+              [thankYouSent]="record.thankYouSent"
+              [notificationType]="'sent'"
+              [date]="record.date"
+              [toAssociate]="record.toAssociate"
+              [fromAssociate]="{name: 'You'}"
+              [message]="record.message"
+              [sparkType]="record.sparkType"
+            ></app-notification>
 
-        </mat-expansion-panel>
+            <div class="actions actions--center">
+              <button mat-raised-button type="button" name="button">load more</button>
+            </div>
 
-      </mat-accordion>
+          </mat-accordion>
 
-    </mat-card>
+      </mat-expansion-panel>
+
+    <!-- </mat-accordion> -->
 
   </div>
 
+  <!-- Floating Action Button to add a spark -->
+  <!-- I tried to sell this button internally but didn't get traction -->
   <button
     *ngIf="false"
     class="dashboard__fab fab"

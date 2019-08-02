@@ -11,10 +11,10 @@
       <form class="form" #sparkForm="ngForm" (ngSubmit)="onSubmit(sparkForm)">
 
       <mat-card-title>
-        From: {{username}}
+        From: {{associate.name}}
       </mat-card-title>
       <mat-card-subtitle>
-        <span *ngIf="associateCtrl.value">To: {{associateCtrl.value}}</span>
+        To: <span *ngIf="associateCtrl.value">{{associateCtrl.value}}</span>
         <span *ngIf="type.value"> for <span style="text-transform: capitalize;">{{type.value}}</span></span>
       </mat-card-subtitle>
 
@@ -36,10 +36,16 @@
             <span>{{associate.name}}</span>
           </mat-option>
         </mat-autocomplete>
+        <!-- <mat-error *ngIf="sparkForm.submitted && associate.invalid">Select an Associate</mat-error> -->
       </mat-form-field>
 
       <!-- Spark type selector -->
-      <p class="form__label">Select Type *</p>
+      <p
+        class="form__label"
+        [class.error]="sparkForm.submitted && type.invalid"
+        >
+        Select Type *
+      </p>
 
       <mat-radio-group
         name="type"
@@ -125,6 +131,8 @@
 
       </mat-radio-group>
 
+      <!-- <mat-error *ngIf="sparkForm.submitted && type.invalid">Select a Spark Care type.</mat-error> -->
+
       <!-- Spark message -->
       <mat-form-field class="form__field">
         <textarea
@@ -132,10 +140,9 @@
           cols="150"
           name="message"
           ngModel
-          required
           #message="ngModel"
           matInput
-          placeholder="Tell us about your moment of care"
+          placeholder="Tell us about the moment of care"
         >
         </textarea>
       </mat-form-field>
@@ -144,7 +151,13 @@
 
       <!-- Submit -->
       <div class="form__actions">
-        <button mat-button type="submit" name="submit">Submit</button>
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          name="submit">
+          Submit
+        </button>
       </div>
 
       </form>

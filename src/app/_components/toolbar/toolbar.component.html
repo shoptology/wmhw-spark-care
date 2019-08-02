@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<mat-toolbar class="toolbar">
 
   <mat-toolbar-row>
 
@@ -16,11 +16,14 @@
 
     <span routerLink="/home">
       <span style="display: flex; justify-content: center; align-items: center;">
-        <app-logo size="32" isInline="true"></app-logo>
+        <app-logo height="32"></app-logo>
       </span>
     </span>
 
+    <span *ngIf="!associate"></span>
+
     <button
+      *ngIf="associate"
       mat-icon-button
       aria-hidden="false"
       aria-label="Spark Care App Menu"

@@ -1,7 +1,11 @@
 <div class="app">
 
   <!-- toggle toolbar OFF when state is login screen -->
-  <header *ngIf="getState(o) != 'login'" class="app__toolbar">
+  <header
+    *ngIf="getState(o) != 'login'"
+    #toolbar
+    class="app__toolbar"
+    >
     <app-toolbar></app-toolbar>
   </header>
 
