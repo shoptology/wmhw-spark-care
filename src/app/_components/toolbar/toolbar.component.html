@@ -2,7 +2,9 @@
 
   <mat-toolbar-row>
 
-    <div *ngIf="true"><!-- TODO: if back navigation exists -->
+    <div *ngIf="!showBackButton"><mat-icon></mat-icon></div> <!-- to occupy the space -->
+
+    <div *ngIf="showBackButton">
 
       <button
         mat-icon-button

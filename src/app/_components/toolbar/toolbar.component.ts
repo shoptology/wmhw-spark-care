@@ -12,14 +12,20 @@ import { Location } from '@angular/common';
 export class ToolbarComponent implements OnInit {
 
   public associate;
+  public showBackButton: boolean;
 
   constructor(
     private location: Location,
     private router: Router,
-  ) { }
+  ) {
+    this.associate = JSON.parse(localStorage.getItem('associate'));
+    router.events.subscribe(() => {
+      this.showBackButton = this.location.path() == '/home' ? false : true;
+    });
+  }
 
   ngOnInit() {
-    this.associate = JSON.parse(localStorage.getItem('associate'));
+
   }
 
   public goBack(): void {
