@@ -56,78 +56,85 @@
         aria-label="Select an option"
         >
 
-        <!-- TODO: ngFor breaks the button ripple -->
-        <mat-radio-button
-          type="radio"
-          matRipple
-          matRippleColor="rgba(0,0,0,0.1)"
-          class="spark-type__option spark-type__option--safety"
-          value="safety"
-          >
-          <app-icon
-            class="option__icon"
-            width="40"
-            height="40"
-            type="safety"
-            title="Safety Spark"
-          >
-          </app-icon>
+          <div class="selector">
+          <mat-radio-button
+            type="radio"
+            matRipple
+            matRippleColor="rgba(0,0,0,0.1)"
+            class="spark-type__option spark-type__option--safety"
+            value="safety"
+            >
+            <app-icon
+              class="option__icon"
+              width="40"
+              height="40"
+              type="safety"
+              title="Safety Spark"
+            >
+            </app-icon>
+          </mat-radio-button>
           <p class="option__label option__label--safety">Safety</p>
-        </mat-radio-button>
+        </div>
 
-        <mat-radio-button
-          type="radio"
-          matRipple
-          matRippleColor="rgba(0,0,0,0.1)"
-          class="spark-type__option spark-type__option--kindness"
-          value="kindness"
-          >
-          <app-icon
-            class="option__icon"
-            width="40"
-            height="40"
-            type="kindness"
-            title="Kindness Spark"
-          >
-          </app-icon>
+        <div class="selector">
+          <mat-radio-button
+            type="radio"
+            matRipple
+            matRippleColor="rgba(0,0,0,0.1)"
+            class="spark-type__option spark-type__option--kindness"
+            value="kindness"
+            >
+            <app-icon
+              class="option__icon"
+              width="40"
+              height="40"
+              type="kindness"
+              title="Kindness Spark"
+            >
+            </app-icon>
+          </mat-radio-button>
           <p class="option__label option__label--kindness">Kindness</p>
-        </mat-radio-button>
+        </div>
 
-        <mat-radio-button
-          type="radio"
-          matRipple
-          matRippleColor="rgba(0,0,0,0.1)"
-          class="spark-type__option spark-type__option--connection"
-          value="connection"
-          >
-          <app-icon
-            class="option__icon"
-            width="40"
-            height="40"
-            type="connection"
-            title="Connection Spark"
-          >
-          </app-icon>
+        <div class="selector">
+          <mat-radio-button
+            type="radio"
+            matRipple
+            matRippleColor="rgba(0,0,0,0.1)"
+            class="spark-type__option spark-type__option--connection"
+            value="connection"
+            >
+            <app-icon
+              class="option__icon"
+              width="40"
+              height="40"
+              type="connection"
+              title="Connection Spark"
+            >
+            </app-icon>
+          </mat-radio-button>
           <p class="option__label option__label--connection">Connection</p>
-        </mat-radio-button>
+        </div>
 
-        <mat-radio-button
-          type="radio"
-          matRipple
-          matRippleColor="rgba(0,0,0,0.1)"
-          class="spark-type__option spark-type__option--simplicity"
-          value="simplicity"
-          >
-          <app-icon
-            class="option__icon"
-            width="40"
-            height="40"
-            type="simplicity"
-            title="Simplicity Spark"
-          >
-          </app-icon>
+        <div class="selector">
+          <mat-radio-button
+            type="radio"
+            matRipple
+            matRippleColor="rgba(0,0,0,0.1)"
+            class="spark-type__option spark-type__option--simplicity"
+            value="simplicity"
+            >
+            <app-icon
+              class="option__icon"
+              width="40"
+              height="40"
+              type="simplicity"
+              title="Simplicity Spark"
+            >
+            </app-icon>
+          </mat-radio-button>
           <p class="option__label option__label--simplicity">Simplicity</p>
-        </mat-radio-button>
+        </div>
 
       </mat-radio-group>
 

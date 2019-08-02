@@ -40,21 +40,32 @@
   &__selector {
     box-sizing: border-box;
     display: grid;
-    grid-template-rows: auto;
-    grid-column-gap: 1%;
-    grid-row-gap: 1%;
-    grid-template-columns: 49.25% 49.25%;
+    grid-column-gap: 10px;
 
-    @include xs {
-      grid-template-columns: 24.25% 24.25% 24.25% 24.25%;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include xxs {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .selector {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
     }
 
   }
   &__option {
     background-color: transparent;
-    border-radius: 1em;
+    border-radius: 50%;
     min-height: min-content;
     outline: none;
+    width: 72px;
+    height: 72px;
+
+    &.mat-radio-button {
+      display: block;
+    }
 
     svg {}
 
@@ -65,6 +76,8 @@
 
     &--safety {
 
+      border: 1px solid $color-safety;
+      box-shadow: 0 2px 0 $color-white, 0 4px 0 rgba($color-safety, 60%);
       background: rgba($color-safety, 2.5%);
 
       &.mat-radio-checked {
@@ -75,6 +88,8 @@
 
     &--kindness {
 
+      border: 1px solid $color-kindness;
+      box-shadow: 0 2px 0 $color-white, 0 4px 0 rgba($color-kindness, 60%);
       background: rgba($color-kindness, 2.5%);
 
       &.mat-radio-checked {
@@ -85,6 +100,8 @@
 
     &--connection {
 
+      border: 1px solid $color-connection;
+      box-shadow: 0 2px 0 $color-white, 0 4px 0 rgba($color-connection, 60%);
       background: rgba($color-connection, 2.5%);
 
       &.mat-radio-checked {
@@ -95,6 +112,8 @@
 
     &--simplicity {
 
+      border: 1px solid $color-simplicity;
+      box-shadow: 0 2px 0 $color-white, 0 4px 0 rgba($color-simplicity, 60%);
       background: rgba($color-simplicity, 2.5%);
 
       &.mat-radio-checked {
@@ -125,11 +144,6 @@
     }
 
     .option {
-
-      &__icon {
-        margin-bottom: 4px;
-        max-width: 50%;
-      }
 
       &__label {
         font-size: 0.8em;
