@@ -42,6 +42,7 @@ import { ChartModule } from 'angular-highcharts';
 import { SendThanksModalComponent } from './_components/send-thanks-modal/send-thanks-modal.component'; // https://api.highcharts.com/highcharts/
 import { NguCarouselModule } from '@ngu/carousel';
 import { WmLogoComponent } from './_components/wm-logo/wm-logo.component';
+import { PreviousRouteService } from './_services/previous-route.service';
 
 @NgModule({
   declarations: [
@@ -92,7 +93,9 @@ import { WmLogoComponent } from './_components/wm-logo/wm-logo.component';
     SparkSentModalComponent,
     SendThanksModalComponent,
   ],
-  providers: [],
+  providers: [
+    PreviousRouteService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
