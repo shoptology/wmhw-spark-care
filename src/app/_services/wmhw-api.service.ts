@@ -106,61 +106,61 @@ export class WmhwApiService {
         sparkType: 'kindness',
         message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       },
-      {
-        isNew: true,
-        thankYouSent: false,
-        date: 1564516054,
-        toAssociate: {
-          name: 'Iqrah Woodcock',
-        },
-        fromAssociate: {name: 'you'},
-        sparkType: 'connection',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-      },
-      {
-        isNew: true,
-        thankYouSent: true,
-        date: 1564516054,
-        toAssociate: {
-          name: 'Dawid Bernard',
-        },
-        fromAssociate: {name: 'you'},
-        sparkType: 'safety',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-      },
-      {
-        isNew: true,
-        thankYouSent: false,
-        date: 1564516054,
-        toAssociate: {
-          name: 'Isla-Mae Cox',
-        },
-        fromAssociate: {name: 'you'},
-        sparkType: 'simplicity',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-      },
-      {
-        isNew: true,
-        thankYouSent: true,
-        date: 1564516054,
-        toAssociate: {
-          name: 'Dawid Bernard',
-        },
-        fromAssociate: {name: 'you'},
-        sparkType: 'safety',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-      },
-      {
-        isNew: true,
-        thankYouSent: true,
-        date: 1564516054,
-        toAssociate: {
-          name: 'Isla-Mae Cox',
-        },
-        fromAssociate: {name: 'you'},
-        sparkType: 'simplicity',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-      },
+      // {
+      //   isNew: true,
+      //   thankYouSent: false,
+      //   date: 1564516054,
+      //   toAssociate: {
+      //     name: 'Iqrah Woodcock',
+      //   },
+      //   fromAssociate: {name: 'you'},
+      //   sparkType: 'connection',
+      //   message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      // },
+      // {
+      //   isNew: true,
+      //   thankYouSent: true,
+      //   date: 1564516054,
+      //   toAssociate: {
+      //     name: 'Dawid Bernard',
+      //   },
+      //   fromAssociate: {name: 'you'},
+      //   sparkType: 'safety',
+      //   message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      // },
+      // {
+      //   isNew: true,
+      //   thankYouSent: false,
+      //   date: 1564516054,
+      //   toAssociate: {
+      //     name: 'Isla-Mae Cox',
+      //   },
+      //   fromAssociate: {name: 'you'},
+      //   sparkType: 'simplicity',
+      //   message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      // },
+      // {
+      //   isNew: true,
+      //   thankYouSent: true,
+      //   date: 1564516054,
+      //   toAssociate: {
+      //     name: 'Dawid Bernard',
+      //   },
+      //   fromAssociate: {name: 'you'},
+      //   sparkType: 'safety',
+      //   message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      // },
+      // {
+      //   isNew: true,
+      //   thankYouSent: true,
+      //   date: 1564516054,
+      //   toAssociate: {
+      //     name: 'Isla-Mae Cox',
+      //   },
+      //   fromAssociate: {name: 'you'},
+      //   sparkType: 'simplicity',
+      //   message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      // },
     ];
     return activityLog;
   }
@@ -223,61 +223,61 @@ export class WmhwApiService {
         sparkType: 'kindness',
         message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       },
-      {
-        isNew: false,
-        thankYouSent: true,
-        date: 1564516054,
-        toAssociate: { name: 'you' },
-        fromAssociate: {
-          name: 'Jaime Vasquez',
-        },
-        sparkType: 'connection',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-      },
-      {
-        isNew: false,
-        thankYouSent: true,
-        date: 1564516054,
-        toAssociate: { name: 'you' },
-        fromAssociate: {
-          name: 'Johanna Roberts',
-        },
-        sparkType: 'safety',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-      },
-      {
-        isNew: false,
-        thankYouSent: true,
-        date: 1564516054,
-        toAssociate: { name: 'you' },
-        fromAssociate: {
-          name: 'Nikodem Greer',
-        },
-        sparkType: 'simplicity',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-      },
-      {
-        isNew: false,
-        thankYouSent: false,
-        date: 1564516054,
-        toAssociate: { name: 'you' },
-        fromAssociate: {
-          name: 'Johanna Roberts',
-        },
-        sparkType: 'safety',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-      },
-      {
-        isNew: false,
-        thankYouSent: true,
-        date: 1564516054,
-        toAssociate: { name: 'you' },
-        fromAssociate: {
-          name: 'Nikodem Greer',
-        },
-        sparkType: 'simplicity',
-        message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-      },
+      // {
+      //   isNew: false,
+      //   thankYouSent: true,
+      //   date: 1564516054,
+      //   toAssociate: { name: 'you' },
+      //   fromAssociate: {
+      //     name: 'Jaime Vasquez',
+      //   },
+      //   sparkType: 'connection',
+      //   message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      // },
+      // {
+      //   isNew: false,
+      //   thankYouSent: true,
+      //   date: 1564516054,
+      //   toAssociate: { name: 'you' },
+      //   fromAssociate: {
+      //     name: 'Johanna Roberts',
+      //   },
+      //   sparkType: 'safety',
+      //   message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      // },
+      // {
+      //   isNew: false,
+      //   thankYouSent: true,
+      //   date: 1564516054,
+      //   toAssociate: { name: 'you' },
+      //   fromAssociate: {
+      //     name: 'Nikodem Greer',
+      //   },
+      //   sparkType: 'simplicity',
+      //   message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      // },
+      // {
+      //   isNew: false,
+      //   thankYouSent: false,
+      //   date: 1564516054,
+      //   toAssociate: { name: 'you' },
+      //   fromAssociate: {
+      //     name: 'Johanna Roberts',
+      //   },
+      //   sparkType: 'safety',
+      //   message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      // },
+      // {
+      //   isNew: false,
+      //   thankYouSent: true,
+      //   date: 1564516054,
+      //   toAssociate: { name: 'you' },
+      //   fromAssociate: {
+      //     name: 'Nikodem Greer',
+      //   },
+      //   sparkType: 'simplicity',
+      //   message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      // },
     ];
     return notifications;
   }

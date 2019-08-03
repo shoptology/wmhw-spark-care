@@ -151,7 +151,6 @@
 
             <app-notification
               *ngFor="let record of activityLog"
-              [isNew]="record.isNew"
               [thankYouSent]="record.thankYouSent"
               [notificationType]="'sent'"
               [date]="record.date"
