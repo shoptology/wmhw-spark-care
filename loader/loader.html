@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="../site/site.css" />
+    <style>
+      body {
+        overflow-x: hidden;
+      }
+      section {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+        display: block;
+        box-sizing: border-box;
+        white-space: nowrap;
+      }
+      section > * {
+        z-index: 9;
+        position: relative;
+        top: 0;
+      }
+      section > canvas {
+        z-index: 1;
+        position: absolute;
+        left: 0;
+      }
+
+      .spacing {
+        width: 100%;
+        min-height: 20%;
+        background: -moz-linear-gradient(-45deg, #1f6bd3 0%, #2c44c9 100%);
+        background: -webkit-linear-gradient(-45deg, #1f6bd3 0%, #2c44c9 100%);
+        background: linear-gradient(135deg, #1f6bd3 0%, #2c44c9 100%);
+        background: linear-gradient(to right bottom,#2c44c9,#2c44c9,#5955bd,#8280ce);
+        background: -webkit-linear-gradient(to right bottom,#2c44c9,#2c44c9,#5955bd,#8280ce);
+      }
+
+      a {
+        position: fixed;
+        right: 15px;
+        top: 15px;
+        z-index: 99;
+        border: none;
+      }
+      a img {
+        max-width: 50px;
+        border-radius: 50px;
+        border: 1px solid #efefef;
+        -webkit-box-shadow: 0 0 5px 0 rgba(55,55,55,.3);
+        box-shadow: 0 0 5px 0 rgba(55,55,55,.3);
+      }
+    </style>
+  </head>
+  <body>
+
+
+
+
+    <section class="example-2">
+      <div class="content" style="padding:25% 0;text-align: center;">
+
+      </div>
+      <canvas id="canvas2"></canvas>
+    </section>
+
+    <!-- Importing generator -->
+    <script type="text/javascript" src="index.min.js"></script>
+    <!-- Starting site logic -->
+    <script type="text/javascript">
+
+
+      var canvas2Settings = {
+        "target":"canvas2",
+        "max":"180",
+        "props":["circle",{"type":"svg","src":"site/spark.svg","size":125,"weight":0.025},{"type":"svg","src":"site/spark2.svg","size":55,"weight":0.05},{"type":"svg","src":"site/spark3.svg","size":50,"weight":0.05},{"type":"svg","src":"site/spark2.svg","size":105,"weight":0.025},{"type":"svg","src":"site/spark3.svg","size":100,"weight":0.025},{"type":"svg","src":"site/spark4.svg","size":75,"weight":0.05},{"type":"svg","src":"site/spark.svg","size":75,"weight":0.05},{"type":"svg","src":"site/sparklet.svg","size":110,"weight":0.025},{"type":"svg","src":"site/sparklet2.svg","size":90,"weight":0.025},{"type":"svg","src":"site/sparklet3.svg","size":70,"weight":0.05},{"type":"svg","src":"site/sparklet4.svg","size":120,"weight":0.025}],
+        "colors":[[165,104,246],[230,61,135],[0,199,228],[253,214,126]],
+        "clock":"15",
+      };
+      var canvas2 = new ConfettiGenerator(canvas2Settings);
+      canvas2.render();
+
+      
+    </script>
+  </body>
+</html>
