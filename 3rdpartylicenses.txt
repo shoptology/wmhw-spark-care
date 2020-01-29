@@ -194,6 +194,9 @@ THE SOFTWARE.
 highcharts
 https://www.highcharts.com/license
 
+ngx-ui-switch
+MIT
+
 regenerator-runtime
 MIT
 MIT License
