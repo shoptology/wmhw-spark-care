@@ -1,0 +1,1 @@
+$(document).on("change",".div-toggle",(function(){var e=$(this).data("target"),t=$("option:selected",this).data("show");$(e).children().addClass("hide"),$(t).removeClass("hide")})),$(document).ready((function(){$(".div-toggle").trigger("change")}));
