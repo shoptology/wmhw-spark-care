@@ -107,6 +107,8 @@ THE SOFTWARE.
 
 @angular/material/radio
 
+@angular/material/select
+
 @angular/material/toolbar
 
 @angular/platform-browser
