@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="12.801" height="17.076" viewBox="0 0 12.801 17.076">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #273972;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+        stroke-width: 1.086px;
+      }
+
+      .cls-2 {
+        fill: #fcba30;
+      }
+    </style>
+  </defs>
+  <g id="Group_728" data-name="Group 728" transform="translate(-253.88 -553)">
+    <g id="Group_690" data-name="Group 690" transform="translate(253.998 552.998)">
+      <g id="Group_688" data-name="Group 688">
+        <circle id="Ellipse_197" data-name="Ellipse 197" class="cls-1" cx="3.52" cy="3.52" r="3.52" transform="translate(5.1 4.82)"/>
+        <line id="Line_18" data-name="Line 18" class="cls-1" y1="5.27" x2="5.27" transform="translate(0.65 11.04)"/>
+      </g>
+      <g id="Group_689" data-name="Group 689">
+        <path id="Path_864" data-name="Path 864" class="cls-2" d="M4.02,4.01a.481.481,0,0,1-.57.14L1.27,2.32c-.2-.2-.13-.59.16-.88s.69-.36.88-.16L4.14,3.46c.11.13.05.38-.12.55Z"/>
+        <path id="Path_865" data-name="Path 865" class="cls-2" d="M5.72,3.56c-.25-.07-.41-.25-.4-.42L5.81.34c.07-.27.45-.41.85-.3s.65.41.58.68L6.27,3.39a.462.462,0,0,1-.55.17Z"/>
+        <path id="Path_866" data-name="Path 866" class="cls-2" d="M3.56,5.72a.462.462,0,0,1-.17.55L.72,7.25c-.27.07-.58-.19-.68-.58s.03-.78.3-.85l2.8-.49c.17-.02.35.15.42.39Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
